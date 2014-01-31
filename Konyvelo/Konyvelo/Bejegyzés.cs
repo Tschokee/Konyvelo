@@ -8,6 +8,9 @@ namespace Konyvelo
 {
     public class Bejegyzés
     {
+        public static int globalBankiEgyenleg { get; set; }
+        public static int globalPenztariEgyenleg { get; set; }
+
         public int sorSzám { get; set; }
         public string fizetésIdeje { get; set; }
         public string megjegyzés { get; set; }
@@ -43,9 +46,11 @@ namespace Konyvelo
             this.bankiKiadás = bankiKiadás;
             this.pénztáriBevétel = pénztáriBevétel;
             this.pénztáriKiadás = pénztáriKiadás;
+            Bejegyzés.globalBankiEgyenleg += (bankiBevétel - bankiKiadás);
+            Bejegyzés.globalPenztariEgyenleg += (pénztáriBevétel - pénztáriKiadás);
 
-            bankiEgyenleg = bankiEgyenleg + bankiBevétel - bankiKiadás;
-            pénztáriEgyenleg = pénztáriEgyenleg + pénztáriBevétel - pénztáriKiadás;
+            bankiEgyenleg = globalBankiEgyenleg;
+            pénztáriEgyenleg = globalPenztariEgyenleg;
         }
     }
 }
