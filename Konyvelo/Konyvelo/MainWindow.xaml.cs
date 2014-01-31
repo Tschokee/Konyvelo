@@ -20,20 +20,33 @@ namespace Konyvelo
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Bejegyzés> bejegyzések = new List<Bejegyzés>();
         private List<Bejegyzés> LoadCollectionData()
         {
-            List<Bejegyzés> bejegyzések = new List<Bejegyzés>();
+            //List<Bejegyzés> bejegyzések = new List<Bejegyzés>();
             //bejegyzések.Add(new Bejegyzés());
             bejegyzések.Add(new Bejegyzés(1, "tegnap", "asdfashdl", new KöltségvetésiCím(), 1000, 300, 500, 600));
             bejegyzések.Add(new Bejegyzés(2, "tegnap", "asdfashdl", new KöltségvetésiCím(), 1000, 300, 500, 600));
             bejegyzések.Add(new Bejegyzés(3, "tegnap", "asdfashdl", new KöltségvetésiCím(), 200, 600, 1200, 100));
             return bejegyzések;
-        } 
+        }
 
         public MainWindow()
         {
             InitializeComponent();
-            MyDataGrid.ItemsSource = LoadCollectionData();
+            LoadCollectionData();
+            MyDataGrid.ItemsSource = bejegyzések/*LoadCollectionData()*/;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Window NLW = new NewLineWindow(bejegyzések, MyDataGrid);
+            NLW.Show();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
