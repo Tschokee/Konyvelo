@@ -14,10 +14,24 @@ namespace Konyvelo
         public KöltségvetésiCím főkönyv { get; set; }
         public int bankiBevétel { get; set; }
         public int bankiKiadás { get; set; }
-        public static int bankiEgyenleg = 0; 
+        public int bankiEgyenleg { get; set; } 
         public int pénztáriBevétel { get; set; }
         public int pénztáriKiadás { get; set; }
-        public static int pénztáriEgyenleg = 0;
+        public int pénztáriEgyenleg { get; set; }
+
+        public Bejegyzés()
+        {
+            this.sorSzám = 0;
+            this.fizetésIdeje = "ma";
+            this.megjegyzés = "note";
+            this.főkönyv = new KöltségvetésiCím();
+            this.bankiBevétel = 300;
+            this.bankiKiadás = 300;
+            this.pénztáriBevétel = 300;
+            this.pénztáriKiadás = 300;
+            this.bankiEgyenleg = 9999;
+            this.pénztáriEgyenleg = 8888;
+        }
 
         public Bejegyzés(int sorSzám, string fizetésIdeje, string megjegyzés, KöltségvetésiCím főkönyv, int bankiBevétel, int bankiKiadás, int pénztáriBevétel, int pénztáriKiadás)
         {

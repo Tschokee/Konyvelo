@@ -23,6 +23,8 @@ namespace Konyvelo
         private List<Bejegyzés> LoadCollectionData()
         {
             List<Bejegyzés> bejegyzések = new List<Bejegyzés>();
+            bejegyzések.Add(new Bejegyzés());
+            bejegyzések.Add(new Bejegyzés(1, "tegnap", "asdfashdl", new KöltségvetésiCím(), 1000, 300, 500, 600));
             bejegyzések.Add(new Bejegyzés(1, "tegnap", "asdfashdl", new KöltségvetésiCím(), 1000, 300, 500, 600));
             return bejegyzések;
         } 
