@@ -34,7 +34,22 @@ namespace Konyvelo
             int s = 0;
             if (list.Count != 0)
                 s = list.Last().sorSzám;
-            list.Add(new Bejegyzés(s + 1, fizetesBox.Text, meghegyzesBox.Text, new KöltségvetésiCím(), Convert.ToInt32(bannkiBeviletBox.Text), Convert.ToInt32(bankiKiadasBox.Text), Convert.ToInt32(penztariBevetelBox.Text), Convert.ToInt32(penztariKiadasBox.Text)));
+
+            //Ha üres string, akkor 0-t ír be
+            int bb, bk, pb, pk;
+            if (bankiBeviletBox.Text.Length == 0) bb = 0;
+            else bb = Convert.ToInt32(bankiBeviletBox.Text);
+
+            if (bankiKiadasBox.Text.Length == 0) bk = 0;
+            else bk = Convert.ToInt32(bankiKiadasBox.Text);
+
+            if (penztariBevetelBox.Text.Length == 0) pb = 0;
+            else pb = Convert.ToInt32(penztariBevetelBox.Text);
+
+            if (penztariKiadasBox.Text.Length == 0) pk = 0;
+            else pk = Convert.ToInt32(penztariKiadasBox.Text);
+
+            list.Add(new Bejegyzés(s + 1, fizetesBox.Text, meghegyzesBox.Text, new KöltségvetésiCím(), bb, bk, pb, pk));
 
             this.Close();
         }
