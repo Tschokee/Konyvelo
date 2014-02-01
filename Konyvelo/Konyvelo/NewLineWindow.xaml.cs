@@ -27,6 +27,9 @@ namespace Konyvelo
             InitializeComponent();
             this.list = l;
             this.d = d;
+            fokonyvComboBox.Items.Add("I");
+            fokonyvComboBox.Items.Add("II");
+            fokonyvComboBox.Items.Add("III");
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -52,7 +55,7 @@ namespace Konyvelo
             list.Add(new Bejegyzés(s + 1, fizetesBox.Text, meghegyzesBox.Text, new KöltségvetésiCím(), bb, bk, pb, pk));
 
             d.Items.Refresh();
-
+            
             this.Close();
         }
 
