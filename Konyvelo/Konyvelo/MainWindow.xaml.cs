@@ -44,5 +44,22 @@ namespace Konyvelo
             NLW.Show();
         }
 
+        private void modositButton_Click(object sender, RoutedEventArgs e)
+        {
+            int t = Convert.ToInt32(MyDataGrid.SelectedIndex.ToString());
+            Window MW = new ModifyWindow(bejegyzések, MyDataGrid,t);
+            MW.Show();
+        }
+
+        private void torolButton_Click(object sender, RoutedEventArgs e)
+        {
+            int t = Convert.ToInt32(MyDataGrid.SelectedIndex.ToString());
+            if(t < bejegyzések.Count()) bejegyzések.RemoveAt(t);
+
+            //global bank és pénztári egyenleg módosítása szükséges, lehetőleg függvény segítségével ami újraszámolja a törölt elem előttitől az összeset
+
+            MyDataGrid.Items.Refresh();
+        }
+
     }
 }

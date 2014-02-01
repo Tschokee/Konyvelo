@@ -52,5 +52,10 @@ namespace Konyvelo
             bankiEgyenleg = globalBankiEgyenleg;
             pénztáriEgyenleg = globalPenztariEgyenleg;
         }
+
+        public void modositGlobalBankiEgyenleg()
+        {
+           
+        }
     }
 }
