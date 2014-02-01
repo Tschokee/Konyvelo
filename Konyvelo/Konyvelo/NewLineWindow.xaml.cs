@@ -30,6 +30,16 @@ namespace Konyvelo
             fokonyvComboBox.Items.Add("I");
             fokonyvComboBox.Items.Add("II");
             fokonyvComboBox.Items.Add("III");
+            fokonyvComboBox.Items.Add("III");
+            fokonyvComboBox.Items.Add("III");
+            fokonyvComboBox.Items.Add("III");
+            fokonyvComboBox.Items.Add("III");
+            fokonyvComboBox.Items.Add("III");
+            fokonyvComboBox.Items.Add("III");
+            fokonyvComboBox.Items.Add("III");
+            fokonyvComboBox.Items.Add("III");
+            fokonyvComboBox.Items.Add("III");
+            fokonyvComboBox.Items.Add("III");
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

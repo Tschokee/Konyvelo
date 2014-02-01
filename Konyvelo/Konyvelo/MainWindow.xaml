@@ -4,6 +4,6 @@
         Title="MainWindow" Height="350" Width="920">
     <Grid Margin="10,25,2,10">
         <DataGrid Name="MyDataGrid" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.167,-9.538" Height="275" Width="890"/>
-        <Button Content="Új sor" HorizontalAlignment="Left" Margin="0,-27,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Button Content="Új sor" HorizontalAlignment="Left" Margin="-13,-27,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
     </Grid>
 </Window>

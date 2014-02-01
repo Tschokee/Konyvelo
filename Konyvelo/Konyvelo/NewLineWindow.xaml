@@ -18,7 +18,7 @@
         <TextBox x:Name="bankiKiadasBox" HorizontalAlignment="Left" Height="28" Margin="116,329,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114"/>
         <TextBox x:Name="penztariBevetelBox" HorizontalAlignment="Left" Height="28" Margin="116,382,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114"/>
         <TextBox x:Name="penztariKiadasBox" HorizontalAlignment="Left" Height="28" Margin="116,438,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114"/>
-        <ComboBox x:Name="fokonyvComboBox" HorizontalAlignment="Left" Margin="116,209,0,0" VerticalAlignment="Top" Width="114" Height="28"/>
+        <ComboBox x:Name="fokonyvComboBox" HorizontalAlignment="Left" Margin="116,209,0,0" VerticalAlignment="Top" Width="114" Height="25" MaxDropDownHeight="100"/>
 
     </Grid>
 </Window>
