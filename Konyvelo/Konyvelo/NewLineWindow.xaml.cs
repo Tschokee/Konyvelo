@@ -51,6 +51,8 @@ namespace Konyvelo
 
             list.Add(new Bejegyzés(s + 1, fizetesBox.Text, meghegyzesBox.Text, new KöltségvetésiCím(), bb, bk, pb, pk));
 
+            d.Items.Refresh();
+
             this.Close();
         }
 
