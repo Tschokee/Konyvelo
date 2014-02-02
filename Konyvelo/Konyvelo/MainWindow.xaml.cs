@@ -46,9 +46,12 @@ namespace Konyvelo
 
         private void modositButton_Click(object sender, RoutedEventArgs e)
         {
-            int t = Convert.ToInt32(MyDataGrid.SelectedIndex.ToString());
-            Window MW = new ModifyWindow(bejegyzések, MyDataGrid,t);
-            MW.Show();
+            if (bejegyzések.Count() != 0)
+            {
+                int t = Convert.ToInt32(MyDataGrid.SelectedIndex.ToString());
+                Window MW = new ModifyWindow(bejegyzések, MyDataGrid, t);
+                MW.Show();
+            }
         }
 
         private void torolButton_Click(object sender, RoutedEventArgs e)
