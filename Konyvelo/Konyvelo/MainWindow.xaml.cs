@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace Konyvelo
 {
@@ -31,8 +32,16 @@ namespace Konyvelo
             return bejegyzések;
         }
 
+        private void openFile()
+        {
+            TextReader sr = new StreamReader("entries.txt");
+            Console.WriteLine(sr.ReadToEnd());
+            sr.Close();
+        }
+
         public MainWindow()
         {
+            openFile();
             InitializeComponent();
             LoadCollectionData();
             MyDataGrid.ItemsSource = bejegyzések/*LoadCollectionData()*/;
