@@ -67,7 +67,6 @@ namespace Konyvelo
                     b.modositGlobalEgyenleg();
                 }
             }
-            //global bank és pénztári egyenleg módosítása szükséges, lehetőleg függvény segítségével ami újraszámolja a törölt elem előttitől az összeset
 
             MyDataGrid.Items.Refresh();
         }

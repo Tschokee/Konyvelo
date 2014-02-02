@@ -71,7 +71,6 @@ namespace Konyvelo
             {
                 b.modositGlobalEgyenleg();
             }
-            //global banki és pénztári egyenleg újraszámolása a módosítottól szükséges
 
             d.Items.Refresh();
 
