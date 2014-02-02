@@ -65,6 +65,12 @@ namespace Konyvelo
             list.ElementAt(t).pénztáriBevétel = pb;
             list.ElementAt(t).pénztáriKiadás = pk;
 
+            Bejegyzés.globalBankiEgyenleg = 0;
+            Bejegyzés.globalPenztariEgyenleg = 0;
+            foreach (Bejegyzés b in list)
+            {
+                b.modositGlobalEgyenleg();
+            }
             //global banki és pénztári egyenleg újraszámolása a módosítottól szükséges
 
             d.Items.Refresh();

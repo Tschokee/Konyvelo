@@ -46,9 +46,9 @@ namespace Konyvelo
 
         private void modositButton_Click(object sender, RoutedEventArgs e)
         {
-            if (bejegyzések.Count() != 0)
+            int t = Convert.ToInt32(MyDataGrid.SelectedIndex.ToString());
+            if (bejegyzések.Count() != 0 && t != -1 && t <= bejegyzések.Count() - 1)
             {
-                int t = Convert.ToInt32(MyDataGrid.SelectedIndex.ToString());
                 Window MW = new ModifyWindow(bejegyzések, MyDataGrid, t);
                 MW.Show();
             }
@@ -57,8 +57,16 @@ namespace Konyvelo
         private void torolButton_Click(object sender, RoutedEventArgs e)
         {
             int t = Convert.ToInt32(MyDataGrid.SelectedIndex.ToString());
-            if(t < bejegyzések.Count() && t > -1) bejegyzések.RemoveAt(t);
-
+            if (t < bejegyzések.Count() && t > -1)
+            {
+                bejegyzések.RemoveAt(t);
+                Bejegyzés.globalBankiEgyenleg = 0;
+                Bejegyzés.globalPenztariEgyenleg = 0;
+                foreach (Bejegyzés b in bejegyzések)
+                {
+                    b.modositGlobalEgyenleg();
+                }
+            }
             //global bank és pénztári egyenleg módosítása szükséges, lehetőleg függvény segítségével ami újraszámolja a törölt elem előttitől az összeset
 
             MyDataGrid.Items.Refresh();

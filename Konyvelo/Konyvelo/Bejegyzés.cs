@@ -53,8 +53,14 @@ namespace Konyvelo
             pénztáriEgyenleg = globalPenztariEgyenleg;
         }
 
-        public void modositGlobalBankiEgyenleg()
+        public void modositGlobalEgyenleg()
         {
+           
+           Bejegyzés.globalBankiEgyenleg += (bankiBevétel - bankiKiadás);
+           Bejegyzés.globalPenztariEgyenleg += (pénztáriBevétel - pénztáriKiadás);
+
+           bankiEgyenleg = globalBankiEgyenleg;
+           pénztáriEgyenleg = globalPenztariEgyenleg;
            
         }
     }
