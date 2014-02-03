@@ -63,8 +63,12 @@ namespace Konyvelo
 
         private void torolButton_Click(object sender, RoutedEventArgs e)
         {
-            Window CDW = new ComfirmDeleteWindow(bejegyzések, MyDataGrid);
-            CDW.Show();
+            int t = Convert.ToInt32(MyDataGrid.SelectedIndex.ToString());
+            if (bejegyzések.Count() != 0 && t != -1 && t <= bejegyzések.Count() - 1)
+            {
+                Window CDW = new ComfirmDeleteWindow(bejegyzések, MyDataGrid);
+                CDW.Show();
+            }
         }
 
     }
