@@ -60,6 +60,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="ChoiceWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -69,6 +73,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Bejegyzés.cs" />
+    <Compile Include="ChoiceWindow.xaml.cs">
+      <DependentUpon>ChoiceWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DataBase.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

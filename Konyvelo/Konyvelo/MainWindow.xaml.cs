@@ -49,8 +49,10 @@ namespace Konyvelo
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Window NLW = new NewLineWindow(bejegyzések, MyDataGrid);
-            NLW.Show();
+            //Window NLW = new NewLineWindow(bejegyzések, MyDataGrid);
+            //NLW.Show();
+            Window cw = new ChoiceWindow(bejegyzések, MyDataGrid);
+            cw.Show();
         }
 
         private void modositButton_Click(object sender, RoutedEventArgs e)
