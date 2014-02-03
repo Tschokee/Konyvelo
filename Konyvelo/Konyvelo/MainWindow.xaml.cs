@@ -27,7 +27,13 @@ namespace Konyvelo
             bejegyzések.Add(new Bejegyzés(1, "tegnap", "asdfashdl", new PénzMozgás(), 1000, 300, 500, 600));
             bejegyzések.Add(new Bejegyzés(2, "tegnap", "asdfashdl", new PénzMozgás(), 1000, 300, 500, 600));
             bejegyzések.Add(new Bejegyzés(3, "tegnap", "asdfashdl", new PénzMozgás(), 200, 600, 1200, 100));
-            return bejegyzések;
+
+            for (int i = 0; i < 50; i++)
+            {
+                bejegyzések.Add(new Bejegyzés());
+            }
+
+                return bejegyzések;
         }
 
         private void openFile()
