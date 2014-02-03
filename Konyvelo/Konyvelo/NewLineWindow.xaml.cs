@@ -62,7 +62,7 @@ namespace Konyvelo
             if (penztariKiadasBox.Text.Length == 0) pk = 0;
             else pk = Convert.ToInt32(penztariKiadasBox.Text);
 
-            list.Add(new Bejegyzés(s + 1, fizetesBox.Text, meghegyzesBox.Text, new Pénzmozgás(), bb, bk, pb, pk));
+            list.Add(new Bejegyzés(s + 1, fizetesBox.Text, meghegyzesBox.Text, new KöltségvetésiCím(), bb, bk, pb, pk));
 
             d.Items.Refresh();
             
