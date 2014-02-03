@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Konyvelo
 {
-    public class KöltségvetésiCím
+    public class Pénzmozgás
     {
         public string szám = "I";
     }
