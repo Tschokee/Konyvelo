@@ -24,8 +24,6 @@ namespace Konyvelo
         List<Bejegyzés> bejegyzések = new List<Bejegyzés>();
         private List<Bejegyzés> LoadCollectionData()
         {
-            //List<Bejegyzés> bejegyzések = new List<Bejegyzés>();
-            //bejegyzések.Add(new Bejegyzés());
             bejegyzések.Add(new Bejegyzés(1, "tegnap", "asdfashdl", new PénzMozgás(), 1000, 300, 500, 600));
             bejegyzések.Add(new Bejegyzés(2, "tegnap", "asdfashdl", new PénzMozgás(), 1000, 300, 500, 600));
             bejegyzések.Add(new Bejegyzés(3, "tegnap", "asdfashdl", new PénzMozgás(), 200, 600, 1200, 100));
@@ -44,13 +42,11 @@ namespace Konyvelo
             openFile();
             InitializeComponent();
             LoadCollectionData();
-            MyDataGrid.ItemsSource = bejegyzések/*LoadCollectionData()*/;
+            MyDataGrid.ItemsSource = bejegyzések;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            //Window NLW = new NewLineWindow(bejegyzések, MyDataGrid);
-            //NLW.Show();
             Window cw = new ChoiceWindow(bejegyzések, MyDataGrid);
             cw.Show();
         }
@@ -67,19 +63,8 @@ namespace Konyvelo
 
         private void torolButton_Click(object sender, RoutedEventArgs e)
         {
-            int t = Convert.ToInt32(MyDataGrid.SelectedIndex.ToString());
-            if (t < bejegyzések.Count() && t > -1)
-            {
-                bejegyzések.RemoveAt(t);
-                Bejegyzés.globalBankiEgyenleg = 0;
-                Bejegyzés.globalPenztariEgyenleg = 0;
-                foreach (Bejegyzés b in bejegyzések)
-                {
-                    b.modositGlobalEgyenleg();
-                }
-            }
-
-            MyDataGrid.Items.Refresh();
+            Window CDW = new ComfirmDeleteWindow(bejegyzések, MyDataGrid);
+            CDW.Show();
         }
 
     }

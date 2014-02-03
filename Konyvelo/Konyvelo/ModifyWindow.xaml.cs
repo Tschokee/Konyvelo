@@ -31,11 +31,28 @@ namespace Konyvelo
             this.t = t;
             fizetesBox.Text = l.ElementAt(t).fizetésIdeje;
             meghegyzesBox.Text = l.ElementAt(t).megjegyzés;
-            bankiBeviletBox.Text = l.ElementAt(t).bankiBevétel.ToString();
-            bankiKiadasBox.Text = l.ElementAt(t).bankiKiadás.ToString();
-            penztariBevetelBox.Text = l.ElementAt(t).pénztáriBevétel.ToString();
-            penztariKiadasBox.Text = l.ElementAt(t).pénztáriKiadás.ToString();
 
+            if (l.ElementAt(t).bankiBevétel != 0)
+            {
+                changeLabel.Content = "Banki bevétel";
+                cahngeBox.Text = l.ElementAt(t).bankiBevétel.ToString();
+            }
+            if (l.ElementAt(t).bankiKiadás != 0)
+            {
+                changeLabel.Content = "Banki kiadás";
+                cahngeBox.Text = l.ElementAt(t).bankiKiadás.ToString();
+            }
+            if (l.ElementAt(t).pénztáriBevétel != 0)
+            {
+                changeLabel.Content = "Pénztári bevétel";
+                cahngeBox.Text = l.ElementAt(t).pénztáriBevétel.ToString();
+            }
+            if(l.ElementAt(t).pénztáriKiadás != 0)
+            {
+                changeLabel.Content = "Pénztári kiadás";
+                cahngeBox.Text = l.ElementAt(t).pénztáriKiadás.ToString();
+            }
+            
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -44,26 +61,17 @@ namespace Konyvelo
             if (list.Count != 0)
                 s = list.Last().sorSzám;
 
-            //Ha üres string, akkor 0-t ír be
-            int bb, bk, pb, pk;
-            if (bankiBeviletBox.Text.Length == 0) bb = 0;
-            else bb = Convert.ToInt32(bankiBeviletBox.Text);
-
-            if (bankiKiadasBox.Text.Length == 0) bk = 0;
-            else bk = Convert.ToInt32(bankiKiadasBox.Text);
-
-            if (penztariBevetelBox.Text.Length == 0) pb = 0;
-            else pb = Convert.ToInt32(penztariBevetelBox.Text);
-
-            if (penztariKiadasBox.Text.Length == 0) pk = 0;
-            else pk = Convert.ToInt32(penztariKiadasBox.Text);
-
             list.ElementAt(t).fizetésIdeje = fizetesBox.Text;
             list.ElementAt(t).megjegyzés = meghegyzesBox.Text;
-            list.ElementAt(t).bankiBevétel = bb;
-            list.ElementAt(t).bankiKiadás = bk;
-            list.ElementAt(t).pénztáriBevétel = pb;
-            list.ElementAt(t).pénztáriKiadás = pk;
+            
+            switch (changeLabel.Content.ToString())
+            {
+                case "Banki bevétel": list.ElementAt(t).bankiBevétel = Convert.ToInt32(cahngeBox.Text); break;
+                case "Banki kiadás": list.ElementAt(t).bankiKiadás = Convert.ToInt32(cahngeBox.Text); break;
+                case "Pénztári bevétel": list.ElementAt(t).pénztáriBevétel = Convert.ToInt32(cahngeBox.Text); break;
+                case "Pénztári kiadás": list.ElementAt(t).pénztáriKiadás = Convert.ToInt32(cahngeBox.Text); break;
+                default: break;
+            }
 
             Bejegyzés.globalBankiEgyenleg = 0;
             Bejegyzés.globalPenztariEgyenleg = 0;
