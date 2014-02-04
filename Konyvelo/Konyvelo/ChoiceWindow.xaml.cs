@@ -21,13 +21,15 @@ namespace Konyvelo
     {
         public List<Bejegyzés> list;
         public DataGrid d;
+        List<PénzMozgás> p;
         public int s;
 
-        public ChoiceWindow(List<Bejegyzés> l, DataGrid d)
+        public ChoiceWindow(List<Bejegyzés> l, DataGrid d, List<PénzMozgás> p)
         {
             InitializeComponent();
             this.list = l;
             this.d = d;
+            this.p = p;
             this.Left = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right / 2) - (this.Width / 2);
             this.Top = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom / 2) - (this.Height / 2);
         }
@@ -42,7 +44,7 @@ namespace Konyvelo
                 s = 3;
             if (penztariKiadasbtn.IsChecked == true)
                 s = 4;
-            Window NWL = new NewLineWindow(list, d, s);
+            Window NWL = new NewLineWindow(list, d, s, p);
             NWL.Show();
             this.Close();
         }
