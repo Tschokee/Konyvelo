@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,9 +25,9 @@ namespace Konyvelo
         List<Bejegyzés> bejegyzések = new List<Bejegyzés>();
         private List<Bejegyzés> LoadCollectionData()
         {
-            bejegyzések.Add(new Bejegyzés(1, "tegnap", "asdfashdl", new PénzMozgás(), 1000, 300, 500, 600));
-            bejegyzések.Add(new Bejegyzés(2, "tegnap", "asdfashdl", new PénzMozgás(), 1000, 300, 500, 600));
-            bejegyzések.Add(new Bejegyzés(3, "tegnap", "asdfashdl", new PénzMozgás(), 200, 600, 1200, 100));
+            bejegyzések.Add(new Bejegyzés(1, "tegnap", "asdfashdl", "I", 1000, 300, 500, 600));
+            bejegyzések.Add(new Bejegyzés(2, "tegnap", "asdfashdl", "II/2", 1000, 300, 500, 600));
+            bejegyzések.Add(new Bejegyzés(3, "tegnap", "asdfashdl", "I", 200, 600, 1200, 100));
 
             for (int i = 0; i < 50; i++)
             {
@@ -39,7 +40,11 @@ namespace Konyvelo
         List<PénzMozgás> pénzmozgások = new List<PénzMozgás>();
         private List<PénzMozgás> createDefaultPénzmozgás()
         {
-            pénzmozgások.Add(new PénzMozgás("I", "Egyházfenntartói járulékok", 0, 0));
+            pénzmozgások.Add(new PénzMozgás("I", "Egyházfenntartói járulékok"));
+            pénzmozgások.Add(new PénzMozgás("II/1", "Gyülekezeti (templomi) perselypénzek"));
+            pénzmozgások.Add(new PénzMozgás("II/2", "Nem templomi perselypénzek"));
+            pénzmozgások.Add(new PénzMozgás("II/3", "Szórványok"));
+
             return pénzmozgások;
         }
 

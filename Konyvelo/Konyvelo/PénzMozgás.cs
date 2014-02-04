@@ -21,6 +21,14 @@ namespace Konyvelo
             teljesítés = 2000;
         }
 
+        public PénzMozgás(string azonosító, string név)
+        {
+            this.azonosító = azonosító;
+            this.név = név;
+            this.előirányzat = 0;
+            this.teljesítés = 0;
+        }
+
         public PénzMozgás(string azonosító, string név, int előirányzat, int teljesítés)
         {
             this.azonosító = azonosító;
