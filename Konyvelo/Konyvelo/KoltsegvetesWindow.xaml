@@ -1,8 +1,9 @@
 ﻿<Window x:Class="Konyvelo.KoltsegvetesWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="KoltsegvetesWindow" Height="802.3" Width="625">
-    <Grid>
+        Title="KoltsegvetesWindow" Height="600" Width="625">
+    <ScrollViewer>
+        <Grid>
         <DataGrid x:Name="IDataGrid" ItemsSource="{Binding Source=Ilista}" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="607" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="I." Binding="{Binding azonosító}" Width="*" />
@@ -29,4 +30,5 @@
         </DataGrid>
 
     </Grid>
+    </ScrollViewer>
 </Window>
