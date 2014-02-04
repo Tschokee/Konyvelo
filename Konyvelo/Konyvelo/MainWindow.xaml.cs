@@ -223,7 +223,7 @@ namespace Konyvelo
         }
 
         List<PénzMozgás> XVII = new List<PénzMozgás>();
-        private List<PénzMozgás> XVIIVLista()
+        private List<PénzMozgás> XVIILista()
         {
             XVII.Add(new PénzMozgás("XVII", "1", "Adományok és segélyek"));
             XVII.Add(new PénzMozgás("XVII", "1", "a", "Egyházmegyei diakónia"));
@@ -267,7 +267,7 @@ namespace Konyvelo
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Window cw = new ChoiceWindow(bejegyzések, MyDataGrid, ILista(), IILista(), IIILista(), IVLista(), VLista(), XIAaLista(), XIAbLista(), XIBaLista(), XIBbLista());
+            Window cw = new ChoiceWindow(bejegyzések, MyDataGrid, ILista(), IILista(), IIILista(), IVLista(), VLista(), XIAaLista(), XIAbLista(), XIBaLista(), XIBbLista(), XIILista(), XIIILista(), XIVLista(), XVLista(), XVILista(), XVIILista(), XVIIILista());
             cw.Show();
         }
 
@@ -276,7 +276,7 @@ namespace Konyvelo
             int t = Convert.ToInt32(MyDataGrid.SelectedIndex.ToString());
             if (bejegyzések.Count() != 0 && t != -1 && t <= bejegyzések.Count() - 1)
             {
-                Window MW = new ModifyWindow(bejegyzések, MyDataGrid, t);
+                Window MW = new ModifyWindow(bejegyzések, MyDataGrid, t, ILista(), IILista(), IIILista(), IVLista(), VLista(), XIAaLista(), XIAbLista(), XIBaLista(), XIBbLista(), XIILista(), XIIILista(), XIVLista(), XVLista(), XVILista(), XVIILista(), XVIIILista());
                 MW.Show();
             }
         }

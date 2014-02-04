@@ -22,8 +22,28 @@ namespace Konyvelo
         public List<Bejegyzés> list;
         public DataGrid d;
         public int t;
+        String ss;
 
-        public ModifyWindow(List<Bejegyzés> l, DataGrid d, int t)
+        public void comboboxFeltolt(List<PénzMozgás> Lista)
+        {
+            foreach (PénzMozgás penz in Lista)
+            {
+                ss = penz.azonosító;
+                if (penz.azonosítóMásodikSzint != null)
+                {
+                    ss = ss + "/" + penz.azonosítóMásodikSzint;
+                    if (penz.azonosítóHarmadikSzint != null)
+                    {
+                        ss = ss + "/" + penz.azonosítóHarmadikSzint;
+                        if (penz.azonosítóNegyedikSzint != null)
+                            ss = ss + "/" + penz.azonosítóNegyedikSzint;
+                    }
+                }
+                fokonyvComboBox.Items.Add(ss);
+            }
+        }
+
+        public ModifyWindow(List<Bejegyzés> l, DataGrid d, int t, List<PénzMozgás> ILista, List<PénzMozgás> IILista, List<PénzMozgás> IIILista, List<PénzMozgás> IVLista, List<PénzMozgás> VLista, List<PénzMozgás> XIAaLista, List<PénzMozgás> XIAbLista, List<PénzMozgás> XIBaLista, List<PénzMozgás> XIBbLista, List<PénzMozgás> XIILista, List<PénzMozgás> XIIILista, List<PénzMozgás> XIVLista, List<PénzMozgás> XVLista, List<PénzMozgás> XVILista, List<PénzMozgás> XVIILista, List<PénzMozgás> XVIIILista)
         {
             InitializeComponent();
             this.list = l;
@@ -31,6 +51,24 @@ namespace Konyvelo
             this.t = t;
             fizetesBox.Text = l.ElementAt(t).fizetésIdeje;
             meghegyzesBox.Text = l.ElementAt(t).megjegyzés;
+            fokonyvComboBox.SelectedItem = l.ElementAt(t).főkönyv;
+
+            comboboxFeltolt(ILista);
+            comboboxFeltolt(IILista);
+            comboboxFeltolt(IIILista);
+            comboboxFeltolt(IVLista);
+            comboboxFeltolt(VLista);
+            comboboxFeltolt(XIAaLista);
+            comboboxFeltolt(XIAbLista);
+            comboboxFeltolt(XIBaLista);
+            comboboxFeltolt(XIBbLista);
+            comboboxFeltolt(XIILista);
+            comboboxFeltolt(XIIILista);
+            comboboxFeltolt(XIVLista);
+            comboboxFeltolt(XVLista);
+            comboboxFeltolt(XVILista);
+            comboboxFeltolt(XVIILista);
+            comboboxFeltolt(XVIIILista);
 
             if (l.ElementAt(t).bankiBevétel != 0)
             {
@@ -65,6 +103,7 @@ namespace Konyvelo
 
             list.ElementAt(t).fizetésIdeje = fizetesBox.Text;
             list.ElementAt(t).megjegyzés = meghegyzesBox.Text;
+            list.ElementAt(t).főkönyv = fokonyvComboBox.SelectedItem.ToString();
             
             switch (changeLabel.Content.ToString())
             {
