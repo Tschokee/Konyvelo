@@ -41,9 +41,28 @@ namespace Konyvelo
         private List<PénzMozgás> createDefaultPénzmozgás()
         {
             pénzmozgások.Add(new PénzMozgás("I", "Egyházfenntartói járulékok"));
+
+            pénzmozgások.Add(new PénzMozgás("II", "Perselypénzek"));
             pénzmozgások.Add(new PénzMozgás("II/1", "Gyülekezeti (templomi) perselypénzek"));
             pénzmozgások.Add(new PénzMozgás("II/2", "Nem templomi perselypénzek"));
             pénzmozgások.Add(new PénzMozgás("II/3", "Szórványok"));
+
+            pénzmozgások.Add(new PénzMozgás("III", "Adományok"));
+            /*pénzmozgások.Add(new PénzMozgás());
+            pénzmozgások.Add(new PénzMozgás());
+            pénzmozgások.Add(new PénzMozgás());
+            pénzmozgások.Add(new PénzMozgás());
+            pénzmozgások.Add(new PénzMozgás());
+            pénzmozgások.Add(new PénzMozgás());
+            pénzmozgások.Add(new PénzMozgás());
+            pénzmozgások.Add(new PénzMozgás());
+            pénzmozgások.Add(new PénzMozgás());
+            pénzmozgások.Add(new PénzMozgás());
+            pénzmozgások.Add(new PénzMozgás());
+            pénzmozgások.Add(new PénzMozgás());
+            pénzmozgások.Add(new PénzMozgás());
+            pénzmozgások.Add(new PénzMozgás());
+            pénzmozgások.Add(new PénzMozgás());*/
 
             return pénzmozgások;
         }
