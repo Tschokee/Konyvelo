@@ -21,17 +21,15 @@ namespace Konyvelo
     {
         public List<Bejegyzés> list;
         public DataGrid d;
-        List<PénzMozgás> p;
         int s;
         string ss;
 
-        public NewLineWindow(List<Bejegyzés> l, DataGrid d, int s, List<PénzMozgás> p)
+        public NewLineWindow(List<Bejegyzés> l, DataGrid d, int s, List<PénzMozgás> ILista, List<PénzMozgás> IILista, List<PénzMozgás> IIILista, List<PénzMozgás> IVLista, List<PénzMozgás> VLista, List<PénzMozgás> XIAaLista, List<PénzMozgás> XIAbLista, List<PénzMozgás> XIBaLista, List<PénzMozgás> XIBbLista)
         {
             InitializeComponent();
             this.list = l;
             this.d = d;
             this.s = s;
-            this.p = p;
             switch (s)
             {
                 case 1 : changeLabel.Content = "Banki bevétel"; break;
@@ -40,7 +38,127 @@ namespace Konyvelo
                 case 4: changeLabel.Content = "Pénztári kiadás"; break;
                 default: break;
             }
-            foreach (PénzMozgás penz in p)
+            foreach (PénzMozgás penz in ILista)
+            {
+                ss = penz.azonosító;
+                if (penz.azonosítóMásodikSzint != null)
+                {
+                    ss = ss + "/" + penz.azonosítóMásodikSzint;
+                    if (penz.azonosítóHarmadikSzint != null)
+                    {
+                        ss = ss + "/" + penz.azonosítóHarmadikSzint;
+                        if (penz.azonosítóNegyedikSzint != null)
+                            ss = ss + "/" + penz.azonosítóNegyedikSzint;
+                    }
+                }
+                fokonyvComboBox.Items.Add(ss);
+            }
+            foreach (PénzMozgás penz in IILista)
+            {
+                ss = penz.azonosító;
+                if (penz.azonosítóMásodikSzint != null)
+                {
+                    ss = ss + "/" + penz.azonosítóMásodikSzint;
+                    if (penz.azonosítóHarmadikSzint != null)
+                    {
+                        ss = ss + "/" + penz.azonosítóHarmadikSzint;
+                        if (penz.azonosítóNegyedikSzint != null)
+                            ss = ss + "/" + penz.azonosítóNegyedikSzint;
+                    }
+                }
+                fokonyvComboBox.Items.Add(ss);
+            }
+            foreach (PénzMozgás penz in IIILista)
+            {
+                ss = penz.azonosító;
+                if (penz.azonosítóMásodikSzint != null)
+                {
+                    ss = ss + "/" + penz.azonosítóMásodikSzint;
+                    if (penz.azonosítóHarmadikSzint != null)
+                    {
+                        ss = ss + "/" + penz.azonosítóHarmadikSzint;
+                        if (penz.azonosítóNegyedikSzint != null)
+                            ss = ss + "/" + penz.azonosítóNegyedikSzint;
+                    }
+                }
+                fokonyvComboBox.Items.Add(ss);
+            }
+            foreach (PénzMozgás penz in IVLista)
+            {
+                ss = penz.azonosító;
+                if (penz.azonosítóMásodikSzint != null)
+                {
+                    ss = ss + "/" + penz.azonosítóMásodikSzint;
+                    if (penz.azonosítóHarmadikSzint != null)
+                    {
+                        ss = ss + "/" + penz.azonosítóHarmadikSzint;
+                        if (penz.azonosítóNegyedikSzint != null)
+                            ss = ss + "/" + penz.azonosítóNegyedikSzint;
+                    }
+                }
+                fokonyvComboBox.Items.Add(ss);
+            }
+            foreach (PénzMozgás penz in VLista)
+            {
+                ss = penz.azonosító;
+                if (penz.azonosítóMásodikSzint != null)
+                {
+                    ss = ss + "/" + penz.azonosítóMásodikSzint;
+                    if (penz.azonosítóHarmadikSzint != null)
+                    {
+                        ss = ss + "/" + penz.azonosítóHarmadikSzint;
+                        if (penz.azonosítóNegyedikSzint != null)
+                            ss = ss + "/" + penz.azonosítóNegyedikSzint;
+                    }
+                }
+                fokonyvComboBox.Items.Add(ss);
+            }
+            foreach (PénzMozgás penz in XIAaLista)
+            {
+                ss = penz.azonosító;
+                if (penz.azonosítóMásodikSzint != null)
+                {
+                    ss = ss + "/" + penz.azonosítóMásodikSzint;
+                    if (penz.azonosítóHarmadikSzint != null)
+                    {
+                        ss = ss + "/" + penz.azonosítóHarmadikSzint;
+                        if (penz.azonosítóNegyedikSzint != null)
+                            ss = ss + "/" + penz.azonosítóNegyedikSzint;
+                    }
+                }
+                fokonyvComboBox.Items.Add(ss);
+            }
+            foreach (PénzMozgás penz in XIAbLista)
+            {
+                ss = penz.azonosító;
+                if (penz.azonosítóMásodikSzint != null)
+                {
+                    ss = ss + "/" + penz.azonosítóMásodikSzint;
+                    if (penz.azonosítóHarmadikSzint != null)
+                    {
+                        ss = ss + "/" + penz.azonosítóHarmadikSzint;
+                        if (penz.azonosítóNegyedikSzint != null)
+                            ss = ss + "/" + penz.azonosítóNegyedikSzint;
+                    }
+                }
+                fokonyvComboBox.Items.Add(ss);
+            }
+            foreach (PénzMozgás penz in XIBaLista)
+            {
+                ss = penz.azonosító;
+                if (penz.azonosítóMásodikSzint != null)
+                {
+                    ss = ss + "/" + penz.azonosítóMásodikSzint;
+                    if (penz.azonosítóHarmadikSzint != null)
+                    {
+                        ss = ss + "/" + penz.azonosítóHarmadikSzint;
+                        if (penz.azonosítóNegyedikSzint != null)
+                            ss = ss + "/" + penz.azonosítóNegyedikSzint;
+                    }
+                }
+                fokonyvComboBox.Items.Add(ss);
+            }
+            foreach (PénzMozgás penz in XIBbLista)
             {
                 ss = penz.azonosító;
                 if (penz.azonosítóMásodikSzint != null)

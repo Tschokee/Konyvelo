@@ -171,7 +171,7 @@ namespace Konyvelo
             openFile();
             InitializeComponent();
             LoadCollectionData();
-            ILista();
+            //ILista();
             MyDataGrid.ItemsSource = bejegyzések;
             this.Left = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right / 2) - (this.Width / 2);
             this.Top = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom / 2) - (this.Height / 2);
@@ -179,7 +179,7 @@ namespace Konyvelo
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Window cw = new ChoiceWindow(bejegyzések, MyDataGrid, IV);
+            Window cw = new ChoiceWindow(bejegyzések, MyDataGrid, ILista(), IILista(), IIILista(), IVLista(), VLista(), XIAaLista(), XIAbLista(), XIBaLista(), XIBbLista());
             cw.Show();
         }
 
