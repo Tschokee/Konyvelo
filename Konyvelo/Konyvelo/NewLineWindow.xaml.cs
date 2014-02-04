@@ -21,14 +21,16 @@ namespace Konyvelo
     {
         public List<Bejegyzés> list;
         public DataGrid d;
+        List<PénzMozgás> p;
         int s;
 
-        public NewLineWindow(List<Bejegyzés> l, DataGrid d, int s)
+        public NewLineWindow(List<Bejegyzés> l, DataGrid d, int s, List<PénzMozgás> p)
         {
             InitializeComponent();
             this.list = l;
             this.d = d;
             this.s = s;
+            this.p = p;
             switch (s)
             {
                 case 1 : changeLabel.Content = "Banki bevétel"; break;
@@ -37,7 +39,11 @@ namespace Konyvelo
                 case 4: changeLabel.Content = "Pénztári kiadás"; break;
                 default: break;
             }
-            fokonyvComboBox.Items.Add("I");
+            foreach (PénzMozgás penz in p)
+            {
+                fokonyvComboBox.Items.Add(penz.azonosító);
+            }
+            /*fokonyvComboBox.Items.Add("I");
             fokonyvComboBox.Items.Add("II");
             fokonyvComboBox.Items.Add("III");
             fokonyvComboBox.Items.Add("III");
@@ -49,7 +55,7 @@ namespace Konyvelo
             fokonyvComboBox.Items.Add("III");
             fokonyvComboBox.Items.Add("III");
             fokonyvComboBox.Items.Add("III");
-            fokonyvComboBox.Items.Add("III");
+            fokonyvComboBox.Items.Add("III");*/
             this.Left = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right / 2) -(this.Width / 2);
             this.Top = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom / 2) - (this.Height / 2);
 
