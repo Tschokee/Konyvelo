@@ -119,7 +119,7 @@ namespace Konyvelo
 
         private void koltsegvetesButton_Click(object sender, RoutedEventArgs e)
         {
-            Window KW = new KoltsegvetesWindow();
+            Window KW = new KoltsegvetesWindow(pénzmozgások);
             KW.Show();
         }
 
