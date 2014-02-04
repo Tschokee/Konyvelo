@@ -299,7 +299,7 @@ namespace Konyvelo
 
         private void koltsegvetesButton_Click(object sender, RoutedEventArgs e)
         {
-            Window KW = new KoltsegvetesWindow(ILista(), IILista(), IIILista(), IVLista());
+            Window KW = new KoltsegvetesWindow(ILista(), IILista(), IIILista(), IVLista(), VLista(), XIAaLista(), XIAbLista(), XIBaLista(), XIBbLista(), XIILista(), XIIILista(), XIVLista(), XVLista(), XVILista(), XVIILista(), XVIIILista());
             KW.Show();
         }
 
