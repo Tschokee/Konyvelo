@@ -60,11 +60,28 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="FokonyvWindow.xaml.cs">
+      <DependentUpon>FokonyvWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KoltsegvetesWindow.xaml.cs">
+      <DependentUpon>KoltsegvetesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZaroszamadasWindow.xaml.cs">
+      <DependentUpon>ZaroszamadasWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="ChoiceWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ComfirmDeleteWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FokonyvWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KoltsegvetesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -108,6 +125,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="NewLineWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ZaroszamadasWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

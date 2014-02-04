@@ -77,5 +77,23 @@ namespace Konyvelo
             }
         }
 
+        private void zaroszamButton_Click(object sender, RoutedEventArgs e)
+        {
+            Window ZSZW = new ZaroszamadasWindow();
+            ZSZW.Show();
+        }
+
+        private void koltsegvetesButton_Click(object sender, RoutedEventArgs e)
+        {
+            Window KW = new KoltsegvetesWindow();
+            KW.Show();
+        }
+
+        private void fokonyvButton_Click(object sender, RoutedEventArgs e)
+        {
+            Window FW = new FokonyvWindow();
+            FW.Show();
+        }
+
     }
 }

@@ -6,8 +6,11 @@
     <Grid Margin="10,24,2,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <DataGrid Name="MyDataGrid" VerticalAlignment="Top" RenderTransformOrigin="1.167,-9.538" Height="410" Margin="10,20,0,0" Grid.RowSpan="3"
                   CanUserReorderColumns="True" CanUserResizeColumns="True" CanUserResizeRows="False" CanUserSortColumns="True"/>
-        <Button Content="Új sor" HorizontalAlignment="Left" Margin="10,-18,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Button x:Name="ujsorBurron" Content="Új sor" HorizontalAlignment="Left" Margin="10,-18,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
         <Button x:Name="modositButton" Content="Módosítás" HorizontalAlignment="Left" Margin="90,-18,0,0" VerticalAlignment="Top" Width="75" Click="modositButton_Click"/>
         <Button x:Name="torolButton" Content="Törlés" HorizontalAlignment="Left" Margin="170,-18,0,0" VerticalAlignment="Top" Width="75" Click="torolButton_Click"/>
+        <Button x:Name="zaroszamButton" Content="Zárószámadás" HorizontalAlignment="Left" Margin="250,-18,0,0" VerticalAlignment="Top" Width="101" Click="zaroszamButton_Click"/>
+        <Button x:Name="koltsegvetesButton" Content="Költségvetés" HorizontalAlignment="Left" Margin="356,-18,0,0" VerticalAlignment="Top" Width="75" Click="koltsegvetesButton_Click"/>
+        <Button x:Name="fokonyvButton" Content="Főkönyv" HorizontalAlignment="Left" Margin="436,-18,0,0" VerticalAlignment="Top" Width="75" Click="fokonyvButton_Click"/>
     </Grid>
 </Window>
