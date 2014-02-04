@@ -1,16 +1,10 @@
 ﻿<Window x:Class="Konyvelo.KoltsegvetesWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-<<<<<<< HEAD
         Title="KoltsegvetesWindow" Height="600" Width="625">
     <ScrollViewer>
-        <Grid>
-        <DataGrid x:Name="IDataGrid" ItemsSource="{Binding Source=Ilista}" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="607" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
-=======
-        Title="KoltsegvetesWindow" Height="802.3" Width="625">
     <Grid>
         <DataGrid x:Name="IDataGrid" ItemsSource="{Binding Source=Ilista}" HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="607" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
->>>>>>> 123a4d9ce6d6eb01eabfef36441148ce9773127d
             <DataGrid.Columns>
                 <DataGridTextColumn Header="I." Binding="{Binding azonosító}" Width="*" />
                 <DataGridTextColumn Header="Előirányzat" Binding="{Binding előirányzat}" Width="*"/>
@@ -34,7 +28,6 @@
                 <DataGridTextColumn Header="Előirányzat" Binding="{Binding előirányzat}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-
     </Grid>
     </ScrollViewer>
 </Window>
