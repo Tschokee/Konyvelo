@@ -23,6 +23,7 @@ namespace Konyvelo
         public DataGrid d;
         List<PénzMozgás> p;
         int s;
+        string ss;
 
         public NewLineWindow(List<Bejegyzés> l, DataGrid d, int s, List<PénzMozgás> p)
         {
@@ -41,21 +42,19 @@ namespace Konyvelo
             }
             foreach (PénzMozgás penz in p)
             {
-                fokonyvComboBox.Items.Add(penz.azonosító);
+                ss = penz.azonosító;
+                if (penz.azonosítóMásodikSzint != null)
+                {
+                    ss = ss + "/" + penz.azonosítóMásodikSzint;
+                    if (penz.azonosítóHarmadikSzint != null)
+                    {
+                        ss = ss + "/" + penz.azonosítóHarmadikSzint;
+                        if (penz.azonosítóNegyedikSzint != null)
+                            ss = ss + "/" + penz.azonosítóNegyedikSzint;
+                    }
+                }
+                fokonyvComboBox.Items.Add(ss);
             }
-            /*fokonyvComboBox.Items.Add("I");
-            fokonyvComboBox.Items.Add("II");
-            fokonyvComboBox.Items.Add("III");
-            fokonyvComboBox.Items.Add("III");
-            fokonyvComboBox.Items.Add("III");
-            fokonyvComboBox.Items.Add("III");
-            fokonyvComboBox.Items.Add("III");
-            fokonyvComboBox.Items.Add("III");
-            fokonyvComboBox.Items.Add("III");
-            fokonyvComboBox.Items.Add("III");
-            fokonyvComboBox.Items.Add("III");
-            fokonyvComboBox.Items.Add("III");
-            fokonyvComboBox.Items.Add("III");*/
             this.Left = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right / 2) -(this.Width / 2);
             this.Top = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom / 2) - (this.Height / 2);
 
