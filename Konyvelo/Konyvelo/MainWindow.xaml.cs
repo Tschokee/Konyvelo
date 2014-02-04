@@ -48,7 +48,6 @@ namespace Konyvelo
         List<PénzMozgás> II = new List<PénzMozgás>();
         private List<PénzMozgás> IILista()
         {
-            II.Add(new PénzMozgás("II", "Perselypénzek"));
             II.Add(new PénzMozgás("II", "1", "Gyülekezeti (templomi) perselypénzek"));
             II.Add(new PénzMozgás("II", "2", "Nem templomi perselypénzek"));
             II.Add(new PénzMozgás("II", "3", "Szórványok"));
@@ -59,7 +58,6 @@ namespace Konyvelo
         List<PénzMozgás> III = new List<PénzMozgás>();
         private List<PénzMozgás> IIILista()
         {
-            III.Add(new PénzMozgás("III", "Adományok"));
             III.Add(new PénzMozgás("III", "1","Isten dicsőségére"));
             III.Add(new PénzMozgás("III", "2", "Úrvacsorai jegyekre"));
             III.Add(new PénzMozgás("III", "3", "Legátumokra"));
@@ -76,17 +74,16 @@ namespace Konyvelo
         List<PénzMozgás> IV = new List<PénzMozgás>();
         private List<PénzMozgás> IVLista()
         {
-            IV.Add(new PénzMozgás("IV", ""));
-            IV.Add(new PénzMozgás("IV", "1", ""));
-            IV.Add(new PénzMozgás("IV", "2", ""));
-            IV.Add(new PénzMozgás("IV", "3", ""));
-            IV.Add(new PénzMozgás("IV", "4", ""));
-            IV.Add(new PénzMozgás("IV", "5", ""));
-            IV.Add(new PénzMozgás("IV", "6", ""));
-            IV.Add(new PénzMozgás("IV", "7", ""));
-            IV.Add(new PénzMozgás("IV", "8", ""));
-            IV.Add(new PénzMozgás("IV", "9", ""));
-            IV.Add(new PénzMozgás("IV", "10", ""));
+            IV.Add(new PénzMozgás("IV", "1", "Térítések alkalmazottaktól"));
+            IV.Add(new PénzMozgás("IV", "2", "Ingatlanok (temető stb.) bevétele"));
+            IV.Add(new PénzMozgás("IV", "3", "Iratterjesztés"));
+            IV.Add(new PénzMozgás("IV", "4", "Gyülekezeti ház bevételei"));
+            IV.Add(new PénzMozgás("IV", "5", "Hitoktatás"));
+            IV.Add(new PénzMozgás("IV", "6", "Támogatások, kölcsönök"));
+            IV.Add(new PénzMozgás("IV", "7", "Vegyes és előre nem látható bevétel"));
+            IV.Add(new PénzMozgás("IV", "8", "2014. évi pénztári maradvány"));
+            IV.Add(new PénzMozgás("IV", "9", "Átmenő tétel"));
+            IV.Add(new PénzMozgás("IV", "10", "Pénzforgalom"));
 
             return IV;
         }
@@ -94,10 +91,9 @@ namespace Konyvelo
         List<PénzMozgás> V = new List<PénzMozgás>();
         private List<PénzMozgás> VLista()
         {
-            V.Add(new PénzMozgás("V", ""));
-            V.Add(new PénzMozgás("V", "1", ""));
-            V.Add(new PénzMozgás("V", "2", ""));
-            V.Add(new PénzMozgás("V", "3", ""));
+            V.Add(new PénzMozgás("V", "1", "Állami normatíva"));
+            V.Add(new PénzMozgás("V", "2", "Kiegészítő állami támogatás"));
+            V.Add(new PénzMozgás("V", "3", "Pályázati céltámogatások átadása"));
 
             return V;
         }
@@ -105,9 +101,6 @@ namespace Konyvelo
         List<PénzMozgás> XIAa = new List<PénzMozgás>();
         private List<PénzMozgás> XIAaLista()
         {
-            XIAa.Add(new PénzMozgás("XI", "Személyi kiadások"));
-            XIAa.Add(new PénzMozgás("XI", "A", "Lelkészek javadalma és közterhei"));
-            XIAa.Add(new PénzMozgás("XI", "A", "a", "Javadalmak"));
             XIAa.Add(new PénzMozgás("XI", "A", "a", "1", "Leklész helyi javadalma"));
             XIAa.Add(new PénzMozgás("XI", "A", "a", "2", "Leklész helyi javadalma"));
             XIAa.Add(new PénzMozgás("XI", "A", "a", "3", "Leklész helyi javadalma"));
@@ -128,7 +121,6 @@ namespace Konyvelo
         List<PénzMozgás> XIAb = new List<PénzMozgás>();
         private List<PénzMozgás> XIAbLista()
         {
-            XIAb.Add(new PénzMozgás("XI", "A", "b", "Közterhek"));
             XIAb.Add(new PénzMozgás("XI", "A", "b", "15", "Javadalmak nyugdíjintézeti fenntartói járuléka(i)"));
             XIAb.Add(new PénzMozgás("XI", "A", "b", "16", "Adóelőlegek"));
 
@@ -137,8 +129,6 @@ namespace Konyvelo
         List<PénzMozgás> XIBa = new List<PénzMozgás>();
         private List<PénzMozgás> XIBaLista()
         {
-            XIBa.Add(new PénzMozgás("XI", "B", "Alkalmazottak javadalma és közterhei"));
-            XIBa.Add(new PénzMozgás("XI", "B", "a", "Javadalmak"));
             XIBa.Add(new PénzMozgás("XI", "B", "a", "1", "Irodai alkalmazott(ak) illetménye"));
             XIBa.Add(new PénzMozgás("XI", "B", "a", "2", "Kántor (orgonista) illetménye"));
             XIBa.Add(new PénzMozgás("XI", "B", "a", "3", "Egyházfi illetménye"));
@@ -146,7 +136,6 @@ namespace Konyvelo
             XIBa.Add(new PénzMozgás("XI", "B", "a", "5", "Egyházfenntartói járulékszedők jutaléka"));
             XIBa.Add(new PénzMozgás("XI", "B", "a", "8", "Munkabérjellegű egyéb kifizetések"));
             XIBa.Add(new PénzMozgás("XI", "B", "a", "10", "Alkalmazottak javadalmának járulékai"));
-            XIBa.Add(new PénzMozgás("XI", "B", "b", "Közterhek"));
 
             return XIBa;
         }
@@ -154,7 +143,7 @@ namespace Konyvelo
         List<PénzMozgás> XIBb = new List<PénzMozgás>();
         private List<PénzMozgás> XIBbLista()
         {
-            XIBb.Add(new PénzMozgás("XI", "B", "b", "Közterhek"));
+            XIBb.Add(new PénzMozgás("XI", "B", "b", "11", "Alkalmazottak javadalmának közterhei"));
 
             return XIBb;
         }
