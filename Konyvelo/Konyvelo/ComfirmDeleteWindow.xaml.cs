@@ -26,6 +26,8 @@ namespace Konyvelo
             InitializeComponent();
             this.bejegyzések = l;
             this.MyDataGrid = d;
+            this.Left = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right / 2) - (this.Width / 2);
+            this.Top = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom / 2) - (this.Height / 2);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
