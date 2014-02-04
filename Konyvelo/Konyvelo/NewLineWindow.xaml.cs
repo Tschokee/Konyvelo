@@ -67,10 +67,10 @@ namespace Konyvelo
 
             switch (s)
             {
-                case 1: list.Add(new Bejegyzés(ssz + 1, fizetesBox.Text, meghegyzesBox.Text, new PénzMozgás(), k, 0, 0, 0)); break;
-                case 2: list.Add(new Bejegyzés(ssz + 1, fizetesBox.Text, meghegyzesBox.Text, new PénzMozgás(), 0, k, 0, 0)); break;
-                case 3: list.Add(new Bejegyzés(ssz + 1, fizetesBox.Text, meghegyzesBox.Text, new PénzMozgás(), 0, 0, k, 0)); break;
-                case 4: list.Add(new Bejegyzés(ssz + 1, fizetesBox.Text, meghegyzesBox.Text, new PénzMozgás(), 0, 0, 0, k)); break;
+                case 1: list.Add(new Bejegyzés(ssz + 1, fizetesBox.Text, meghegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), k, 0, 0, 0)); break;
+                case 2: list.Add(new Bejegyzés(ssz + 1, fizetesBox.Text, meghegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), 0, k, 0, 0)); break;
+                case 3: list.Add(new Bejegyzés(ssz + 1, fizetesBox.Text, meghegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), 0, 0, k, 0)); break;
+                case 4: list.Add(new Bejegyzés(ssz + 1, fizetesBox.Text, meghegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), 0, 0, 0, k)); break;
                 default: break;
             }
 

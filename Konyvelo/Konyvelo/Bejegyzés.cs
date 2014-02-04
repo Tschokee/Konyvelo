@@ -14,7 +14,7 @@ namespace Konyvelo
         public int sorSzám { get; set; }
         public string fizetésIdeje { get; set; }
         public string megjegyzés { get; set; }
-        public PénzMozgás főkönyv { get; set; }
+        public string főkönyv { get; set; }
         public int bankiBevétel { get; set; }
         public int bankiKiadás { get; set; }
         public int bankiEgyenleg { get; set; } 
@@ -27,7 +27,7 @@ namespace Konyvelo
             this.sorSzám = 0;
             this.fizetésIdeje = "ma";
             this.megjegyzés = "note";
-            this.főkönyv = new PénzMozgás();
+            this.főkönyv = "TEMP";
             this.bankiBevétel = 300;
             this.bankiKiadás = 300;
             this.pénztáriBevétel = 300;
@@ -36,7 +36,7 @@ namespace Konyvelo
             this.pénztáriEgyenleg = 8888;
         }
 
-        public Bejegyzés(int sorSzám, string fizetésIdeje, string megjegyzés, PénzMozgás főkönyv, int bankiBevétel, int bankiKiadás, int pénztáriBevétel, int pénztáriKiadás)
+        public Bejegyzés(int sorSzám, string fizetésIdeje, string megjegyzés, string főkönyv, int bankiBevétel, int bankiKiadás, int pénztáriBevétel, int pénztáriKiadás)
         {
             this.sorSzám = sorSzám;
             this.fizetésIdeje = fizetésIdeje;
