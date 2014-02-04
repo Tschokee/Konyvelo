@@ -3,19 +3,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="KoltsegvetesWindow" Height="802.3" Width="625">
     <Grid>
-        <DataGrid x:Name="IDataGrid" ItemsSource="{Binding Source=Ilista}" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="607" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
+        <DataGrid x:Name="IDataGrid" ItemsSource="{Binding Source=Ilista}" HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="607" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="I." Binding="{Binding azonosító}" Width="*" />
                 <DataGridTextColumn Header="Előirányzat" Binding="{Binding előirányzat}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <DataGrid x:Name="IIDataGrid" ItemsSource="{Binding Source=IIlista}" HorizontalAlignment="Left" Height="121" Margin="0,136,0,0" VerticalAlignment="Top" Width="607" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
+        <DataGrid x:Name="IIDataGrid" ItemsSource="{Binding Source=IIlista}" HorizontalAlignment="Left" Height="102" Margin="0,136,0,0" VerticalAlignment="Top" Width="607" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="II. Perselypénzek" Binding="{Binding azonosító}" Width="*" />
                 <DataGridTextColumn Header="Előirányzat" Binding="{Binding előirányzat}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <DataGrid x:Name="IIIDataGrid" ItemsSource="{Binding Source=IIIlista}" HorizontalAlignment="Left" Height="235" Margin="0,295,0,0" VerticalAlignment="Top" Width="607" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
+        <DataGrid x:Name="IIIDataGrid" ItemsSource="{Binding Source=IIIlista}" HorizontalAlignment="Left" Height="219" Margin="0,295,0,0" VerticalAlignment="Top" Width="607" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="III. Adományok" Binding="{Binding azonosító}" Width="*" />
                 <DataGridTextColumn Header="Előirányzat" Binding="{Binding előirányzat}" Width="*"/>
