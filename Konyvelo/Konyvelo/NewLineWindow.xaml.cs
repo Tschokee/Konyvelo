@@ -73,7 +73,7 @@ namespace Konyvelo
                 case 4: list.Add(new Bejegyzés(ssz + 1, fizetesBox.Text, meghegyzesBox.Text, new PénzMozgás(), 0, 0, 0, k)); break;
                 default: break;
             }
-
+            
             d.Items.Refresh();
             
             this.Close();
