@@ -36,6 +36,13 @@ namespace Konyvelo
                 return bejegyzések;
         }
 
+        List<PénzMozgás> pénzmozgások = new List<PénzMozgás>();
+        private List<PénzMozgás> createDefaultPénzmozgás()
+        {
+            pénzmozgások.Add(new PénzMozgás("I", "Egyházfenntartói járulékok", 0, 0));
+            return pénzmozgások;
+        }
+
         private void openFile()
         {
             TextReader sr = new StreamReader("entries.txt");
