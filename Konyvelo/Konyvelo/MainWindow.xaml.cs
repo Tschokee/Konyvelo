@@ -148,6 +148,105 @@ namespace Konyvelo
             return XIBb;
         }
 
+        List<PénzMozgás> XII = new List<PénzMozgás>();
+        private List<PénzMozgás> XIILista()
+        {
+            XII.Add(new PénzMozgás("XI", "1", "Úrvacsorai jegyekre"));
+            XII.Add(new PénzMozgás("XI", "2", "Szeretetvendégségek, gyülekezeti napok"));
+            XII.Add(new PénzMozgás("XI", "3", "Gyülekezeti misszió"));
+            XII.Add(new PénzMozgás("XI", "3", "a", "Konfirmandusok"));
+            XII.Add(new PénzMozgás("XI", "3", "b", "Hitoktatás"));
+            XII.Add(new PénzMozgás("XI", "3", "c", "Ifjúsági munka"));
+            XII.Add(new PénzMozgás("XI", "3", "d", "Szórvány- és tanyagondozás"));
+            XII.Add(new PénzMozgás("XI", "3", "e", "Missziói alkalmak"));
+            XII.Add(new PénzMozgás("XI", "4", "Legátumok"));
+            XII.Add(new PénzMozgás("XI", "5", "Gyülekezeten belüli szeretetszolgálat"));
+            XII.Add(new PénzMozgás("XI", "6", "Gyülekezeti újság"));
+            XII.Add(new PénzMozgás("XI", "7", "Sajtó misszió"));
+
+            return XII;
+        }
+
+        List<PénzMozgás> XIII = new List<PénzMozgás>();
+        private List<PénzMozgás> XIIILista()
+        {
+            XIII.Add(new PénzMozgás("XIII", "1", "Irodaszerek"));
+            XIII.Add(new PénzMozgás("XIII", "2", "Posta- és telefonköltség"));
+            XIII.Add(new PénzMozgás("XIII", "3", "Banki költségek"));
+            XIII.Add(new PénzMozgás("XIII", "4", "Egyházi hivatal(ok) fűtése, világítása"));
+            XIII.Add(new PénzMozgás("XIII", "5", "Egyházközségi hivatal(ok) takarítása"));
+            XIII.Add(new PénzMozgás("XIII", "6", "Hivatali berendezések és eszközök karbantartása"));
+            XIII.Add(new PénzMozgás("XIII", "7", "Kiküldetési és közlekedési költségek"));
+            XIII.Add(new PénzMozgás("XIII", "8", "Gépkocsi fenntartás költségei"));
+            XIII.Add(new PénzMozgás("XIII", "9", "Egyházlátogatások költségei"));
+            XIII.Add(new PénzMozgás("XIII", "10", "Újságok előfizetése"));
+            XIII.Add(new PénzMozgás("XIII", "11", "Egyházközségi könyvtár gyarapítása"));
+            
+            return XIII;
+        }
+
+        List<PénzMozgás> XIV = new List<PénzMozgás>();
+        private List<PénzMozgás> XIVLista()
+        {
+            XIV.Add(new PénzMozgás("XIV", "1", "Templom karbantartási és fenntartási költségei"));
+            XIV.Add(new PénzMozgás("XIV", "2", "Templom közüzemi költségei"));
+            XIV.Add(new PénzMozgás("XIV", "3", "Parókia karbantartási és fenntartási költségei"));
+            XIV.Add(new PénzMozgás("XIV", "4", "Parókia közüzemi költségei"));
+            XIV.Add(new PénzMozgás("XIV", "5", "Gyülekezeti ház karbantartási és fenntartási költségei"));
+            XIV.Add(new PénzMozgás("XIV", "6", "Gyülekezeti ház közüzemi költségei"));
+            XIV.Add(new PénzMozgás("XIV", "7", "Egyéb épület karbantartási és fenntartási költségei"));
+            XIV.Add(new PénzMozgás("XIV", "8", "Egyéb épület közüzemi költségei"));
+            XIV.Add(new PénzMozgás("XIV", "9", "Egyéb épület felújitási költségei"));
+            XIV.Add(new PénzMozgás("XIV", "10", "Egyházi ingatlanok biztosítási díjai"));
+            XIV.Add(new PénzMozgás("XIV", "11", "Lakbérek"));
+
+            return XIV;
+        }
+
+        List<PénzMozgás> XV = new List<PénzMozgás>();
+        private List<PénzMozgás> XVLista()
+        {
+            XV.Add(new PénzMozgás("XV", "1", "Templom felújítási költségei"));
+            XV.Add(new PénzMozgás("XV", "2", "Parókia felújítási költségei"));
+            XV.Add(new PénzMozgás("XV", "3", "Gyülekezeti ház felújítási költségei"));
+            XV.Add(new PénzMozgás("XV", "4", "Egyéb épület felújítási költségei"));
+
+            return XV;
+        }
+
+        List<PénzMozgás> XVI = new List<PénzMozgás>();
+        private List<PénzMozgás> XVILista()
+        {
+            XVI.Add(new PénzMozgás("XVI", "Közalapi hozzájárulás"));
+
+            return XVI;
+        }
+
+        List<PénzMozgás> XVII = new List<PénzMozgás>();
+        private List<PénzMozgás> XVIIVLista()
+        {
+            XVII.Add(new PénzMozgás("XVII", "1", "Adományok és segélyek"));
+            XVII.Add(new PénzMozgás("XVII", "1", "a", "Egyházmegyei diakónia"));
+            XVII.Add(new PénzMozgás("XVII", "1", "b", "Lekötött perselypénzek elküldése"));
+            XVII.Add(new PénzMozgás("XVII", "2", "Kölcsönök törlesztése"));
+            XVII.Add(new PénzMozgás("XVII", "3", "Gyülekezeten kívűli adományok és segélyek"));
+            XVII.Add(new PénzMozgás("XVII", "4", "Átmenő tétel"));
+            XVII.Add(new PénzMozgás("XVII", "5", "Pénzforgalom"));
+            XVII.Add(new PénzMozgás("XVII", "6", "Vegyes és előre nem látható kiadások"));
+
+            return XVII;
+        }
+
+        List<PénzMozgás> XVIII = new List<PénzMozgás>();
+        private List<PénzMozgás> XVIIILista()
+        {
+            XVIII.Add(new PénzMozgás("XVIII", "1", "Állami normatíva"));
+            XVIII.Add(new PénzMozgás("XVIII", "2", "Kiegészítő állami támogatás"));
+            XVIII.Add(new PénzMozgás("XVIII", "3", "Pályázati céltámogatások átadása"));
+
+            return XVIII;
+        }
+
         private void openFile()
         {
             TextReader sr = new StreamReader("entries.txt");
