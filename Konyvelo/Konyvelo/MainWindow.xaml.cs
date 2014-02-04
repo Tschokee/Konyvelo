@@ -38,7 +38,7 @@ namespace Konyvelo
         }
 
         List<PénzMozgás> I = new List<PénzMozgás>();
-        private List<PénzMozgás> createDefaultPénzmozgás()
+        private List<PénzMozgás> ILista()
         {
             I.Add(new PénzMozgás("I", "Egyházfenntartói járulékok"));
 
@@ -171,7 +171,7 @@ namespace Konyvelo
             openFile();
             InitializeComponent();
             LoadCollectionData();
-            createDefaultPénzmozgás();
+            ILista();
             MyDataGrid.ItemsSource = bejegyzések;
             this.Left = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right / 2) - (this.Width / 2);
             this.Top = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom / 2) - (this.Height / 2);
@@ -211,7 +211,7 @@ namespace Konyvelo
 
         private void koltsegvetesButton_Click(object sender, RoutedEventArgs e)
         {
-            Window KW = new KoltsegvetesWindow(pénzmozgások);
+            Window KW = new KoltsegvetesWindow(ILista(), IILista(), IIILista(), IVLista());
             KW.Show();
         }
 

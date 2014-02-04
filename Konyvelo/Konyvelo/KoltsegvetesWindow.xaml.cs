@@ -19,33 +19,13 @@ namespace Konyvelo
     /// </summary>
     public partial class KoltsegvetesWindow : Window
     {
-        List<PénzMozgás> pénzmozgások;
-        //List<String> ls;
-        public KoltsegvetesWindow(List<PénzMozgás> p)
+        public KoltsegvetesWindow(List<PénzMozgás> ILista, List<PénzMozgás> IILista, List<PénzMozgás> IIILista, List<PénzMozgás> IVLista)
         {
             InitializeComponent();
-            this.pénzmozgások = p;
-
-            /*DataGridTextColumn col1 = new DataGridTextColumn();
-            col1.Header = "asd";
-            string s;
-            foreach (PénzMozgás penz in p)
-            {
-                s = penz.azonosító;
-                if (penz.azonosítóMásodikSzint != null)
-                {
-                    s = s + "/" + penz.azonosítóMásodikSzint;
-                    if (penz.azonosítóHarmadikSzint != null)
-                    {
-                        s = s + "/" + penz.azonosítóHarmadikSzint;
-                        if (penz.azonosítóNegyedikSzint != null)
-                            s = s + "/" + penz.azonosítóNegyedikSzint;
-                    }
-                }
-                s = s + " " + penz.név;
-                col1.Binding = new Binding(s);
-            }
-            MyDataGrid.Columns.Add(col1);*/
+            IDataGrid.ItemsSource = ILista;
+            IIDataGrid.ItemsSource = IILista;
+            IIIDataGrid.ItemsSource = IIILista;
+            IVDataGrid.ItemsSource = IVLista;
 
             this.Left = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right / 2) - (this.Width / 2);
             this.Top = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom / 2) - (this.Height / 2);
