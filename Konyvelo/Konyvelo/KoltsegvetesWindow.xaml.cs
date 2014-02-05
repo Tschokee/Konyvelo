@@ -22,38 +22,6 @@ namespace Konyvelo
 
         public void frissit()
         {
-            
-        }
-
-        public void osszegez(List<PénzMozgás> Lista, Label lab)
-        {
-            int i = 0;
-            foreach (PénzMozgás p in Lista)
-            {
-                i += p.előirányzat;
-            }
-            lab.Content = i;
-        }
-
-        public KoltsegvetesWindow(List<PénzMozgás> ILista, List<PénzMozgás> IILista, List<PénzMozgás> IIILista, List<PénzMozgás> IVLista, List<PénzMozgás> VLista, List<PénzMozgás> XIAaLista, List<PénzMozgás> XIAbLista, List<PénzMozgás> XIBaLista, List<PénzMozgás> XIBbLista, List<PénzMozgás> XIILista, List<PénzMozgás> XIIILista, List<PénzMozgás> XIVLista, List<PénzMozgás> XVLista, List<PénzMozgás> XVILista, List<PénzMozgás> XVIILista, List<PénzMozgás> XVIIILista)
-        {
-            InitializeComponent();
-            IDataGrid.ItemsSource = ILista;
-            IIDataGrid.ItemsSource = IILista;
-            IIIDataGrid.ItemsSource = IIILista;
-            IVDataGrid.ItemsSource = IVLista;
-            VDataGrid.ItemsSource = VLista;
-            XIAaDataGrid.ItemsSource = XIAaLista;
-            XIAbDataGrid.ItemsSource = XIAbLista;
-            XIBaDataGrid.ItemsSource = XIBaLista;
-            XIBbDataGrid.ItemsSource = XIBbLista;
-            XIIDataGrid.ItemsSource = XIILista;
-            XIIIDataGrid.ItemsSource = XIIILista;
-            XIVDataGrid.ItemsSource = XIVLista;
-            XVDataGrid.ItemsSource = XVLista;
-            XVIDataGrid.ItemsSource = XVILista;
-            XVIIDataGrid.ItemsSource = XVIILista;
-            XVIIIDataGrid.ItemsSource = XVIIILista;
             osszegez(ILista, Iossz);
             osszegez(IILista, IIossz);
             osszegez(IIILista, IIIossz);
@@ -86,8 +54,79 @@ namespace Konyvelo
             osszesEloiranyzottEvesKiadasNev.Content = "Összes előirányzott kiadás a " + System.DateTime.Now.Year + ". évre:";
             osszesEloiranyzottEvesKiadasErtek.Content = evesKiadasErtek.Content;
             kulonbozet.Content = Convert.ToInt32(osszesEloiranyzottEvesBevetelErtek.Content) - Convert.ToInt32(osszesEloiranyzottEvesKiadasErtek.Content);
+        }
+
+        public void osszegez(List<PénzMozgás> Lista, Label lab)
+        {
+            int i = 0;
+            foreach (PénzMozgás p in Lista)
+            {
+                i += p.előirányzat;
+            }
+            lab.Content = i;
+        }
+
+        List<PénzMozgás> ILista, IILista, IIILista, IVLista, VLista, XIAaLista, XIAbLista, XIBaLista, XIBbLista, XIILista, XIIILista, XIVLista, XVLista, XVILista, XVIILista, XVIIILista;
+        
+
+        public KoltsegvetesWindow(List<PénzMozgás> ILista, List<PénzMozgás> IILista, List<PénzMozgás> IIILista, List<PénzMozgás> IVLista, List<PénzMozgás> VLista, List<PénzMozgás> XIAaLista, List<PénzMozgás> XIAbLista, List<PénzMozgás> XIBaLista, List<PénzMozgás> XIBbLista, List<PénzMozgás> XIILista, List<PénzMozgás> XIIILista, List<PénzMozgás> XIVLista, List<PénzMozgás> XVLista, List<PénzMozgás> XVILista, List<PénzMozgás> XVIILista, List<PénzMozgás> XVIIILista)
+        {
+            InitializeComponent();
+            IDataGrid.ItemsSource = ILista;
+            IIDataGrid.ItemsSource = IILista;
+            IIIDataGrid.ItemsSource = IIILista;
+            IVDataGrid.ItemsSource = IVLista;
+            VDataGrid.ItemsSource = VLista;
+            XIAaDataGrid.ItemsSource = XIAaLista;
+            XIAbDataGrid.ItemsSource = XIAbLista;
+            XIBaDataGrid.ItemsSource = XIBaLista;
+            XIBbDataGrid.ItemsSource = XIBbLista;
+            XIIDataGrid.ItemsSource = XIILista;
+            XIIIDataGrid.ItemsSource = XIIILista;
+            XIVDataGrid.ItemsSource = XIVLista;
+            XVDataGrid.ItemsSource = XVLista;
+            XVIDataGrid.ItemsSource = XVILista;
+            XVIIDataGrid.ItemsSource = XVIILista;
+            XVIIIDataGrid.ItemsSource = XVIIILista;
+            this.ILista = ILista;
+            this.IILista = IILista;
+            this.IIILista = IIILista;
+            this.IVLista = IVLista;
+            this.VLista = VLista;
+            this.XIAaLista = XIAaLista;
+            this.XIAbLista = XIAbLista;
+            this.XIBaLista = XIBaLista;
+            this.XIBbLista = XIBbLista;
+            this.XIILista = XIILista;
+            this.XIIILista = XIIILista;
+            this.XIVLista = XIVLista;
+            this.XVLista = XVLista;
+            this.XVILista = XVILista;
+            this.XVIILista = XVIILista;
+            this.XVIIILista = XVIIILista;
+            frissit();
             this.Left = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right / 2) - (this.Width / 2);
             this.Top = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom / 2) - (this.Height / 2);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.ILista = (List<PénzMozgás>)IDataGrid.ItemsSource;
+            this.IILista = (List<PénzMozgás>)IIDataGrid.ItemsSource;
+            this.IIILista = (List<PénzMozgás>)IIIDataGrid.ItemsSource;
+            this.IVLista = (List<PénzMozgás>)IVDataGrid.ItemsSource;
+            this.VLista = (List<PénzMozgás>)VDataGrid.ItemsSource;
+            this.XIAaLista = (List<PénzMozgás>)XIAaDataGrid.ItemsSource;
+            this.XIAbLista = (List<PénzMozgás>)XIAbDataGrid.ItemsSource;
+            this.XIBaLista = (List<PénzMozgás>)XIBaDataGrid.ItemsSource;
+            this.XIBbLista = (List<PénzMozgás>)XIBbDataGrid.ItemsSource;
+            this.XIILista = (List<PénzMozgás>)XIIDataGrid.ItemsSource;
+            this.XIIILista = (List<PénzMozgás>)XIIIDataGrid.ItemsSource;
+            this.XIVLista = (List<PénzMozgás>)XIVDataGrid.ItemsSource;
+            this.XVLista = (List<PénzMozgás>)XVDataGrid.ItemsSource;
+            this.XVILista = (List<PénzMozgás>)XVIDataGrid.ItemsSource;
+            this.XVIILista = (List<PénzMozgás>)XVIIDataGrid.ItemsSource;
+            this.XVIIILista = (List<PénzMozgás>)XVIIIDataGrid.ItemsSource;
         }
     }
 }

@@ -292,6 +292,26 @@ namespace Konyvelo
             return XVIII;
         }
 
+        private void generateLists()
+        {
+            ILista();
+            IILista();
+            IIILista();
+            IVLista();
+            VLista();
+            XIAaLista();
+            XIAbLista();
+            XIBaLista();
+            XIBbLista();
+            XIILista();
+            XIIILista();
+            XIVLista();
+            XVLista();
+            XVILista();
+            XVIILista();
+            XVIIILista();
+        }
+
         private void openFile()
         {
             TextReader sr = new StreamReader("entries.txt");
@@ -306,13 +326,14 @@ namespace Konyvelo
             LoadCollectionData();
             MyDataGrid.ItemsSource = bejegyzések;
             MyDataGrid.IsReadOnly = true;
+            generateLists();
             this.Left = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right / 2) - (this.Width / 2);
             this.Top = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom / 2) - (this.Height / 2);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Window cw = new ChoiceWindow(bejegyzések, MyDataGrid, ILista(), IILista(), IIILista(), IVLista(), VLista(), XIAaLista(), XIAbLista(), XIBaLista(), XIBbLista(), XIILista(), XIIILista(), XIVLista(), XVLista(), XVILista(), XVIILista(), XVIIILista());
+            Window cw = new ChoiceWindow(bejegyzések, MyDataGrid, I, II, III, IV, V, XIAa, XIAb, XIBa, XIBb, XII, XIII, XIV, XV, XVI, XVII, XVIII);
             cw.Show();
         }
 
@@ -321,7 +342,7 @@ namespace Konyvelo
             int t = Convert.ToInt32(MyDataGrid.SelectedIndex.ToString());
             if (bejegyzések.Count() != 0 && t != -1 && t <= bejegyzések.Count() - 1)
             {
-                Window MW = new ModifyWindow(bejegyzések, MyDataGrid, t, ILista(), IILista(), IIILista(), IVLista(), VLista(), XIAaLista(), XIAbLista(), XIBaLista(), XIBbLista(), XIILista(), XIIILista(), XIVLista(), XVLista(), XVILista(), XVIILista(), XVIIILista());
+                Window MW = new ModifyWindow(bejegyzések, MyDataGrid, t, I, II, III, IV, V, XIAa, XIAb, XIBa, XIBb, XII, XIII, XIV, XV, XVI, XVII, XVIII);
                 MW.Show();
             }
         }
@@ -338,17 +359,13 @@ namespace Konyvelo
 
         private void zaroszamButton_Click(object sender, RoutedEventArgs e)
         {
-            Window ZSZW = new ZaroszamadasWindow(ILista(), IILista(), IIILista(), IVLista(), VLista(), XIAaLista(),
-                XIAbLista(), XIBaLista(), XIBbLista(), XIILista(), XIIILista(), XIVLista(), XVLista(), XVILista(),
-                XVIILista(), XVIIILista());
+            Window ZSZW = new ZaroszamadasWindow(I, II, III, IV, V, XIAa, XIAb, XIBa, XIBb, XII, XIII, XIV, XV, XVI, XVII, XVIII);
             ZSZW.Show();
         }
 
         private void koltsegvetesButton_Click(object sender, RoutedEventArgs e)
         {
-            Window KW = new KoltsegvetesWindow(ILista(), IILista(), IIILista(), IVLista(), VLista(), XIAaLista(),
-                XIAbLista(), XIBaLista(), XIBbLista(), XIILista(), XIIILista(), XIVLista(), XVLista(), XVILista(),
-                XVIILista(), XVIIILista());
+            Window KW = new KoltsegvetesWindow(I, II, III, IV, V, XIAa, XIAb, XIBa, XIBb, XII, XIII, XIV, XV, XVI, XVII, XVIII);
             KW.Show();
         }
 
