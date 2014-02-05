@@ -51,6 +51,9 @@ namespace Konyvelo
             II.Add(new PénzMozgás("II", "1", "Gyülekezeti (templomi) perselypénzek"));
             II.Add(new PénzMozgás("II", "2", "Nem templomi perselypénzek"));
             II.Add(new PénzMozgás("II", "3", "Szórványok"));
+            II.Add(new PénzMozgás("II", "4", ""));
+            II.Add(new PénzMozgás("II", "5", ""));
+            II.Add(new PénzMozgás("II", "6", ""));
 
             return II;
         }
@@ -67,6 +70,7 @@ namespace Konyvelo
             III.Add(new PénzMozgás("III", "7", "Céladományok"));
             III.Add(new PénzMozgás("III", "8", "Stólamegváltás"));
             III.Add(new PénzMozgás("III", "9", "Áldozati adományok"));
+            III.Add(new PénzMozgás("III", "10", ""));
 
             return III;
         }
@@ -94,6 +98,9 @@ namespace Konyvelo
             V.Add(new PénzMozgás("V", "1", "Állami normatíva"));
             V.Add(new PénzMozgás("V", "2", "Kiegészítő állami támogatás"));
             V.Add(new PénzMozgás("V", "3", "Pályázati céltámogatások átadása"));
+            V.Add(new PénzMozgás("V", "4", ""));
+            V.Add(new PénzMozgás("V", "5", ""));
+            V.Add(new PénzMozgás("V", "6", ""));
 
             return V;
         }
@@ -109,6 +116,7 @@ namespace Konyvelo
             XIAa.Add(new PénzMozgás("XI", "A", "a", "6", "Segédlekész javadalma"));
             XIAa.Add(new PénzMozgás("XI", "A", "a", "7", "Segédlekész javadalma"));
             XIAa.Add(new PénzMozgás("XI", "A", "a", "8", "Fűtés világítás javadalmi része"));
+            XIAa.Add(new PénzMozgás("XI", "A", "a", "9", ""));
             XIAa.Add(new PénzMozgás("XI", "A", "a", "10", "Helyettesítések munkabérei"));
             XIAa.Add(new PénzMozgás("XI", "A", "a", "11", "Természetbeni javadalmak ellenértéke"));
             XIAa.Add(new PénzMozgás("XI", "A", "a", "12", "Kárpótlékok"));
@@ -123,6 +131,7 @@ namespace Konyvelo
         {
             XIAb.Add(new PénzMozgás("XI", "A", "b", "15", "Javadalmak nyugdíjintézeti fenntartói járuléka(i)"));
             XIAb.Add(new PénzMozgás("XI", "A", "b", "16", "Adóelőlegek"));
+            XIAb.Add(new PénzMozgás("XI", "A", "b", "17", ""));
 
             return XIAb;
         }
@@ -134,7 +143,10 @@ namespace Konyvelo
             XIBa.Add(new PénzMozgás("XI", "B", "a", "3", "Egyházfi illetménye"));
             XIBa.Add(new PénzMozgás("XI", "B", "a", "4", "Harangozó illetménye"));
             XIBa.Add(new PénzMozgás("XI", "B", "a", "5", "Egyházfenntartói járulékszedők jutaléka"));
+            XIBa.Add(new PénzMozgás("XI", "B", "a", "6", ""));
+            XIBa.Add(new PénzMozgás("XI", "B", "a", "7", ""));
             XIBa.Add(new PénzMozgás("XI", "B", "a", "8", "Munkabérjellegű egyéb kifizetések"));
+            XIBa.Add(new PénzMozgás("XI", "B", "a", "9", ""));
             XIBa.Add(new PénzMozgás("XI", "B", "a", "10", "Alkalmazottak javadalmának járulékai"));
 
             return XIBa;
@@ -144,6 +156,8 @@ namespace Konyvelo
         private List<PénzMozgás> XIBbLista()
         {
             XIBb.Add(new PénzMozgás("XI", "B", "b", "11", "Alkalmazottak javadalmának közterhei"));
+            XIBb.Add(new PénzMozgás("XI", "B", "b", "12", ""));
+            XIBb.Add(new PénzMozgás("XI", "B", "b", "13", ""));
 
             return XIBb;
         }
@@ -163,6 +177,8 @@ namespace Konyvelo
             XII.Add(new PénzMozgás("XI", "5", "Gyülekezeten belüli szeretetszolgálat"));
             XII.Add(new PénzMozgás("XI", "6", "Gyülekezeti újság"));
             XII.Add(new PénzMozgás("XI", "7", "Sajtó misszió"));
+            XII.Add(new PénzMozgás("XI", "8", ""));
+            XII.Add(new PénzMozgás("XI", "9", ""));
 
             return XII;
         }
@@ -181,6 +197,10 @@ namespace Konyvelo
             XIII.Add(new PénzMozgás("XIII", "9", "Egyházlátogatások költségei"));
             XIII.Add(new PénzMozgás("XIII", "10", "Újságok előfizetése"));
             XIII.Add(new PénzMozgás("XIII", "11", "Egyházközségi könyvtár gyarapítása"));
+            XIII.Add(new PénzMozgás("XIII", "12", ""));
+            XIII.Add(new PénzMozgás("XIII", "13", ""));
+            XIII.Add(new PénzMozgás("XIII", "14", ""));
+            XIII.Add(new PénzMozgás("XIII", "15", ""));
             
             return XIII;
         }
@@ -199,6 +219,9 @@ namespace Konyvelo
             XIV.Add(new PénzMozgás("XIV", "9", "Egyéb épület felújitási költségei"));
             XIV.Add(new PénzMozgás("XIV", "10", "Egyházi ingatlanok biztosítási díjai"));
             XIV.Add(new PénzMozgás("XIV", "11", "Lakbérek"));
+            XIV.Add(new PénzMozgás("XIV", "12", ""));
+            XIV.Add(new PénzMozgás("XIV", "13", ""));
+            XIV.Add(new PénzMozgás("XIV", "14", ""));
 
             return XIV;
         }
@@ -210,6 +233,9 @@ namespace Konyvelo
             XV.Add(new PénzMozgás("XV", "2", "Parókia felújítási költségei"));
             XV.Add(new PénzMozgás("XV", "3", "Gyülekezeti ház felújítási költségei"));
             XV.Add(new PénzMozgás("XV", "4", "Egyéb épület felújítási költségei"));
+            XV.Add(new PénzMozgás("XV", "5", ""));
+            XV.Add(new PénzMozgás("XV", "6", ""));
+            XV.Add(new PénzMozgás("XV", "7", ""));
 
             return XV;
         }
@@ -243,6 +269,9 @@ namespace Konyvelo
             XVIII.Add(new PénzMozgás("XVIII", "1", "Állami normatíva"));
             XVIII.Add(new PénzMozgás("XVIII", "2", "Kiegészítő állami támogatás"));
             XVIII.Add(new PénzMozgás("XVIII", "3", "Pályázati céltámogatások átadása"));
+            XVIII.Add(new PénzMozgás("XVIII", "4", ""));
+            XVIII.Add(new PénzMozgás("XVIII", "5", ""));
+            XVIII.Add(new PénzMozgás("XVIII", "6", ""));
 
             return XVIII;
         }
@@ -293,13 +322,17 @@ namespace Konyvelo
 
         private void zaroszamButton_Click(object sender, RoutedEventArgs e)
         {
-            Window ZSZW = new ZaroszamadasWindow();
+            Window ZSZW = new ZaroszamadasWindow(ILista(), IILista(), IIILista(), IVLista(), VLista(), XIAaLista(),
+                XIAbLista(), XIBaLista(), XIBbLista(), XIILista(), XIIILista(), XIVLista(), XVLista(), XVILista(),
+                XVIILista(), XVIIILista());
             ZSZW.Show();
         }
 
         private void koltsegvetesButton_Click(object sender, RoutedEventArgs e)
         {
-            Window KW = new KoltsegvetesWindow(ILista(), IILista(), IIILista(), IVLista(), VLista(), XIAaLista(), XIAbLista(), XIBaLista(), XIBbLista(), XIILista(), XIIILista(), XIVLista(), XVLista(), XVILista(), XVIILista(), XVIIILista());
+            Window KW = new KoltsegvetesWindow(ILista(), IILista(), IIILista(), IVLista(), VLista(), XIAaLista(),
+                XIAbLista(), XIBaLista(), XIBbLista(), XIILista(), XIIILista(), XIVLista(), XVLista(), XVILista(),
+                XVIILista(), XVIIILista());
             KW.Show();
         }
 

@@ -37,8 +37,6 @@ namespace Konyvelo
 
             bankiEgyenleg = globalBankiEgyenleg;
             pénztáriEgyenleg = globalPenztariEgyenleg;
-            /*this.bankiEgyenleg = 9999;
-            this.pénztáriEgyenleg = 8888;*/
         }
 
         public Bejegyzés(int sorSzám, string fizetésIdeje, string megjegyzés, string főkönyv, int bankiBevétel, int bankiKiadás, int pénztáriBevétel, int pénztáriKiadás)
