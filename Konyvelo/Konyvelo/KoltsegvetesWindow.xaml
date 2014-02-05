@@ -168,7 +168,7 @@
             <Label x:Name="osszesEloiranyzottEvesKiadasErtek"  HorizontalAlignment="Left" Height="27" Margin="398,3855,0,0" VerticalAlignment="Top" Width="202"/>
             <Label Content="Különbözet:" HorizontalAlignment="Left" Height="27" Margin="0,3882,0,0" VerticalAlignment="Top" Width="393"/>
             <Label x:Name="kulonbozet"  HorizontalAlignment="Left" Height="27" Margin="398,3882,0,0" VerticalAlignment="Top" Width="202"/>
-            <Button Content="Mentés" HorizontalAlignment="Left" Height="36" Margin="465,3909,0,0" VerticalAlignment="Top" Width="85" Click="Button_Click_1"/>
+            <Button x:Name="saveButton" Content="Mentés" HorizontalAlignment="Left" Height="36" Margin="465,3909,0,0" VerticalAlignment="Top" Width="85" Click="SaveButton_Click"/>
         </Grid>
     </ScrollViewer>
 </Window>

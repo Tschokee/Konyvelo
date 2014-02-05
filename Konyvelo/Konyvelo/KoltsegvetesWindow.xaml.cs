@@ -109,7 +109,7 @@ namespace Konyvelo
             this.Top = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom / 2) - (this.Height / 2);
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             this.ILista = (List<PénzMozgás>)IDataGrid.ItemsSource;
             this.IILista = (List<PénzMozgás>)IIDataGrid.ItemsSource;
@@ -127,6 +127,7 @@ namespace Konyvelo
             this.XVILista = (List<PénzMozgás>)XVIDataGrid.ItemsSource;
             this.XVIILista = (List<PénzMozgás>)XVIIDataGrid.ItemsSource;
             this.XVIIILista = (List<PénzMozgás>)XVIIIDataGrid.ItemsSource;
+            frissit();
         }
     }
 }
