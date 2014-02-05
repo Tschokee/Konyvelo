@@ -50,12 +50,12 @@ namespace Konyvelo
         private List<PénzMozgás> IILista()
         {
             II.Clear();
-            II.Add(new PénzMozgás("II", "1", "Gyülekezeti (templomi) perselypénzek"));
-            II.Add(new PénzMozgás("II", "2", "Nem templomi perselypénzek"));
-            II.Add(new PénzMozgás("II", "3", "Szórványok"));
-            II.Add(new PénzMozgás("II", "4", ""));
-            II.Add(new PénzMozgás("II", "5", ""));
-            II.Add(new PénzMozgás("II", "6", ""));
+            II.Add(new PénzMozgás("II/1", "Gyülekezeti (templomi) perselypénzek"));
+            II.Add(new PénzMozgás("II/2", "Nem templomi perselypénzek"));
+            II.Add(new PénzMozgás("II/3", "Szórványok"));
+            II.Add(new PénzMozgás("II/4", ""));
+            II.Add(new PénzMozgás("II/5", ""));
+            II.Add(new PénzMozgás("II/6", ""));
 
             return II;
         }
@@ -114,7 +114,7 @@ namespace Konyvelo
         private List<PénzMozgás> XIAaLista()
         {
             XIAa.Clear();
-            XIAa.Add(new PénzMozgás("XI", "A", "a", "1", "Leklész helyi javadalma"));
+            XIAa.Add(new PénzMozgás("XI/A/a/1", "Leklész helyi javadalma"));
             XIAa.Add(new PénzMozgás("XI", "A", "a", "2", "Leklész helyi javadalma"));
             XIAa.Add(new PénzMozgás("XI", "A", "a", "3", "Leklész helyi javadalma"));
             XIAa.Add(new PénzMozgás("XI", "A", "a", "4", "Leklész helyi javadalma"));
