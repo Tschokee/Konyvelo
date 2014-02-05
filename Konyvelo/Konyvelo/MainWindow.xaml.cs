@@ -49,6 +49,7 @@ namespace Konyvelo
         List<PénzMozgás> II = new List<PénzMozgás>();
         private List<PénzMozgás> IILista()
         {
+            II.Clear();
             II.Add(new PénzMozgás("II", "1", "Gyülekezeti (templomi) perselypénzek"));
             II.Add(new PénzMozgás("II", "2", "Nem templomi perselypénzek"));
             II.Add(new PénzMozgás("II", "3", "Szórványok"));
@@ -62,6 +63,7 @@ namespace Konyvelo
         List<PénzMozgás> III = new List<PénzMozgás>();
         private List<PénzMozgás> IIILista()
         {
+            III.Clear();
             III.Add(new PénzMozgás("III", "1","Isten dicsőségére"));
             III.Add(new PénzMozgás("III", "2", "Úrvacsorai jegyekre"));
             III.Add(new PénzMozgás("III", "3", "Legátumokra"));
@@ -79,6 +81,7 @@ namespace Konyvelo
         List<PénzMozgás> IV = new List<PénzMozgás>();
         private List<PénzMozgás> IVLista()
         {
+            IV.Clear();
             IV.Add(new PénzMozgás("IV", "1", "Térítések alkalmazottaktól"));
             IV.Add(new PénzMozgás("IV", "2", "Ingatlanok (temető stb.) bevétele"));
             IV.Add(new PénzMozgás("IV", "3", "Iratterjesztés"));
@@ -96,6 +99,7 @@ namespace Konyvelo
         List<PénzMozgás> V = new List<PénzMozgás>();
         private List<PénzMozgás> VLista()
         {
+            V.Clear();
             V.Add(new PénzMozgás("V", "1", "Állami normatíva"));
             V.Add(new PénzMozgás("V", "2", "Kiegészítő állami támogatás"));
             V.Add(new PénzMozgás("V", "3", "Pályázati céltámogatások átadása"));
@@ -109,6 +113,7 @@ namespace Konyvelo
         List<PénzMozgás> XIAa = new List<PénzMozgás>();
         private List<PénzMozgás> XIAaLista()
         {
+            XIAa.Clear();
             XIAa.Add(new PénzMozgás("XI", "A", "a", "1", "Leklész helyi javadalma"));
             XIAa.Add(new PénzMozgás("XI", "A", "a", "2", "Leklész helyi javadalma"));
             XIAa.Add(new PénzMozgás("XI", "A", "a", "3", "Leklész helyi javadalma"));
@@ -130,6 +135,7 @@ namespace Konyvelo
         List<PénzMozgás> XIAb = new List<PénzMozgás>();
         private List<PénzMozgás> XIAbLista()
         {
+            XIAb.Clear();
             XIAb.Add(new PénzMozgás("XI", "A", "b", "15", "Javadalmak nyugdíjintézeti fenntartói járuléka(i)"));
             XIAb.Add(new PénzMozgás("XI", "A", "b", "16", "Adóelőlegek"));
             XIAb.Add(new PénzMozgás("XI", "A", "b", "17", ""));
@@ -139,6 +145,7 @@ namespace Konyvelo
         List<PénzMozgás> XIBa = new List<PénzMozgás>();
         private List<PénzMozgás> XIBaLista()
         {
+            XIBa.Clear();
             XIBa.Add(new PénzMozgás("XI", "B", "a", "1", "Irodai alkalmazott(ak) illetménye"));
             XIBa.Add(new PénzMozgás("XI", "B", "a", "2", "Kántor (orgonista) illetménye"));
             XIBa.Add(new PénzMozgás("XI", "B", "a", "3", "Egyházfi illetménye"));
@@ -156,6 +163,7 @@ namespace Konyvelo
         List<PénzMozgás> XIBb = new List<PénzMozgás>();
         private List<PénzMozgás> XIBbLista()
         {
+            XIBb.Clear();
             XIBb.Add(new PénzMozgás("XI", "B", "b", "11", "Alkalmazottak javadalmának közterhei"));
             XIBb.Add(new PénzMozgás("XI", "B", "b", "12", ""));
             XIBb.Add(new PénzMozgás("XI", "B", "b", "13", ""));
@@ -166,6 +174,7 @@ namespace Konyvelo
         List<PénzMozgás> XII = new List<PénzMozgás>();
         private List<PénzMozgás> XIILista()
         {
+            XII.Clear();
             XII.Add(new PénzMozgás("XI", "1", "Úrvacsorai jegyekre"));
             XII.Add(new PénzMozgás("XI", "2", "Szeretetvendégségek, gyülekezeti napok"));
             XII.Add(new PénzMozgás("XI", "3", "Gyülekezeti misszió"));
@@ -187,6 +196,7 @@ namespace Konyvelo
         List<PénzMozgás> XIII = new List<PénzMozgás>();
         private List<PénzMozgás> XIIILista()
         {
+            XIII.Clear();
             XIII.Add(new PénzMozgás("XIII", "1", "Irodaszerek"));
             XIII.Add(new PénzMozgás("XIII", "2", "Posta- és telefonköltség"));
             XIII.Add(new PénzMozgás("XIII", "3", "Banki költségek"));
@@ -209,6 +219,7 @@ namespace Konyvelo
         List<PénzMozgás> XIV = new List<PénzMozgás>();
         private List<PénzMozgás> XIVLista()
         {
+            XIV.Clear();
             XIV.Add(new PénzMozgás("XIV", "1", "Templom karbantartási és fenntartási költségei"));
             XIV.Add(new PénzMozgás("XIV", "2", "Templom közüzemi költségei"));
             XIV.Add(new PénzMozgás("XIV", "3", "Parókia karbantartási és fenntartási költségei"));
@@ -230,6 +241,7 @@ namespace Konyvelo
         List<PénzMozgás> XV = new List<PénzMozgás>();
         private List<PénzMozgás> XVLista()
         {
+            XV.Clear();
             XV.Add(new PénzMozgás("XV", "1", "Templom felújítási költségei"));
             XV.Add(new PénzMozgás("XV", "2", "Parókia felújítási költségei"));
             XV.Add(new PénzMozgás("XV", "3", "Gyülekezeti ház felújítási költségei"));
@@ -244,6 +256,7 @@ namespace Konyvelo
         List<PénzMozgás> XVI = new List<PénzMozgás>();
         private List<PénzMozgás> XVILista()
         {
+            XVI.Clear();
             XVI.Add(new PénzMozgás("XVI", "Közalapi hozzájárulás"));
 
             return XVI;
@@ -252,6 +265,7 @@ namespace Konyvelo
         List<PénzMozgás> XVII = new List<PénzMozgás>();
         private List<PénzMozgás> XVIILista()
         {
+            XVII.Clear();
             XVII.Add(new PénzMozgás("XVII", "1", "Adományok és segélyek"));
             XVII.Add(new PénzMozgás("XVII", "1", "a", "Egyházmegyei diakónia"));
             XVII.Add(new PénzMozgás("XVII", "1", "b", "Lekötött perselypénzek elküldése"));
@@ -267,6 +281,7 @@ namespace Konyvelo
         List<PénzMozgás> XVIII = new List<PénzMozgás>();
         private List<PénzMozgás> XVIIILista()
         {
+            XVIII.Clear();
             XVIII.Add(new PénzMozgás("XVIII", "1", "Állami normatíva"));
             XVIII.Add(new PénzMozgás("XVIII", "2", "Kiegészítő állami támogatás"));
             XVIII.Add(new PénzMozgás("XVIII", "3", "Pályázati céltámogatások átadása"));
