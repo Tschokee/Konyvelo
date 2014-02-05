@@ -40,6 +40,7 @@ namespace Konyvelo
         List<PénzMozgás> I = new List<PénzMozgás>();
         private List<PénzMozgás> ILista()
         {
+            I.Clear();
             I.Add(new PénzMozgás("I", "Egyházfenntartói járulékok"));
 
             return I;

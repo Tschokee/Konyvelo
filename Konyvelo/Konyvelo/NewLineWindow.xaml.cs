@@ -57,6 +57,7 @@ namespace Konyvelo
                 case 4: changeLabel.Content = "Pénztári kiadás"; break;
                 default: break;
             }
+            this.fokonyvComboBox.Items.Clear();
             comboboxFeltolt(ILista);
             comboboxFeltolt(IILista);
             comboboxFeltolt(IIILista);
@@ -73,6 +74,7 @@ namespace Konyvelo
             comboboxFeltolt(XVILista);
             comboboxFeltolt(XVIILista);
             comboboxFeltolt(XVIIILista);
+
             
             this.Left = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right / 2) -(this.Width / 2);
             this.Top = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom / 2) - (this.Height / 2);
@@ -99,7 +101,7 @@ namespace Konyvelo
             }
             
             d.Items.Refresh();
-            
+
             this.Close();
         }
 
