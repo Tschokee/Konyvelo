@@ -26,7 +26,18 @@ namespace Konyvelo
             IIDataGrid.ItemsSource = IILista;
             IIIDataGrid.ItemsSource = IIILista;
             IVDataGrid.ItemsSource = IVLista;
-
+            VDataGrid.ItemsSource = VLista;
+            XIAaDataGrid.ItemsSource = XIAaLista;
+            XIAbDataGrid.ItemsSource = XIAbLista;
+            XIBaDataGrid.ItemsSource = XIBaLista;
+            XIBbDataGrid.ItemsSource = XIBbLista;
+            XIIDataGrid.ItemsSource = XIILista;
+            XIIIDataGrid.ItemsSource = XIIILista;
+            XIVDataGrid.ItemsSource = XIVLista;
+            XVDataGrid.ItemsSource = XVLista;
+            XVIDataGrid.ItemsSource = XVILista;
+            XVIIDataGrid.ItemsSource = XVIILista;
+            XVIIIDataGrid.ItemsSource = XVIIILista;
             this.Left = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right / 2) - (this.Width / 2);
             this.Top = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom / 2) - (this.Height / 2);
         }
