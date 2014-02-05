@@ -6,8 +6,9 @@
     <Grid Height="3931">
         <DataGrid x:Name="IDataGrid" HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="I." Binding="{Binding azonosító}" Width="*" />
-                <DataGridTextColumn Header="Összesen" Binding="{Binding előirányzat}" Width="*"/>
+                    <DataGridTextColumn Header="I. Egyházfenntartói járulékok" Binding="{Binding azonosító}" Width="*" />
+                    <DataGridTextColumn Header="Költségvetési cím" Binding="{Binding név}" Width="*" />
+                    <DataGridTextColumn Header="Összesen" Binding="{Binding előirányzat}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
         <DataGrid x:Name="IIDataGrid" HorizontalAlignment="Left" Height="140" Margin="0,105,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" RenderTransformOrigin="0.5,0.5">
