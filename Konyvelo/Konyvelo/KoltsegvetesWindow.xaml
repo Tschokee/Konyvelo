@@ -1,11 +1,7 @@
 ﻿<Window x:Class="Konyvelo.KoltsegvetesWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-<<<<<<< HEAD
-        Title="KoltsegvetesWindow" Height="887.925" Width="625">
-=======
         Title="KoltsegvetesWindow" Height="555.175" Width="625" ResizeMode="NoResize">
->>>>>>> 9782384c617896cd6d04f62c2b7dee4edae75b43
     <ScrollViewer>
     <Grid Height="3931">
         <DataGrid x:Name="IDataGrid" HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="607" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
