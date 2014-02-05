@@ -19,9 +19,17 @@ namespace Konyvelo
     /// </summary>
     public partial class ZaroszamadasWindow : Window
     {
-        public ZaroszamadasWindow()
+        public ZaroszamadasWindow(List<PénzMozgás> ILista, List<PénzMozgás> IILista, List<PénzMozgás> IIILista,
+            List<PénzMozgás> IVLista, List<PénzMozgás> VLista, List<PénzMozgás> XIAaLista, List<PénzMozgás> XIAbLista,
+            List<PénzMozgás> XIBaLista, List<PénzMozgás> XIBbLista, List<PénzMozgás> XIILista, List<PénzMozgás> XIIILista,
+            List<PénzMozgás> XIVLista, List<PénzMozgás> XVLista, List<PénzMozgás> XVILista, List<PénzMozgás> XVIILista,
+            List<PénzMozgás> XVIIILista)
         {
             InitializeComponent();
+            IDataGrid.ItemsSource = ILista;
+            IIDataGrid.ItemsSource = IILista;
+            IIIDataGrid.ItemsSource = IIILista;
+            IVDataGrid.ItemsSource = IVLista;
             this.Left = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right / 2) - (this.Width / 2);
             this.Top = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom / 2) - (this.Height / 2);
         }
