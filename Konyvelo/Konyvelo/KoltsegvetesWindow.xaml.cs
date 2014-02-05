@@ -129,5 +129,10 @@ namespace Konyvelo
             this.XVIIILista = (List<PénzMozgás>)XVIIIDataGrid.ItemsSource;
             frissit();
         }
+
+        private void megseButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -1,17 +1,17 @@
 ﻿<Window x:Class="Konyvelo.KoltsegvetesWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="KoltsegvetesWindow" Height="590.175" Width="625" ResizeMode="NoResize">
-    <ScrollViewer>
+        Title="KoltsegvetesWindow" Height="587.175" Width="625" ResizeMode="NoResize">
+    <ScrollViewer Margin="0,0,0,4">
     <Grid Height="3960" Width="600">
-        <DataGrid x:Name="IDataGrid" HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
+        <DataGrid x:Name="IDataGrid" HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" CanUserReorderColumns="False">
             <DataGrid.Columns>
                     <DataGridTextColumn Header="I. Egyházfenntartói járulékok" Binding="{Binding azonosító}" Width="180" />
                     <DataGridTextColumn Header="Költségvetési cím" Binding="{Binding név}" Width="*"/>
                     <DataGridTextColumn Header="Összesen" Binding="{Binding előirányzat}" Width="120"/>
             </DataGrid.Columns>
         </DataGrid>
-        <DataGrid x:Name="IIDataGrid" HorizontalAlignment="Left" Height="140" Margin="0,105,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" RenderTransformOrigin="0.5,0.5">
+        <DataGrid x:Name="IIDataGrid" HorizontalAlignment="Left" Height="140" Margin="0,105,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" RenderTransformOrigin="0.5,0.5" CanUserReorderColumns="False">
                 <DataGrid.Columns>
                 <DataGridTextColumn Header="II. Perselypénzek" Binding="{Binding azonosító}" Width="180" />
                     <DataGridTextColumn Header="Költségvetési cím" Binding="{Binding név}" Width="*" />
@@ -88,10 +88,10 @@
                     <DataGridTextColumn Header="Összesen" Binding="{Binding előirányzat}" Width="120"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <DataGrid x:Name="XVDataGrid" HorizontalAlignment="Left" Height="159" Margin="0,3047,0,0" VerticalAlignment="Top" Width="600"  AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
+            <DataGrid x:Name="XVDataGrid" HorizontalAlignment="Left" Height="159" Margin="0,3047,0,0" VerticalAlignment="Top" Width="600"  AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" CanUserReorderColumns="False">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="XV. Egyházi ingatlanok és bérlemények felújítási és beruházási költségei" Binding="{Binding azonosító}" Width="399" />
-                    <DataGridTextColumn Header="Költségvetési cím" Binding="{Binding név}" Width="100" />
+                    <DataGridTextColumn Header="Költségvetési cím" Binding="{Binding név}" Width="*" />
                     <DataGridTextColumn Header="Összesen" Binding="{Binding előirányzat}" Width="90"/>
                 </DataGrid.Columns>
             </DataGrid>
@@ -168,7 +168,8 @@
             <Label x:Name="osszesEloiranyzottEvesKiadasErtek"  HorizontalAlignment="Left" Height="27" Margin="398,3855,0,0" VerticalAlignment="Top" Width="202"/>
             <Label Content="Különbözet:" HorizontalAlignment="Left" Height="27" Margin="0,3882,0,0" VerticalAlignment="Top" Width="393"/>
             <Label x:Name="kulonbozet"  HorizontalAlignment="Left" Height="27" Margin="398,3882,0,0" VerticalAlignment="Top" Width="202"/>
-            <Button x:Name="saveButton" Content="Mentés" HorizontalAlignment="Left" Height="36" Margin="465,3909,0,0" VerticalAlignment="Top" Width="85" Click="SaveButton_Click"/>
+            <Button x:Name="saveButton" Content="Mentés" HorizontalAlignment="Left" Height="27" Margin="381,3909,0,0" VerticalAlignment="Top" Width="85" Click="SaveButton_Click"/>
+            <Button x:Name="megseButton" Content="Mégse" HorizontalAlignment="Left" Margin="480,3909,0,0" VerticalAlignment="Top" Width="85" Height="27" Click="megseButton_Click"/>
         </Grid>
     </ScrollViewer>
 </Window>
