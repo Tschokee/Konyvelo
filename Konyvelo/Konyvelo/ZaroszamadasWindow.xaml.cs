@@ -94,9 +94,9 @@ namespace Konyvelo
             evesKiadasNev.Content = "Az egyházközség " + System.DateTime.Now.Year + ". évi kiadásai összesen:";
             osszegezElo(XVIIILista, XVIIIelo);
             evesKiadaselo.Content = Convert.ToInt32(evesSajatKiadaselo.Content) + Convert.ToInt32(XVIIIelo.Content);
-            osszesEloiranyzottEvesBevetelNev.Content = "Összes előirányzott bevétel a " + System.DateTime.Now.Year + ". évre:";
+            osszesEloiranyzottEvesBevetelNev.Content = "Összes bevétel a " + System.DateTime.Now.Year + ". évre:";
             osszesEloiranyzottEvesBevetelelo.Content = EvesBevetelelo.Content;
-            osszesEloiranyzottEvesKiadasNev.Content = "Összes előirányzott kiadás a " + System.DateTime.Now.Year + ". évre:";
+            osszesEloiranyzottEvesKiadasNev.Content = "Összes kiadás a " + System.DateTime.Now.Year + ". évre:";
             osszesEloiranyzottEvesKiadaselo.Content = evesKiadaselo.Content;
             kulonbozetelo.Content = Convert.ToInt32(osszesEloiranyzottEvesBevetelelo.Content) - Convert.ToInt32(osszesEloiranyzottEvesKiadaselo.Content);
 
