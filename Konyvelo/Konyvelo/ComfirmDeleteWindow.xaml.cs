@@ -30,7 +30,8 @@ namespace Konyvelo
             this.Top = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom / 2) - (this.Height / 2);
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        //ez a metódus törli a listából a kijelölt elemet, itt lehet törölni az adatbázisból is, a metódus frissíti a törölt elem utáni elemek sorszámát, és újraszámolja az egyenlegeket. szerintem elég a törölt elemek utáni részt menteni csak!
+        public void listabolTorol()
         {
             int t = Convert.ToInt32(MyDataGrid.SelectedIndex.ToString());
             if (t < bejegyzések.Count() && t > -1)
@@ -51,6 +52,11 @@ namespace Konyvelo
                     i++;
                 }
             }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            listabolTorol();//kijelölt elem törlése
 
             MyDataGrid.Items.Refresh();
             this.Close();

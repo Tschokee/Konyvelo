@@ -33,6 +33,30 @@ namespace Konyvelo
             }
         }
 
+        //listaelem módosító metódus, módosítja a listában a kijelölt elemet, és újraszámolja az egyenlegeket
+        public void listaElemModosit()
+        {
+            list.ElementAt(t).fizetésIdeje = fizetesBox.Text;
+            list.ElementAt(t).megjegyzés = meghegyzesBox.Text;
+            list.ElementAt(t).főkönyv = fokonyvComboBox.SelectedItem.ToString();
+
+            switch (changeLabel.Content.ToString())
+            {
+                case "Banki bevétel": list.ElementAt(t).bankiBevétel = Convert.ToInt32(cahngeBox.Text); break;
+                case "Banki kiadás": list.ElementAt(t).bankiKiadás = Convert.ToInt32(cahngeBox.Text); break;
+                case "Pénztári bevétel": list.ElementAt(t).pénztáriBevétel = Convert.ToInt32(cahngeBox.Text); break;
+                case "Pénztári kiadás": list.ElementAt(t).pénztáriKiadás = Convert.ToInt32(cahngeBox.Text); break;
+                default: break;
+            }
+
+            Bejegyzés.globalBankiEgyenleg = 0;
+            Bejegyzés.globalPenztariEgyenleg = 0;
+            foreach (Bejegyzés b in list)
+            {
+                b.modositGlobalEgyenleg();
+            }
+        }
+
         public ModifyWindow(List<Bejegyzés> l, DataGrid d, int t, List<PénzMozgás> ILista, List<PénzMozgás> IILista, List<PénzMozgás> IIILista, List<PénzMozgás> IVLista, List<PénzMozgás> VLista, List<PénzMozgás> XIAaLista, List<PénzMozgás> XIAbLista, List<PénzMozgás> XIBaLista, List<PénzMozgás> XIBbLista, List<PénzMozgás> XIILista, List<PénzMozgás> XIIILista, List<PénzMozgás> XIVLista, List<PénzMozgás> XVLista, List<PénzMozgás> XVILista, List<PénzMozgás> XVIILista, List<PénzMozgás> XVIIILista)
         {
             InitializeComponent();
@@ -87,29 +111,8 @@ namespace Konyvelo
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            int s = 0;
-            if (list.Count != 0)
-                s = list.Last().sorSzám;
 
-            list.ElementAt(t).fizetésIdeje = fizetesBox.Text;
-            list.ElementAt(t).megjegyzés = meghegyzesBox.Text;
-            list.ElementAt(t).főkönyv = fokonyvComboBox.SelectedItem.ToString();
-            
-            switch (changeLabel.Content.ToString())
-            {
-                case "Banki bevétel": list.ElementAt(t).bankiBevétel = Convert.ToInt32(cahngeBox.Text); break;
-                case "Banki kiadás": list.ElementAt(t).bankiKiadás = Convert.ToInt32(cahngeBox.Text); break;
-                case "Pénztári bevétel": list.ElementAt(t).pénztáriBevétel = Convert.ToInt32(cahngeBox.Text); break;
-                case "Pénztári kiadás": list.ElementAt(t).pénztáriKiadás = Convert.ToInt32(cahngeBox.Text); break;
-                default: break;
-            }
-
-            Bejegyzés.globalBankiEgyenleg = 0;
-            Bejegyzés.globalPenztariEgyenleg = 0;
-            foreach (Bejegyzés b in list)
-            {
-                b.modositGlobalEgyenleg();
-            }
+            listaElemModosit();//a kívánt módosítások elmentése a listába
 
             d.Items.Refresh();
 
