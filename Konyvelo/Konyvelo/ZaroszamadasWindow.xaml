@@ -134,79 +134,79 @@
             </DataGrid>
             <Label Content="II. Perselypénzek összesen:" HorizontalAlignment="Left" Height="27" Margin="0,245,0,0" VerticalAlignment="Top" Width="655"/>
             <Label x:Name="IIelo"  HorizontalAlignment="Left" Height="27" Margin="662,245,0,0" VerticalAlignment="Top" Width="118"/>
-            <Label x:Name="IItelj"  HorizontalAlignment="Left" Height="27" Margin="784,245,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="IItelj"  HorizontalAlignment="Left" Height="27" Margin="782,245,0,0" VerticalAlignment="Top" Width="120"/>
             <Label Content="III. Adományok összesen:" HorizontalAlignment="Left" Height="27" Margin="0,521,0,0" VerticalAlignment="Top" Width="658"/>
             <Label x:Name="IIIelo"  HorizontalAlignment="Left" Height="27" Margin="662,521,0,0" VerticalAlignment="Top" Width="118"/>
-            <Label x:Name="IIItelj"  HorizontalAlignment="Left" Height="27" Margin="784,521,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="IIItelj"  HorizontalAlignment="Left" Height="27" Margin="782,521,0,0" VerticalAlignment="Top" Width="120"/>
             <Label Content="IV. Egyéb bevételek összesen:" HorizontalAlignment="Left" Height="27" Margin="0,798,0,0" VerticalAlignment="Top" Width="658"/>
             <Label x:Name="IVelo"  HorizontalAlignment="Left" Height="27" Margin="662,798,0,0" VerticalAlignment="Top" Width="118"/>
-            <Label x:Name="IVtelj"  HorizontalAlignment="Left" Height="27" Margin="784,798,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="IVtelj"  HorizontalAlignment="Left" Height="27" Margin="782,798,0,0" VerticalAlignment="Top" Width="120"/>
             <Label x:Name="evesSajatBevetelNev" Content="Éves saját cuuc" HorizontalAlignment="Left" Height="27" Margin="0,825,0,0" VerticalAlignment="Top" Width="658"/>
             <Label x:Name="evesSajatBevetelelo"  HorizontalAlignment="Left" Height="27" Margin="662,826,0,0" VerticalAlignment="Top" Width="118"/>
-            <Label x:Name="evesSajatBeveteltelj"  HorizontalAlignment="Left" Height="27" Margin="784,826,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="evesSajatBeveteltelj"  HorizontalAlignment="Left" Height="27" Margin="782,826,0,0" VerticalAlignment="Top" Width="120"/>
             <Label Content="V. Átvett pénzeszközök összesen:" HorizontalAlignment="Left" Height="27" Margin="0,998,0,0" VerticalAlignment="Top" Width="658"/>
             <Label x:Name="Velo"  HorizontalAlignment="Left" Height="27" Margin="662,998,0,0" VerticalAlignment="Top" Width="118"/>
-            <Label x:Name="Vtelj"  HorizontalAlignment="Left" Height="27" Margin="784,998,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="Vtelj"  HorizontalAlignment="Left" Height="27" Margin="782,998,0,0" VerticalAlignment="Top" Width="120"/>
             <Label x:Name="evesBevetelNev" Content="éves cucc" HorizontalAlignment="Left" Height="27" Margin="0,1025,0,0" VerticalAlignment="Top" Width="658"/>
             <Label x:Name="EvesBevetelelo"  HorizontalAlignment="Left" Height="27" Margin="662,1025,0,0" VerticalAlignment="Top" Width="118"/>
-            <Label x:Name="EvesBeveteltelj"  HorizontalAlignment="Left" Height="27" Margin="784,1025,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="EvesBeveteltelj"  HorizontalAlignment="Left" Height="27" Margin="782,1025,0,0" VerticalAlignment="Top" Width="120"/>
             <Label Content="XI/A/a. Javadalmak összesen:" HorizontalAlignment="Left" Height="27" Margin="0,1350,0,0" VerticalAlignment="Top" Width="658"/>
             <Label x:Name="XIAaelo"  HorizontalAlignment="Left" Height="27" Margin="662,1350,0,0" VerticalAlignment="Top" Width="118"/>
-            <Label x:Name="XIAatelj"  HorizontalAlignment="Left" Height="27" Margin="784,1350,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="XIAatelj"  HorizontalAlignment="Left" Height="27" Margin="782,1350,0,0" VerticalAlignment="Top" Width="120"/>
             <Label Content="XI/A/b. Közterhek összesen:" HorizontalAlignment="Left" Height="27" Margin="0,1493,0,0" VerticalAlignment="Top" Width="658"/>
             <Label x:Name="XIAbelo"  HorizontalAlignment="Left" Height="27" Margin="662,1493,0,0" VerticalAlignment="Top" Width="118"/>
-            <Label x:Name="XIAbtelj"  HorizontalAlignment="Left" Height="27" Margin="784,1493,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="XIAbtelj"  HorizontalAlignment="Left" Height="27" Margin="782,1493,0,0" VerticalAlignment="Top" Width="120"/>
             <Label Content="XI/A. Lelkészek javadalma és közterhei összesen:" HorizontalAlignment="Left" Height="27" Margin="0,1520,0,0" VerticalAlignment="Top" Width="658"/>
             <Label x:Name="XI_Aelo"  HorizontalAlignment="Left" Height="27" Margin="662,1520,0,0" VerticalAlignment="Top" Width="118"/>
-            <Label x:Name="XI_Atelj"  HorizontalAlignment="Left" Height="27" Margin="784,1520,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="XI_Atelj"  HorizontalAlignment="Left" Height="27" Margin="782,1520,0,0" VerticalAlignment="Top" Width="120"/>
             <Label Content="XI/B/a. Javadalmak összesen:" HorizontalAlignment="Left" Height="27" Margin="0,1769,0,0" VerticalAlignment="Top" Width="658"/>
             <Label x:Name="XIBaelo"  HorizontalAlignment="Left" Height="27" Margin="662,1769,0,0" VerticalAlignment="Top" Width="118"/>
-            <Label x:Name="XIBatelj"  HorizontalAlignment="Left" Height="27" Margin="784,1769,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="XIBatelj"  HorizontalAlignment="Left" Height="27" Margin="782,1769,0,0" VerticalAlignment="Top" Width="120"/>
             <Label Content="XI/B/b. Közterhek összesen:" HorizontalAlignment="Left" Height="27" Margin="0,1912,0,0" VerticalAlignment="Top" Width="658"/>
             <Label x:Name="XIBbelo"  HorizontalAlignment="Left" Height="27" Margin="662,1912,0,0" VerticalAlignment="Top" Width="118"/>
-            <Label x:Name="XIBbtelj"  HorizontalAlignment="Left" Height="27" Margin="784,1912,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="XIBbtelj"  HorizontalAlignment="Left" Height="27" Margin="782,1912,0,0" VerticalAlignment="Top" Width="120"/>
             <Label Content="XI/B. Alkalmazottak javadalma és közterhei összesen:" HorizontalAlignment="Left" Height="27" Margin="0,1939,0,0" VerticalAlignment="Top" Width="658"/>
             <Label x:Name="XI_Belo"  HorizontalAlignment="Left" Height="27" Margin="662,1939,0,0" VerticalAlignment="Top" Width="118"/>
-            <Label x:Name="XI_Btelj"  HorizontalAlignment="Left" Height="27" Margin="784,1939,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="XI_Btelj"  HorizontalAlignment="Left" Height="27" Margin="782,1939,0,0" VerticalAlignment="Top" Width="120"/>
             <Label Content="XI. Személyi kiadások összesen:" HorizontalAlignment="Left" Height="27" Margin="0,1966,0,0" VerticalAlignment="Top" Width="658"/>
             <Label x:Name="XIelo"  HorizontalAlignment="Left" Height="27" Margin="662,1966,0,0" VerticalAlignment="Top" Width="118"/>
-            <Label x:Name="XItelj"  HorizontalAlignment="Left" Height="27" Margin="784,1966,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="XItelj"  HorizontalAlignment="Left" Height="27" Margin="782,1966,0,0" VerticalAlignment="Top" Width="120"/>
             <Label Content="XII. Gyülekezeti élet kiadásai összesen:" HorizontalAlignment="Left" Height="27" Margin="0,2294,0,0" VerticalAlignment="Top" Width="658"/>
             <Label x:Name="XIIelo"  HorizontalAlignment="Left" Height="27" Margin="662,2294,0,0" VerticalAlignment="Top" Width="118"/>
-            <Label x:Name="XIItelj"  HorizontalAlignment="Left" Height="27" Margin="784,2294,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="XIItelj"  HorizontalAlignment="Left" Height="27" Margin="782,2294,0,0" VerticalAlignment="Top" Width="120"/>
             <Label Content="XIII. Igazgatási kiadások összesen:" HorizontalAlignment="Left" Height="27" Margin="0,2635,0,0" VerticalAlignment="Top" Width="658"/>
             <Label x:Name="XIIIelo"  HorizontalAlignment="Left" Height="27" Margin="662,2635,0,0" VerticalAlignment="Top" Width="118"/>
-            <Label x:Name="XIIItelj"  HorizontalAlignment="Left" Height="27" Margin="784,2635,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="XIIItelj"  HorizontalAlignment="Left" Height="27" Margin="782,2635,0,0" VerticalAlignment="Top" Width="120"/>
             <Label Content="XIV. Egyházi ingatlanok és bérlemények fenntartása összesen:" HorizontalAlignment="Left" Height="27" Margin="0,2987,0,0" VerticalAlignment="Top" Width="658"/>
             <Label x:Name="XIVelo"  HorizontalAlignment="Left" Height="27" Margin="662,2987,0,0" VerticalAlignment="Top" Width="118"/>
-            <Label x:Name="XIVtelj"  HorizontalAlignment="Left" Height="27" Margin="784,2987,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="XIVtelj"  HorizontalAlignment="Left" Height="27" Margin="782,2987,0,0" VerticalAlignment="Top" Width="120"/>
             <Label Content="XV. Egyházi ingatlanok és bérlemények felújítási és beruházási költségei:" HorizontalAlignment="Left" Height="27" Margin="0,3206,0,0" VerticalAlignment="Top" Width="658"/>
             <Label x:Name="XVelo"  HorizontalAlignment="Left" Height="27" Margin="662,3206,0,0" VerticalAlignment="Top" Width="118"/>
-            <Label x:Name="XVtelj"  HorizontalAlignment="Left" Height="27" Margin="784,3206,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="XVtelj"  HorizontalAlignment="Left" Height="27" Margin="782,3206,0,0" VerticalAlignment="Top" Width="120"/>
             <Label Content="XVI. Közalapi hozzájárulás összesen:" HorizontalAlignment="Left" Height="27" Margin="0,3311,0,0" VerticalAlignment="Top" Width="658"/>
             <Label x:Name="XVIelo"  HorizontalAlignment="Left" Height="27" Margin="662,3311,0,0" VerticalAlignment="Top" Width="118"/>
-            <Label x:Name="XVItelj"  HorizontalAlignment="Left" Height="27" Margin="784,3311,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="XVItelj"  HorizontalAlignment="Left" Height="27" Margin="782,3311,0,0" VerticalAlignment="Top" Width="120"/>
             <Label Content="XVII. Egyéb kiadások összesen:" HorizontalAlignment="Left" Height="27" Margin="0,3549,0,0" VerticalAlignment="Top" Width="658"/>
             <Label x:Name="XVIIelo"  HorizontalAlignment="Left" Height="27" Margin="662,3549,0,0" VerticalAlignment="Top" Width="118"/>
-            <Label x:Name="XVIItelj"  HorizontalAlignment="Left" Height="27" Margin="784,3549,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="XVIItelj"  HorizontalAlignment="Left" Height="27" Margin="782,3549,0,0" VerticalAlignment="Top" Width="120"/>
             <Label x:Name="evesSajatKiadasNev" Content="éves saját kiadás cucc" HorizontalAlignment="Left" Height="27" Margin="0,3576,0,0" VerticalAlignment="Top" Width="658"/>
             <Label x:Name="evesSajatKiadaselo"  HorizontalAlignment="Left" Height="27" Margin="662,3576,0,0" VerticalAlignment="Top" Width="118"/>
-            <Label x:Name="evesSajatKiadastelj"  HorizontalAlignment="Left" Height="27" Margin="784,3576,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="evesSajatKiadastelj"  HorizontalAlignment="Left" Height="27" Margin="782,3576,0,0" VerticalAlignment="Top" Width="120"/>
             <Label Content="XVIII. Átadott pénzeszközök összesen:" HorizontalAlignment="Left" Height="27" Margin="0,3749,0,0" VerticalAlignment="Top" Width="658"/>
             <Label x:Name="XVIIIelo"  HorizontalAlignment="Left" Height="27" Margin="662,3749,0,0" VerticalAlignment="Top" Width="118"/>
-            <Label x:Name="XVIIItelj"  HorizontalAlignment="Left" Height="27" Margin="784,3749,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="XVIIItelj"  HorizontalAlignment="Left" Height="27" Margin="782,3749,0,0" VerticalAlignment="Top" Width="120"/>
             <Label x:Name="evesKiadasNev" Content="éves kiadás cucc" HorizontalAlignment="Left" Height="27" Margin="0,3776,0,0" VerticalAlignment="Top" Width="658"/>
             <Label x:Name="evesKiadaselo"  HorizontalAlignment="Left" Height="27" Margin="662,3776,0,0" VerticalAlignment="Top" Width="118"/>
-            <Label x:Name="evesKiadastelj"  HorizontalAlignment="Left" Height="27" Margin="784,3776,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="evesKiadastelj"  HorizontalAlignment="Left" Height="27" Margin="782,3776,0,0" VerticalAlignment="Top" Width="120"/>
             <Label x:Name="osszesEloiranyzottEvesBevetelNev" Content="XVII. Egyéb kiadások összesen:" HorizontalAlignment="Left" Height="27" Margin="0,3828,0,0" VerticalAlignment="Top" Width="658"/>
             <Label x:Name="osszesEloiranyzottEvesBevetelelo"  HorizontalAlignment="Left" Height="27" Margin="662,3828,0,0" VerticalAlignment="Top" Width="118"/>
-            <Label x:Name="osszesEloiranyzottEvesBeveteltelj"  HorizontalAlignment="Left" Height="27" Margin="784,3828,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="osszesEloiranyzottEvesBeveteltelj"  HorizontalAlignment="Left" Height="27" Margin="782,3828,0,0" VerticalAlignment="Top" Width="120"/>
             <Label x:Name="osszesEloiranyzottEvesKiadasNev" Content="XVII. Egyéb kiadások összesen:" HorizontalAlignment="Left" Height="27" Margin="0,3855,0,0" VerticalAlignment="Top" Width="658"/>
             <Label x:Name="osszesEloiranyzottEvesKiadaselo"  HorizontalAlignment="Left" Height="27" Margin="662,3855,0,0" VerticalAlignment="Top" Width="118"/>
-            <Label x:Name="osszesEloiranyzottEvesKiadastelj"  HorizontalAlignment="Left" Height="27" Margin="784,3855,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="osszesEloiranyzottEvesKiadastelj"  HorizontalAlignment="Left" Height="27" Margin="782,3855,0,0" VerticalAlignment="Top" Width="120"/>
             <Label Content="Különbözet:" HorizontalAlignment="Left" Height="27" Margin="0,3882,0,0" VerticalAlignment="Top" Width="393"/>
             <Label x:Name="kulonbozetelo"  HorizontalAlignment="Left" Height="27" Margin="662,3882,0,0" VerticalAlignment="Top" Width="118"/>
-            <Label x:Name="kulonbozettelj"  HorizontalAlignment="Left" Height="27" Margin="784,3882,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="kulonbozettelj"  HorizontalAlignment="Left" Height="27" Margin="782,3882,0,0" VerticalAlignment="Top" Width="120"/>
         </Grid>
     </ScrollViewer>
 </Window>
