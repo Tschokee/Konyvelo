@@ -177,20 +177,20 @@ namespace Konyvelo
         private List<PénzMozgás> XIILista()
         {
             XII.Clear();
-            XII.Add(new PénzMozgás("XI/1", "Úrvacsorai jegyekre"));
-            XII.Add(new PénzMozgás("XI/2", "Szeretetvendégségek, gyülekezeti napok"));
-            XII.Add(new PénzMozgás("XI/3", "Gyülekezeti misszió"));
-            XII.Add(new PénzMozgás("XI/3/a", "Konfirmandusok"));
-            XII.Add(new PénzMozgás("XI/3/b", "Hitoktatás"));
-            XII.Add(new PénzMozgás("XI/3/c", "Ifjúsági munka"));
-            XII.Add(new PénzMozgás("XI/3/d", "Szórvány- és tanyagondozás"));
-            XII.Add(new PénzMozgás("XI/3/e", "Missziói alkalmak"));
-            XII.Add(new PénzMozgás("XI/4", "Legátumok"));
-            XII.Add(new PénzMozgás("XI/5", "Gyülekezeten belüli szeretetszolgálat"));
-            XII.Add(new PénzMozgás("XI/6", "Gyülekezeti újság"));
-            XII.Add(new PénzMozgás("XI/7", "Sajtó misszió"));
-            XII.Add(new PénzMozgás("XI/8", ""));
-            XII.Add(new PénzMozgás("XI/9", ""));
+            XII.Add(new PénzMozgás("XII/1", "Úrvacsorai jegyekre"));
+            XII.Add(new PénzMozgás("XII/2", "Szeretetvendégségek, gyülekezeti napok"));
+            XII.Add(new PénzMozgás("XII/3", "Gyülekezeti misszió"));
+            XII.Add(new PénzMozgás("XII/3/a", "Konfirmandusok"));
+            XII.Add(new PénzMozgás("XII/3/b", "Hitoktatás"));
+            XII.Add(new PénzMozgás("XII/3/c", "Ifjúsági munka"));
+            XII.Add(new PénzMozgás("XII/3/d", "Szórvány- és tanyagondozás"));
+            XII.Add(new PénzMozgás("XII/3/e", "Missziói alkalmak"));
+            XII.Add(new PénzMozgás("XII/4", "Legátumok"));
+            XII.Add(new PénzMozgás("XII/5", "Gyülekezeten belüli szeretetszolgálat"));
+            XII.Add(new PénzMozgás("XII/6", "Gyülekezeti újság"));
+            XII.Add(new PénzMozgás("XII/7", "Sajtó misszió"));
+            XII.Add(new PénzMozgás("XII/8", ""));
+            XII.Add(new PénzMozgás("XII/9", ""));
 
             return XII;
         }
@@ -352,7 +352,7 @@ namespace Konyvelo
 
         private void zaroszamButton_Click(object sender, RoutedEventArgs e)
         {
-            Window ZSZW = new ZaroszamadasWindow(I, II, III, IV, V, XIAa, XIAb, XIBa, XIBb, XII, XIII, XIV, XV, XVI, XVII, XVIII);
+            Window ZSZW = new ZaroszamadasWindow(bejegyzések, I, II, III, IV, V, XIAa, XIAb, XIBa, XIBb, XII, XIII, XIV, XV, XVI, XVII, XVIII);
             ZSZW.Show();
         }
 
