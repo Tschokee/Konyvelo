@@ -378,7 +378,13 @@ namespace Konyvelo
         {
             PrintDialog dlg = new PrintDialog();
             dlg.ShowDialog();
-            dlg.PrintVisual(this, "Oldal nyomtatás");
+            //dlg.PrintVisual(MyDataGrid, "Oldal nyomtatás");
+
+            Size pageSize = new Size(dlg.PrintableAreaWidth, dlg.PrintableAreaHeight);
+            // sizing of the element.
+            MyDataGrid.Measure(pageSize);
+            MyDataGrid.Arrange(new Rect(5, 5, pageSize.Width, pageSize.Height));
+            dlg.PrintVisual(MyDataGrid, Title);
         }
 
     }
