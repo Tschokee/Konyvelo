@@ -376,7 +376,7 @@ namespace Konyvelo
 
         private void printMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            PrintDialog dlg = new PrintDialog();
+          /*  PrintDialog dlg = new PrintDialog();
             dlg.ShowDialog();
             //dlg.PrintVisual(MyDataGrid, "Oldal nyomtatás");
 
@@ -384,7 +384,14 @@ namespace Konyvelo
             // sizing of the element.
             MyDataGrid.Measure(pageSize);
             MyDataGrid.Arrange(new Rect(5, 5, pageSize.Width, pageSize.Height));
-            dlg.PrintVisual(MyDataGrid, Title);
+            dlg.PrintVisual(MyDataGrid, Title);*/
+            Image myImage = new Image();
+            RenderTargetBitmap bitmap = new RenderTargetBitmap(900, 900, 96, 96, PixelFormats.Pbgra32);
+            bitmap.Render(MyDataGrid);
+            myImage.Source = bitmap;
+            StackPanel myStackPanel = new StackPanel();
+            myStackPanel.Children.Add(myImage);
+            this.Content = myStackPanel;
         }
 
     }
