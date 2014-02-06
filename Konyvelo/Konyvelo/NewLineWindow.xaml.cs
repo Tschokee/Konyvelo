@@ -43,6 +43,13 @@ namespace Konyvelo
             }
         }
 
+
+        //a listához hozzáadó metódus
+        public void listaAdd(Bejegyzés b)
+        {
+            list.Add(b);
+        }
+
         public NewLineWindow(List<Bejegyzés> l, DataGrid d, int s, List<PénzMozgás> ILista, List<PénzMozgás> IILista, List<PénzMozgás> IIILista, List<PénzMozgás> IVLista, List<PénzMozgás> VLista, List<PénzMozgás> XIAaLista, List<PénzMozgás> XIAbLista, List<PénzMozgás> XIBaLista, List<PénzMozgás> XIBbLista, List<PénzMozgás> XIILista, List<PénzMozgás> XIIILista, List<PénzMozgás> XIVLista, List<PénzMozgás> XVLista, List<PénzMozgás> XVILista, List<PénzMozgás> XVIILista, List<PénzMozgás> XVIIILista)
         {
             InitializeComponent();
@@ -91,12 +98,13 @@ namespace Konyvelo
 
             if (changeBox.Text.Length != 0) k = Convert.ToInt32(changeBox.Text);
 
+            //listához itt adunk metódussal
             switch (s)
             {
-                case 1: list.Add(new Bejegyzés(ssz + 1, fizetesBox.Text, megjegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), k, 0, 0, 0)); break;
-                case 2: list.Add(new Bejegyzés(ssz + 1, fizetesBox.Text, megjegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), 0, k, 0, 0)); break;
-                case 3: list.Add(new Bejegyzés(ssz + 1, fizetesBox.Text, megjegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), 0, 0, k, 0)); break;
-                case 4: list.Add(new Bejegyzés(ssz + 1, fizetesBox.Text, megjegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), 0, 0, 0, k)); break;
+                case 1: listaAdd(new Bejegyzés(ssz + 1, fizetesBox.Text, megjegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), k, 0, 0, 0)); break;
+                case 2: listaAdd(new Bejegyzés(ssz + 1, fizetesBox.Text, megjegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), 0, k, 0, 0)); break;
+                case 3: listaAdd(new Bejegyzés(ssz + 1, fizetesBox.Text, megjegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), 0, 0, k, 0)); break;
+                case 4: listaAdd(new Bejegyzés(ssz + 1, fizetesBox.Text, megjegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), 0, 0, 0, k)); break;
                 default: break;
             }
             

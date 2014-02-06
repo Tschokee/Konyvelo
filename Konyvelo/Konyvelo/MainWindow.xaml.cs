@@ -23,6 +23,8 @@ namespace Konyvelo
     public partial class MainWindow : Window
     {
         List<Bejegyzés> bejegyzések = new List<Bejegyzés>();
+
+        //ez a metódus tölti be a bejegyzések táblából az adatokat a listába
         private List<Bejegyzés> LoadCollectionData()
         {
             bejegyzések.Add(new Bejegyzés(1, "tegnap", "asdfashdl", "I", 1000, 300, 500, 600));
@@ -34,7 +36,7 @@ namespace Konyvelo
                 //bejegyzések.Add(new Bejegyzés());
             }
 
-                return bejegyzések;
+            return bejegyzések;
         }
 
         List<PénzMozgás> I = new List<PénzMozgás>();
@@ -315,10 +317,9 @@ namespace Konyvelo
         public MainWindow()
         {
             InitializeComponent();
-            LoadCollectionData();
-            MyDataGrid.ItemsSource = bejegyzések;
+            MyDataGrid.ItemsSource = LoadCollectionData();//bejegyzések listát feltöltő metódus 
             MyDataGrid.IsReadOnly = true;
-            generateLists();
+            generateLists();//ha a pénzmozgás tábla üres akkor kell csak lefuttatni ezt a metódust és elmenteni a táblába, ha nem üres akkor a táblából kell betölteni az adatokat a listákba
             this.Left = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right / 2) - (this.Width / 2);
             this.Top = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom / 2) - (this.Height / 2);
         }
