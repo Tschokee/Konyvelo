@@ -85,22 +85,28 @@ namespace Konyvelo
                 ssz = list.Last().sorSzám;
 
             int k = 0;
-
-            if (changeBox.Text.Length != 0) k = Convert.ToInt32(changeBox.Text);
-
-            //listához itt adunk metódussal
-            switch (s)
+            try
             {
-                case 1: listaAdd(new Bejegyzés(ssz + 1, fizetesBox.Text, megjegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), k, 0, 0, 0)); break;
-                case 2: listaAdd(new Bejegyzés(ssz + 1, fizetesBox.Text, megjegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), 0, k, 0, 0)); break;
-                case 3: listaAdd(new Bejegyzés(ssz + 1, fizetesBox.Text, megjegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), 0, 0, k, 0)); break;
-                case 4: listaAdd(new Bejegyzés(ssz + 1, fizetesBox.Text, megjegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), 0, 0, 0, k)); break;
-                default: break;
-            }
-            
-            d.Items.Refresh();
+                if (changeBox.Text.Length != 0) k = Convert.ToInt32(changeBox.Text);
 
-            this.Close();
+                //listához itt adunk metódussal
+                switch (s)
+                {
+                    case 1: listaAdd(new Bejegyzés(ssz + 1, fizetesBox.Text, megjegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), k, 0, 0, 0)); break;
+                    case 2: listaAdd(new Bejegyzés(ssz + 1, fizetesBox.Text, megjegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), 0, k, 0, 0)); break;
+                    case 3: listaAdd(new Bejegyzés(ssz + 1, fizetesBox.Text, megjegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), 0, 0, k, 0)); break;
+                    case 4: listaAdd(new Bejegyzés(ssz + 1, fizetesBox.Text, megjegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), 0, 0, 0, k)); break;
+                    default: break;
+                }
+
+                d.Items.Refresh();
+
+                this.Close();
+            }
+            catch (FormatException fe)
+            {
+                MessageBox.Show("Az éréték mezőbe számot kell megadni!", "Hiba");
+            }             
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

@@ -41,21 +41,31 @@ namespace Konyvelo
             list.ElementAt(t).főkönyv = fokonyvComboBox.SelectedItem.ToString();
 
             if (changeBox.Text == "") changeBox.Text = "0";
-
-            switch (changeLabel.Content.ToString())
+            try
             {
-                case "Banki bevétel": list.ElementAt(t).bankiBevétel = Convert.ToInt32(changeBox.Text);  break;
-                case "Banki kiadás": list.ElementAt(t).bankiKiadás = Convert.ToInt32(changeBox.Text); break;
-                case "Pénztári bevétel": list.ElementAt(t).pénztáriBevétel = Convert.ToInt32(changeBox.Text); break;
-                case "Pénztári kiadás": list.ElementAt(t).pénztáriKiadás = Convert.ToInt32(changeBox.Text); break;
-                default: break;
+                switch (changeLabel.Content.ToString())
+                {
+                    case "Banki bevétel": list.ElementAt(t).bankiBevétel = Convert.ToInt32(changeBox.Text); break;
+                    case "Banki kiadás": list.ElementAt(t).bankiKiadás = Convert.ToInt32(changeBox.Text); break;
+                    case "Pénztári bevétel": list.ElementAt(t).pénztáriBevétel = Convert.ToInt32(changeBox.Text); break;
+                    case "Pénztári kiadás": list.ElementAt(t).pénztáriKiadás = Convert.ToInt32(changeBox.Text); break;
+                    default: break;
+                }
+
+                Bejegyzés.globalBankiEgyenleg = 0;
+                Bejegyzés.globalPenztariEgyenleg = 0;
+                foreach (Bejegyzés b in list)
+                {
+                    b.modositGlobalEgyenleg();
+                }
+
+                d.Items.Refresh();
+
+                this.Close();
             }
-
-            Bejegyzés.globalBankiEgyenleg = 0;
-            Bejegyzés.globalPenztariEgyenleg = 0;
-            foreach (Bejegyzés b in list)
+            catch (FormatException fe)
             {
-                b.modositGlobalEgyenleg();
+                MessageBox.Show("Az éréték mezőbe számot kell megadni!", "Hiba");
             }
         }
 
@@ -116,9 +126,6 @@ namespace Konyvelo
 
             listaElemModosit();//a kívánt módosítások elmentése a listába
 
-            d.Items.Refresh();
-
-            this.Close();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
