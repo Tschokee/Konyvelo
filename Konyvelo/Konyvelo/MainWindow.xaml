@@ -34,6 +34,7 @@
                 <MenuItem Header="Főkönyv" Click="fokonyvButton_Click"/>
             </MenuItem>
             <MenuItem Header="Súgó" Margin="5,5,0,0" Click="sugoMenuItem_Click"/>
+            <MenuItem Header="Nyomtatás" Margin="5,5,0,0" Click="printMenuItem_Click"/>
         </Menu>
         <DataGrid Name="MyDataGrid" VerticalAlignment="Top" RenderTransformOrigin="1.167,-9.538" Height="434"
                   CanUserReorderColumns="True" CanUserResizeColumns="True" CanUserResizeRows="False" CanUserSortColumns="True" CanUserAddRows="False" CanUserDeleteRows="False" Margin="0,4,10,0"/>

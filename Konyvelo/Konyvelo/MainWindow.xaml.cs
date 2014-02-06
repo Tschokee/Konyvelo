@@ -374,5 +374,11 @@ namespace Konyvelo
             SW.Show();
         }
 
+        private void printMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            PrintDialog dlg = new PrintDialog();
+            dlg.ShowDialog();
+        }
+
     }
 }
