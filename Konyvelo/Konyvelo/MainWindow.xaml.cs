@@ -33,7 +33,7 @@ namespace Konyvelo
 
             for (int i = 0; i < 50; i++)
             {
-                //bejegyzések.Add(new Bejegyzés());
+                bejegyzések.Add(new Bejegyzés());
             }
 
             return bejegyzések;
@@ -378,6 +378,7 @@ namespace Konyvelo
         {
             PrintDialog dlg = new PrintDialog();
             dlg.ShowDialog();
+            dlg.PrintVisual(this, "Oldal nyomtatás");
         }
 
     }
