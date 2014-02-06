@@ -3,6 +3,22 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Könyvelő program" Height="500" Width="904" ResizeMode="NoResize">
     <!-- MaxHeight="350" MaxWidth="884" MinHeight="350" MinWidth="884" -->
+    <Window.CommandBindings>
+        <CommandBinding Command="Refresh" Executed="modositButton_Click"/>
+        <CommandBinding Command="Delete" Executed="torolButton_Click"/>
+        <CommandBinding Command="Open" Executed="zaroszamButton_Click"/>
+        <CommandBinding Command="Close" Executed="koltsegvetesButton_Click"/>
+        <CommandBinding Command="Copy" Executed="fokonyvButton_Click"/>
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Command="Refresh" Key="M"/>
+        <KeyBinding Command="Delete" Key="D"/>
+        <KeyBinding Command="Close" Key="K"/>
+        <KeyBinding Command="Open" Key="Z"/>
+        <KeyBinding Command="Close" Key="K"/>
+        <KeyBinding Command="Copy" Key="F"/>      
+        <MouseBinding Command="Refresh" MouseAction="LeftDoubleClick"/>
+    </Window.InputBindings>
     <Grid Margin="10,24,2,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Menu Margin="-10,-28,10,10">
             <MenuItem Header="_Műveletek" Margin="5,5,0,0">
@@ -15,6 +31,7 @@
                 <MenuItem Header="Költségvetés" Click="koltsegvetesButton_Click"/>
                 <MenuItem Header="Főkönyv" Click="fokonyvButton_Click"/>
             </MenuItem>
+            <MenuItem Header="Súgó" Margin="5,5,0,0" Click="sugoMenuItem_Click"/>
         </Menu>
         <DataGrid Name="MyDataGrid" VerticalAlignment="Top" RenderTransformOrigin="1.167,-9.538" Height="426"
                   CanUserReorderColumns="True" CanUserResizeColumns="True" CanUserResizeRows="False" CanUserSortColumns="True" CanUserAddRows="False" CanUserDeleteRows="False" Margin="0,4,10,0"/>
