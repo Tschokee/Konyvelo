@@ -286,467 +286,467 @@ namespace Konyvelo
                 }
                 if (b.főkönyv.Equals(XIAaLista[0].azonosító))
                 {
-                    XIAaLista[0].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIAaLista[0].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIAaLista[1].azonosító))
                 {
-                    XIAaLista[1].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIAaLista[1].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIAaLista[2].azonosító))
                 {
-                    XIAaLista[2].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIAaLista[2].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIAaLista[3].azonosító))
                 {
-                    XIAaLista[3].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIAaLista[3].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIAaLista[4].azonosító))
                 {
-                    XIAaLista[4].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIAaLista[4].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIAaLista[5].azonosító))
                 {
-                    XIAaLista[5].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIAaLista[5].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIAaLista[6].azonosító))
                 {
-                    XIAaLista[6].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIAaLista[6].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIAaLista[7].azonosító))
                 {
-                    XIAaLista[7].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIAaLista[7].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIAaLista[8].azonosító))
                 {
-                    XIAaLista[8].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIAaLista[8].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIAaLista[9].azonosító))
                 {
-                    XIAaLista[9].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIAaLista[9].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIAaLista[10].azonosító))
                 {
-                    XIAaLista[10].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIAaLista[10].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIAaLista[11].azonosító))
                 {
-                    XIAaLista[11].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIAaLista[11].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIAaLista[12].azonosító))
                 {
-                    XIAaLista[12].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIAaLista[12].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIAaLista[13].azonosító))
                 {
-                    XIAaLista[13].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIAaLista[13].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIAbLista[0].azonosító))
                 {
-                    XIAbLista[0].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIAbLista[0].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIAbLista[1].azonosító))
                 {
-                    XIAbLista[1].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIAbLista[1].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIAbLista[2].azonosító))
                 {
-                    XIAbLista[2].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIAbLista[2].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIBaLista[0].azonosító))
                 {
-                    XIBaLista[0].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIBaLista[0].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIBaLista[1].azonosító))
                 {
-                    XIBaLista[1].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIBaLista[1].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIBaLista[2].azonosító))
                 {
-                    XIBaLista[2].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIBaLista[2].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIBaLista[3].azonosító))
                 {
-                    XIBaLista[3].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIBaLista[3].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIBaLista[4].azonosító))
                 {
-                    XIBaLista[4].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIBaLista[4].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIBaLista[5].azonosító))
                 {
-                    XIBaLista[5].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIBaLista[5].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIBaLista[6].azonosító))
                 {
-                    XIBaLista[6].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIBaLista[6].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIBaLista[7].azonosító))
                 {
-                    XIBaLista[7].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIBaLista[7].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIBaLista[8].azonosító))
                 {
-                    XIBaLista[8].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIBaLista[8].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIBaLista[9].azonosító))
                 {
-                    XIBaLista[9].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIBaLista[9].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIBbLista[0].azonosító))
                 {
-                    XIBbLista[0].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIBbLista[0].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIBbLista[1].azonosító))
                 {
-                    XIBbLista[1].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIBbLista[1].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIBbLista[2].azonosító))
                 {
-                    XIBbLista[2].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIBbLista[2].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIILista[0].azonosító))
                 {
-                    XIILista[0].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIILista[0].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIILista[1].azonosító))
                 {
-                    XIILista[1].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIILista[1].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIILista[2].azonosító))
                 {
-                    XIILista[2].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIILista[2].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIILista[3].azonosító))
                 {
-                    XIILista[3].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIILista[3].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIILista[4].azonosító))
                 {
-                    XIILista[4].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIILista[4].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIILista[5].azonosító))
                 {
-                    XIILista[5].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIILista[5].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIILista[6].azonosító))
                 {
-                    XIILista[6].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIILista[6].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIILista[7].azonosító))
                 {
-                    XIILista[7].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIILista[7].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIILista[8].azonosító))
                 {
-                    XIILista[8].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIILista[8].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIILista[9].azonosító))
                 {
-                    XIILista[9].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIILista[9].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIILista[10].azonosító))
                 {
-                    XIILista[10].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIILista[10].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIILista[11].azonosító))
                 {
-                    XIILista[11].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIILista[11].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIILista[12].azonosító))
                 {
-                    XIILista[12].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIILista[12].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIILista[13].azonosító))
                 {
-                    XIILista[13].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIILista[13].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIIILista[0].azonosító))
                 {
-                    XIIILista[0].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIIILista[0].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIIILista[1].azonosító))
                 {
-                    XIIILista[1].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIIILista[1].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIIILista[2].azonosító))
                 {
-                    XIIILista[2].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIIILista[2].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIIILista[3].azonosító))
                 {
-                    XIIILista[3].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIIILista[3].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIIILista[4].azonosító))
                 {
-                    XIIILista[4].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIIILista[4].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIIILista[5].azonosító))
                 {
-                    XIIILista[5].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIIILista[5].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIIILista[6].azonosító))
                 {
-                    XIIILista[6].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIIILista[6].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIIILista[7].azonosító))
                 {
-                    XIIILista[7].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIIILista[7].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIIILista[8].azonosító))
                 {
-                    XIIILista[8].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIIILista[8].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIIILista[9].azonosító))
                 {
-                    XIIILista[9].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIIILista[9].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIIILista[10].azonosító))
                 {
-                    XIIILista[10].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIIILista[10].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIIILista[11].azonosító))
                 {
-                    XIIILista[11].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIIILista[11].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIIILista[12].azonosító))
                 {
-                    XIIILista[12].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIIILista[12].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIIILista[13].azonosító))
                 {
-                    XIIILista[13].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIIILista[13].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIIILista[14].azonosító))
                 {
-                    XIIILista[14].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIIILista[14].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIVLista[0].azonosító))
                 {
-                    XIVLista[0].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIVLista[0].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIVLista[1].azonosító))
                 {
-                    XIVLista[1].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIVLista[1].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIVLista[2].azonosító))
                 {
-                    XIVLista[2].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIVLista[2].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIVLista[3].azonosító))
                 {
-                    XIVLista[3].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIVLista[3].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIVLista[4].azonosító))
                 {
-                    XIVLista[4].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIVLista[4].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIVLista[5].azonosító))
                 {
-                    XIVLista[5].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIVLista[5].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIVLista[6].azonosító))
                 {
-                    XIVLista[6].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIVLista[6].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIVLista[7].azonosító))
                 {
-                    XIVLista[7].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIVLista[7].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIVLista[8].azonosító))
                 {
-                    XIVLista[8].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIVLista[8].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIVLista[9].azonosító))
                 {
-                    XIVLista[9].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIVLista[9].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIVLista[10].azonosító))
                 {
-                    XIVLista[10].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIVLista[10].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIVLista[11].azonosító))
                 {
-                    XIVLista[11].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIVLista[11].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIVLista[12].azonosító))
                 {
-                    XIVLista[12].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIVLista[12].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XIVLista[13].azonosító))
                 {
-                    XIVLista[13].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIVLista[13].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XVLista[0].azonosító))
                 {
-                    XVLista[0].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XVLista[0].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XVLista[1].azonosító))
                 {
-                    XVLista[1].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XVLista[1].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XVLista[2].azonosító))
                 {
-                    XVLista[2].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XVLista[2].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XVLista[3].azonosító))
                 {
-                    XVLista[3].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XVLista[3].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XVLista[4].azonosító))
                 {
-                    XVLista[4].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XVLista[4].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XVLista[5].azonosító))
                 {
-                    XVLista[5].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XVLista[5].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XVLista[6].azonosító))
                 {
-                    XVLista[6].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XVLista[6].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XVILista[0].azonosító))
                 {
-                    XIVLista[0].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XIVLista[0].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XVIILista[0].azonosító))
                 {
-                    XVIILista[0].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XVIILista[0].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XVIILista[1].azonosító))
                 {
-                    XVIILista[1].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XVIILista[1].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XVIILista[2].azonosító))
                 {
-                    XVIILista[2].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XVIILista[2].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XVIILista[3].azonosító))
                 {
-                    XVIILista[3].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XVIILista[3].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XVIILista[4].azonosító))
                 {
-                    XVIILista[4].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XVIILista[4].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XVIILista[5].azonosító))
                 {
-                    XVIILista[5].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XVIILista[5].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XVIIILista[0].azonosító))
                 {
-                    XVIIILista[0].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XVIIILista[0].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XVIIILista[1].azonosító))
                 {
-                    XVIIILista[1].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XVIIILista[1].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XVIIILista[2].azonosító))
                 {
-                    XVIIILista[2].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XVIIILista[2].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XVIIILista[3].azonosító))
                 {
-                    XVIIILista[3].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XVIIILista[3].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XVIIILista[4].azonosító))
                 {
-                    XVIIILista[4].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XVIIILista[4].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XVIIILista[5].azonosító))
                 {
-                    XVIIILista[5].teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                    XVIIILista[5].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }              
             }
