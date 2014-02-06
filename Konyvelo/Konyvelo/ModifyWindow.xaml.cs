@@ -40,12 +40,14 @@ namespace Konyvelo
             list.ElementAt(t).megjegyzés = meghegyzesBox.Text;
             list.ElementAt(t).főkönyv = fokonyvComboBox.SelectedItem.ToString();
 
+            if (changeBox.Text == "") changeBox.Text = "0";
+
             switch (changeLabel.Content.ToString())
             {
-                case "Banki bevétel": list.ElementAt(t).bankiBevétel = Convert.ToInt32(cahngeBox.Text); break;
-                case "Banki kiadás": list.ElementAt(t).bankiKiadás = Convert.ToInt32(cahngeBox.Text); break;
-                case "Pénztári bevétel": list.ElementAt(t).pénztáriBevétel = Convert.ToInt32(cahngeBox.Text); break;
-                case "Pénztári kiadás": list.ElementAt(t).pénztáriKiadás = Convert.ToInt32(cahngeBox.Text); break;
+                case "Banki bevétel": list.ElementAt(t).bankiBevétel = Convert.ToInt32(changeBox.Text);  break;
+                case "Banki kiadás": list.ElementAt(t).bankiKiadás = Convert.ToInt32(changeBox.Text); break;
+                case "Pénztári bevétel": list.ElementAt(t).pénztáriBevétel = Convert.ToInt32(changeBox.Text); break;
+                case "Pénztári kiadás": list.ElementAt(t).pénztáriKiadás = Convert.ToInt32(changeBox.Text); break;
                 default: break;
             }
 
@@ -87,22 +89,22 @@ namespace Konyvelo
             if (l.ElementAt(t).bankiBevétel != 0)
             {
                 changeLabel.Content = "Banki bevétel";
-                cahngeBox.Text = l.ElementAt(t).bankiBevétel.ToString();
+                changeBox.Text = l.ElementAt(t).bankiBevétel.ToString();
             }
             if (l.ElementAt(t).bankiKiadás != 0)
             {
                 changeLabel.Content = "Banki kiadás";
-                cahngeBox.Text = l.ElementAt(t).bankiKiadás.ToString();
+                changeBox.Text = l.ElementAt(t).bankiKiadás.ToString();
             }
             if (l.ElementAt(t).pénztáriBevétel != 0)
             {
                 changeLabel.Content = "Pénztári bevétel";
-                cahngeBox.Text = l.ElementAt(t).pénztáriBevétel.ToString();
+                changeBox.Text = l.ElementAt(t).pénztáriBevétel.ToString();
             }
             if(l.ElementAt(t).pénztáriKiadás != 0)
             {
                 changeLabel.Content = "Pénztári kiadás";
-                cahngeBox.Text = l.ElementAt(t).pénztáriKiadás.ToString();
+                changeBox.Text = l.ElementAt(t).pénztáriKiadás.ToString();
             }
             this.Left = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right / 2) - (this.Width / 2);
             this.Top = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom / 2) - (this.Height / 2);

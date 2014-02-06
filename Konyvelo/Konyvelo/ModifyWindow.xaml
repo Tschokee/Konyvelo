@@ -11,7 +11,7 @@
         <Label x:Name="changeLabel" Content="Banki bevétel" HorizontalAlignment="Left" Margin="12,271,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="fizetesBox" HorizontalAlignment="Left" Height="25" Margin="116,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114"/>
         <TextBox x:Name="meghegyzesBox" HorizontalAlignment="Left" Height="51" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Margin="116,124,0,0"/>
-        <TextBox x:Name="cahngeBox" HorizontalAlignment="Left" Height="25" Margin="116,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114"/>
+        <TextBox x:Name="changeBox" HorizontalAlignment="Left" Height="25" Margin="116,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114"/>
         <ComboBox x:Name="fokonyvComboBox" HorizontalAlignment="Left" Margin="116,209,0,0" VerticalAlignment="Top" Width="114" Height="25" MaxDropDownHeight="100"/>
 
     </Grid>
