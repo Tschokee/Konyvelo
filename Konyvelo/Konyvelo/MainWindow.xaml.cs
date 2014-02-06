@@ -364,7 +364,7 @@ namespace Konyvelo
 
         private void fokonyvButton_Click(object sender, RoutedEventArgs e)
         {
-            Window FW = new FokonyvWindow();
+            Window FW = new FokonyvWindow(bejegyzések);
             FW.Show();
         }
 
