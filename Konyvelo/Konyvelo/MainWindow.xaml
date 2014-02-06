@@ -5,6 +5,7 @@
     <!-- MaxHeight="350" MaxWidth="884" MinHeight="350" MinWidth="884" -->
     <Window.CommandBindings>
         <CommandBinding Command="Refresh" Executed="modositButton_Click"/>
+        <CommandBinding Command="Cut" Executed="Button_Click_1"/>
         <CommandBinding Command="Delete" Executed="torolButton_Click"/>
         <CommandBinding Command="Open" Executed="zaroszamButton_Click"/>
         <CommandBinding Command="Close" Executed="koltsegvetesButton_Click"/>
@@ -12,6 +13,7 @@
     </Window.CommandBindings>
     <Window.InputBindings>
         <KeyBinding Command="Refresh" Key="M"/>
+        <KeyBinding Command="Cut" Key="N"/>
         <KeyBinding Command="Delete" Key="D"/>
         <KeyBinding Command="Close" Key="K"/>
         <KeyBinding Command="Open" Key="Z"/>
