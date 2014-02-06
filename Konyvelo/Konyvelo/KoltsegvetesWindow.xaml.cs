@@ -66,6 +66,27 @@ namespace Konyvelo
             lab.Content = i;
         }
 
+        //a gridek forráslitáit felveszika memóriában lévő listák, itt lehet menteni adatbázisba is ezeket a listákat(azt nem tudjuk h melyik elem módosult, az egészet menteni kell, de ez nem sok)
+        public void listakMentese()
+        {
+            this.ILista = (List<PénzMozgás>)IDataGrid.ItemsSource;
+            this.IILista = (List<PénzMozgás>)IIDataGrid.ItemsSource;
+            this.IIILista = (List<PénzMozgás>)IIIDataGrid.ItemsSource;
+            this.IVLista = (List<PénzMozgás>)IVDataGrid.ItemsSource;
+            this.VLista = (List<PénzMozgás>)VDataGrid.ItemsSource;
+            this.XIAaLista = (List<PénzMozgás>)XIAaDataGrid.ItemsSource;
+            this.XIAbLista = (List<PénzMozgás>)XIAbDataGrid.ItemsSource;
+            this.XIBaLista = (List<PénzMozgás>)XIBaDataGrid.ItemsSource;
+            this.XIBbLista = (List<PénzMozgás>)XIBbDataGrid.ItemsSource;
+            this.XIILista = (List<PénzMozgás>)XIIDataGrid.ItemsSource;
+            this.XIIILista = (List<PénzMozgás>)XIIIDataGrid.ItemsSource;
+            this.XIVLista = (List<PénzMozgás>)XIVDataGrid.ItemsSource;
+            this.XVLista = (List<PénzMozgás>)XVDataGrid.ItemsSource;
+            this.XVILista = (List<PénzMozgás>)XVIDataGrid.ItemsSource;
+            this.XVIILista = (List<PénzMozgás>)XVIIDataGrid.ItemsSource;
+            this.XVIIILista = (List<PénzMozgás>)XVIIIDataGrid.ItemsSource;
+        }
+
         List<PénzMozgás> ILista, IILista, IIILista, IVLista, VLista, XIAaLista, XIAbLista, XIBaLista, XIBbLista, XIILista, XIIILista, XIVLista, XVLista, XVILista, XVIILista, XVIIILista;
         
 
@@ -111,22 +132,7 @@ namespace Konyvelo
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            this.ILista = (List<PénzMozgás>)IDataGrid.ItemsSource;
-            this.IILista = (List<PénzMozgás>)IIDataGrid.ItemsSource;
-            this.IIILista = (List<PénzMozgás>)IIIDataGrid.ItemsSource;
-            this.IVLista = (List<PénzMozgás>)IVDataGrid.ItemsSource;
-            this.VLista = (List<PénzMozgás>)VDataGrid.ItemsSource;
-            this.XIAaLista = (List<PénzMozgás>)XIAaDataGrid.ItemsSource;
-            this.XIAbLista = (List<PénzMozgás>)XIAbDataGrid.ItemsSource;
-            this.XIBaLista = (List<PénzMozgás>)XIBaDataGrid.ItemsSource;
-            this.XIBbLista = (List<PénzMozgás>)XIBbDataGrid.ItemsSource;
-            this.XIILista = (List<PénzMozgás>)XIIDataGrid.ItemsSource;
-            this.XIIILista = (List<PénzMozgás>)XIIIDataGrid.ItemsSource;
-            this.XIVLista = (List<PénzMozgás>)XIVDataGrid.ItemsSource;
-            this.XVLista = (List<PénzMozgás>)XVDataGrid.ItemsSource;
-            this.XVILista = (List<PénzMozgás>)XVIDataGrid.ItemsSource;
-            this.XVIILista = (List<PénzMozgás>)XVIIDataGrid.ItemsSource;
-            this.XVIIILista = (List<PénzMozgás>)XVIIIDataGrid.ItemsSource;
+            listakMentese();//listák elmentése
             frissit();
         }
 
