@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,6 +31,7 @@ namespace Konyvelo
         }
 
         //ez a metódus törli a listából a kijelölt elemet, itt lehet törölni az adatbázisból is, a metódus frissíti a törölt elem utáni elemek sorszámát, és újraszámolja az egyenlegeket. szerintem elég a törölt elemek utáni részt menteni csak!
+        //Hali: én így gondoltam.   ----> ##1
         public void listabolTorol()
         {
             int t = Convert.ToInt32(MyDataGrid.SelectedIndex.ToString());
@@ -38,7 +39,7 @@ namespace Konyvelo
             {
                 int ssz = bejegyzések.ElementAt(t).sorSzám;
                 int i = 1, j = ssz;
-                bejegyzések.RemoveAt(t);
+                this.removeentry(t);//##1
                 Bejegyzés.globalBankiEgyenleg = 0;
                 Bejegyzés.globalPenztariEgyenleg = 0;
                 foreach (Bejegyzés b in bejegyzések)
@@ -53,7 +54,11 @@ namespace Konyvelo
                 }
             }
         }
-
+        //##1
+        private void removeentry(int t)
+        {
+            bejegyzések.RemoveAt(t);//<<---------------   és itt törli majd ki az adatbázisból
+        }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             listabolTorol();//kijelölt elem törlése
