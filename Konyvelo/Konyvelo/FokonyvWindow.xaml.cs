@@ -22,7 +22,47 @@ namespace Konyvelo
         List<Bejegyzés> I = new List<Bejegyzés>(), II1 = new List<Bejegyzés>(), II2 = new List<Bejegyzés>(), II3 = new List<Bejegyzés>(), II4 = new List<Bejegyzés>(), II5 = new List<Bejegyzés>(), II6 = new List<Bejegyzés>(), III1 = new List<Bejegyzés>(), III2 = new List<Bejegyzés>(), III3 = new List<Bejegyzés>(), III4 = new List<Bejegyzés>(), III5 = new List<Bejegyzés>(), III6 = new List<Bejegyzés>(), III7 = new List<Bejegyzés>(), III8 = new List<Bejegyzés>(), III9 = new List<Bejegyzés>(), III10 = new List<Bejegyzés>(), IV1 = new List<Bejegyzés>(), IV2 = new List<Bejegyzés>(), IV3 = new List<Bejegyzés>(), IV4 = new List<Bejegyzés>(), IV5 = new List<Bejegyzés>(), IV6 = new List<Bejegyzés>(), IV7 = new List<Bejegyzés>(), IV8 = new List<Bejegyzés>(), IV9 = new List<Bejegyzés>(), IV10 = new List<Bejegyzés>(), V1 = new List<Bejegyzés>(), V2 = new List<Bejegyzés>(), V3 = new List<Bejegyzés>(), V4 = new List<Bejegyzés>(), V5 = new List<Bejegyzés>(), V6 = new List<Bejegyzés>(),
             XIAa1 = new List<Bejegyzés>(), XIAa2 = new List<Bejegyzés>(), XIAa3 = new List<Bejegyzés>(), XIAa4 = new List<Bejegyzés>(), XIAa5 = new List<Bejegyzés>(), XIAa6 = new List<Bejegyzés>(), XIAa7 = new List<Bejegyzés>(), XIAa8 = new List<Bejegyzés>(), XIAa9 = new List<Bejegyzés>(), XIAa10 = new List<Bejegyzés>(), XIAa11 = new List<Bejegyzés>(), XIAa12 = new List<Bejegyzés>(), XIAa13 = new List<Bejegyzés>(), XIAa14 = new List<Bejegyzés>(), XIAb1 = new List<Bejegyzés>(), XIAb2 = new List<Bejegyzés>(), XIAb3 = new List<Bejegyzés>(), XIBa1 = new List<Bejegyzés>(), XIBa2 = new List<Bejegyzés>(), XIBa3 = new List<Bejegyzés>(), XIBa4 = new List<Bejegyzés>(), XIBa5 = new List<Bejegyzés>(), XIBa6 = new List<Bejegyzés>(), XIBa7 = new List<Bejegyzés>(), XIBa8 = new List<Bejegyzés>(), XIBa9 = new List<Bejegyzés>(), XIBa10 = new List<Bejegyzés>(),
             XIBb1 = new List<Bejegyzés>(), XIBb2 = new List<Bejegyzés>(), XIBb3 = new List<Bejegyzés>(), XII1 = new List<Bejegyzés>(), XII2 = new List<Bejegyzés>(), XII3 = new List<Bejegyzés>(), XII4 = new List<Bejegyzés>(), XII5 = new List<Bejegyzés>(), XII6 = new List<Bejegyzés>(), XII7 = new List<Bejegyzés>(), XII8 = new List<Bejegyzés>(), XII9 = new List<Bejegyzés>(), XII10 = new List<Bejegyzés>(), XII11 = new List<Bejegyzés>(), XII12 = new List<Bejegyzés>(), XII13 = new List<Bejegyzés>(), XII14 = new List<Bejegyzés>(), XIII1 = new List<Bejegyzés>(), XIII2 = new List<Bejegyzés>(), XIII3 = new List<Bejegyzés>(), XIII4 = new List<Bejegyzés>(), XIII5 = new List<Bejegyzés>(), XIII6 = new List<Bejegyzés>(), XIII7 = new List<Bejegyzés>(), XIII8 = new List<Bejegyzés>(), XIII9 = new List<Bejegyzés>(), XIII10 = new List<Bejegyzés>(), XIII11 = new List<Bejegyzés>(), XIII12 = new List<Bejegyzés>(), XIII13 = new List<Bejegyzés>(), XIII14 = new List<Bejegyzés>(), XIII15 = new List<Bejegyzés>(),
-            XIV1 = new List<Bejegyzés>(), XIV2 = new List<Bejegyzés>(), XIV3 = new List<Bejegyzés>(), XIV4 = new List<Bejegyzés>(), XIV5 = new List<Bejegyzés>(), XIV6 = new List<Bejegyzés>(), XIV7 = new List<Bejegyzés>(), XIV8 = new List<Bejegyzés>(), XIV9 = new List<Bejegyzés>(), XIV10 = new List<Bejegyzés>(), XIV11 = new List<Bejegyzés>(), XIV12 = new List<Bejegyzés>(), XIV13 = new List<Bejegyzés>(), XIV14 = new List<Bejegyzés>(), XV1 = new List<Bejegyzés>(), XV2 = new List<Bejegyzés>(), XV3 = new List<Bejegyzés>(), XV4 = new List<Bejegyzés>(), XV5 = new List<Bejegyzés>(), XV6 = new List<Bejegyzés>(), XV7 = new List<Bejegyzés>(), XVI = new List<Bejegyzés>(), XVII1 = new List<Bejegyzés>(), XVII2 = new List<Bejegyzés>(), XVII3 = new List<Bejegyzés>(), XVII4 = new List<Bejegyzés>(), XVII5 = new List<Bejegyzés>(), XVII6 = new List<Bejegyzés>(), XVIII1 = new List<Bejegyzés>(), XVIII2 = new List<Bejegyzés>(), XVIII3 = new List<Bejegyzés>(), XVIII4 = new List<Bejegyzés>(), XVIII5 = new List<Bejegyzés>(), XVIII6;
+            XIV1 = new List<Bejegyzés>(), XIV2 = new List<Bejegyzés>(), XIV3 = new List<Bejegyzés>(), XIV4 = new List<Bejegyzés>(), XIV5 = new List<Bejegyzés>(), XIV6 = new List<Bejegyzés>(), XIV7 = new List<Bejegyzés>(), XIV8 = new List<Bejegyzés>(), XIV9 = new List<Bejegyzés>(), XIV10 = new List<Bejegyzés>(), XIV11 = new List<Bejegyzés>(), XIV12 = new List<Bejegyzés>(), XIV13 = new List<Bejegyzés>(), XIV14 = new List<Bejegyzés>(), XV1 = new List<Bejegyzés>(), XV2 = new List<Bejegyzés>(), XV3 = new List<Bejegyzés>(), XV4 = new List<Bejegyzés>(), XV5 = new List<Bejegyzés>(), XV6 = new List<Bejegyzés>(), XV7 = new List<Bejegyzés>(), XVI = new List<Bejegyzés>(), XVII1 = new List<Bejegyzés>(), XVII2 = new List<Bejegyzés>(), XVII3 = new List<Bejegyzés>(), XVII4 = new List<Bejegyzés>(), XVII5 = new List<Bejegyzés>(), XVII6 = new List<Bejegyzés>(), XVIII1 = new List<Bejegyzés>(), XVIII2 = new List<Bejegyzés>(), XVIII3 = new List<Bejegyzés>(), XVIII4 = new List<Bejegyzés>(), XVIII5 = new List<Bejegyzés>(), XVIII6 = new List<Bejegyzés>();
+        int m = 0;
+
+        private void generateGrid(List<Bejegyzés> l, int f)
+        {
+            DataGrid myDataGrid = new DataGrid();
+            myDataGrid.CanUserAddRows = false;
+            myDataGrid.IsReadOnly = true;
+            myDataGrid.Height = I.Count * 20;
+            myDataGrid.Width = 590;
+            myDataGrid.Margin = new Thickness(0, m, 0, 0);
+            myDataGrid.ItemsSource = I;
+            myDataGrid.AutoGenerateColumns = false;
+            DataGridTextColumn col1 = new DataGridTextColumn();
+            col1.Binding = new Binding("sorSzám");
+            col1.Width = 100;
+            myDataGrid.Columns.Add(col1);
+            DataGridTextColumn col2 = new DataGridTextColumn();
+            col2.Binding = new Binding("fizetésIdeje");
+            col2.Width = 100;
+            myDataGrid.Columns.Add(col2);
+            DataGridTextColumn col3 = new DataGridTextColumn();
+            col3.Binding = new Binding("megjegyzés");
+            col3.Width = 250;
+            myDataGrid.Columns.Add(col3);
+            DataGridTextColumn col4 = new DataGridTextColumn();
+            if (f <= 5)
+            {
+                col4.Binding = new Binding("osszBevetel");
+            }
+            else
+            { 
+                col4.Binding = new Binding("osszKiadas");
+            }
+            col4.Width = 120;
+            myDataGrid.Columns.Add(col4);
+            myDataGrid.HorizontalAlignment = HorizontalAlignment.Left;
+            myDataGrid.VerticalAlignment = VerticalAlignment.Top;
+            myDataGrid.HeadersVisibility = DataGridHeadersVisibility.None;
+            myGrid.Children.Add(myDataGrid);
+        }
         public FokonyvWindow(List<Bejegyzés> bl)
         {
             InitializeComponent();
@@ -161,10 +201,17 @@ namespace Konyvelo
                 }
             }
 
-            /*DataGrid d = new DataGrid();
-            d.Height = 200;
-            d.Width = 905;
-            d.Margin = new Thickness(0, 100, 0, 0);*/
+            Label ILabel = new Label();
+            ILabel.Content = "I. Egyházfenntartói járulék";
+            ILabel.Margin = new Thickness(0, 0, 0, 0);
+            ILabel.Height = 27;
+            m += 27;
+            ILabel.HorizontalAlignment = HorizontalAlignment.Left;
+            ILabel.VerticalAlignment = VerticalAlignment.Top;
+            myGrid.Children.Add(ILabel);
+
+            generateGrid(I, 1);
+
             
             this.Left = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right / 2) - (this.Width / 2);
             this.Top = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom / 2) - (this.Height / 2);

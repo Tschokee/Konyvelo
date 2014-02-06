@@ -320,6 +320,58 @@ namespace Konyvelo
             MyDataGrid.ItemsSource = LoadCollectionData();//bejegyzések listát feltöltő metódus 
             MyDataGrid.IsReadOnly = true;
             generateLists();//ha a pénzmozgás tábla üres akkor kell csak lefuttatni ezt a metódust és elmenteni a táblába, ha nem üres akkor a táblából kell betölteni az adatokat a listákba
+            MyDataGrid.AutoGenerateColumns = false;
+            DataGridTextColumn col1 = new DataGridTextColumn();
+            col1.Binding = new Binding("sorSzám");
+            col1.Header = "Sorszám";
+            col1.Width = 65;
+            MyDataGrid.Columns.Add(col1);
+            DataGridTextColumn col2 = new DataGridTextColumn();
+            col2.Binding = new Binding("fizetésIdeje");
+            col2.Header = "Fizetés ideje";
+            col2.Width = 87;
+            MyDataGrid.Columns.Add(col2);
+            DataGridTextColumn col3 = new DataGridTextColumn();
+            col3.Binding = new Binding("megjegyzés");
+            col3.Header = "Megjegyzés";
+            col3.Width = 87;
+            MyDataGrid.Columns.Add(col3);
+            DataGridTextColumn col4 = new DataGridTextColumn();
+            col4.Binding = new Binding("főkönyv");
+            col4.Header = "Főkönyv";
+            col4.Width = 80;
+            MyDataGrid.Columns.Add(col4);
+            DataGridTextColumn col5 = new DataGridTextColumn();
+            col5.Binding = new Binding("bankiBevétel");
+            col5.Header = "Banki bevétel";
+            col5.Width = 87;
+            MyDataGrid.Columns.Add(col5);
+            DataGridTextColumn col6 = new DataGridTextColumn();
+            col6.Binding = new Binding("bankiKiadás");
+            col6.Header = "Banki kiadás";
+            col6.Width = 87;
+            MyDataGrid.Columns.Add(col6);
+            DataGridTextColumn col7 = new DataGridTextColumn();
+            col7.Binding = new Binding("bankiEgyenleg");
+            col7.Header = "Banki egyenleg";
+            col7.Width = 87;
+            MyDataGrid.Columns.Add(col7);
+            DataGridTextColumn col8 = new DataGridTextColumn();
+            col8.Binding = new Binding("pénztáriBevétel");
+            col8.Header = "Pénztári bevétel";
+            col8.Width = 87;
+            MyDataGrid.Columns.Add(col8);
+            DataGridTextColumn col9 = new DataGridTextColumn();
+            col9.Binding = new Binding("pénztáriKiadás");
+            col9.Header = "Pénztár kiadás";
+            col9.Width = 87;
+            MyDataGrid.Columns.Add(col9);
+            DataGridTextColumn col10 = new DataGridTextColumn();
+            col10.Binding = new Binding("pénztáriEgyenleg");
+            col10.Header = "pénztári egyenleg";
+            col10.Width = 87;
+            MyDataGrid.Columns.Add(col10);
+            
             this.Left = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right / 2) - (this.Width / 2);
             this.Top = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Bottom / 2) - (this.Height / 2);
         }

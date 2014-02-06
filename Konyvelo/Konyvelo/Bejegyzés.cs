@@ -21,6 +21,8 @@ namespace Konyvelo
         public int pénztáriBevétel { get; set; }
         public int pénztáriKiadás { get; set; }
         public int pénztáriEgyenleg { get; set; }
+        public int osszBevetel { get; set; }
+        public int osszKiadas { get; set; }
 
         public Bejegyzés()
         {
@@ -49,6 +51,8 @@ namespace Konyvelo
             this.bankiKiadás = bankiKiadás;
             this.pénztáriBevétel = pénztáriBevétel;
             this.pénztáriKiadás = pénztáriKiadás;
+            this.osszBevetel = bankiBevétel + pénztáriBevétel;
+            this.osszKiadas = bankiKiadás + pénztáriKiadás;
             Bejegyzés.globalBankiEgyenleg += (bankiBevétel - bankiKiadás);
             Bejegyzés.globalPenztariEgyenleg += (pénztáriBevétel - pénztáriKiadás);
 
