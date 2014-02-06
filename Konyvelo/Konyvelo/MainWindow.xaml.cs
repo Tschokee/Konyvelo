@@ -368,5 +368,11 @@ namespace Konyvelo
             FW.Show();
         }
 
+        private void sugoMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Window SW = new SugoWindow();
+            SW.Show();
+        }
+
     }
 }

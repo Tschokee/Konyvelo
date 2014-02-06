@@ -68,6 +68,9 @@
     <Compile Include="KoltsegvetesWindow.xaml.cs">
       <DependentUpon>KoltsegvetesWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SugoWindow.xaml.cs">
+      <DependentUpon>SugoWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ZaroszamadasWindow.xaml.cs">
       <DependentUpon>ZaroszamadasWindow.xaml</DependentUpon>
     </Compile>
@@ -127,6 +130,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="NewLineWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SugoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
