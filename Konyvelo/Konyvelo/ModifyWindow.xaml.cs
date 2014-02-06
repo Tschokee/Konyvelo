@@ -29,16 +29,6 @@ namespace Konyvelo
             foreach (PénzMozgás penz in Lista)
             {
                 ss = penz.azonosító;
-                if (penz.azonosítóMásodikSzint != null)
-                {
-                    ss = ss + "/" + penz.azonosítóMásodikSzint;
-                    if (penz.azonosítóHarmadikSzint != null)
-                    {
-                        ss = ss + "/" + penz.azonosítóHarmadikSzint;
-                        if (penz.azonosítóNegyedikSzint != null)
-                            ss = ss + "/" + penz.azonosítóNegyedikSzint;
-                    }
-                }
                 fokonyvComboBox.Items.Add(ss);
             }
         }

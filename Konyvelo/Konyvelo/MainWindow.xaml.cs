@@ -166,9 +166,9 @@ namespace Konyvelo
         private List<PénzMozgás> XIBbLista()
         {
             XIBb.Clear();
-            XIBb.Add(new PénzMozgás("XI", "B", "b", "11", "Alkalmazottak javadalmának közterhei"));
-            XIBb.Add(new PénzMozgás("XI", "B", "b", "12", ""));
-            XIBb.Add(new PénzMozgás("XI", "B", "b", "13", ""));
+            XIBb.Add(new PénzMozgás("XI/B/b/11", "Alkalmazottak javadalmának közterhei"));
+            XIBb.Add(new PénzMozgás("XI/B/b/12", ""));
+            XIBb.Add(new PénzMozgás("XI/B/b/13", ""));
 
             return XIBb;
         }
@@ -177,20 +177,20 @@ namespace Konyvelo
         private List<PénzMozgás> XIILista()
         {
             XII.Clear();
-            XII.Add(new PénzMozgás("XI", "1", "Úrvacsorai jegyekre"));
-            XII.Add(new PénzMozgás("XI", "2", "Szeretetvendégségek, gyülekezeti napok"));
-            XII.Add(new PénzMozgás("XI", "3", "Gyülekezeti misszió"));
-            XII.Add(new PénzMozgás("XI", "3", "a", "Konfirmandusok"));
-            XII.Add(new PénzMozgás("XI", "3", "b", "Hitoktatás"));
-            XII.Add(new PénzMozgás("XI", "3", "c", "Ifjúsági munka"));
-            XII.Add(new PénzMozgás("XI", "3", "d", "Szórvány- és tanyagondozás"));
-            XII.Add(new PénzMozgás("XI", "3", "e", "Missziói alkalmak"));
-            XII.Add(new PénzMozgás("XI", "4", "Legátumok"));
-            XII.Add(new PénzMozgás("XI", "5", "Gyülekezeten belüli szeretetszolgálat"));
-            XII.Add(new PénzMozgás("XI", "6", "Gyülekezeti újság"));
-            XII.Add(new PénzMozgás("XI", "7", "Sajtó misszió"));
-            XII.Add(new PénzMozgás("XI", "8", ""));
-            XII.Add(new PénzMozgás("XI", "9", ""));
+            XII.Add(new PénzMozgás("XI/1", "Úrvacsorai jegyekre"));
+            XII.Add(new PénzMozgás("XI/2", "Szeretetvendégségek, gyülekezeti napok"));
+            XII.Add(new PénzMozgás("XI/3", "Gyülekezeti misszió"));
+            XII.Add(new PénzMozgás("XI/3/a", "Konfirmandusok"));
+            XII.Add(new PénzMozgás("XI/3/b", "Hitoktatás"));
+            XII.Add(new PénzMozgás("XI/3/c", "Ifjúsági munka"));
+            XII.Add(new PénzMozgás("XI/3/d", "Szórvány- és tanyagondozás"));
+            XII.Add(new PénzMozgás("XI/3/e", "Missziói alkalmak"));
+            XII.Add(new PénzMozgás("XI/4", "Legátumok"));
+            XII.Add(new PénzMozgás("XI/5", "Gyülekezeten belüli szeretetszolgálat"));
+            XII.Add(new PénzMozgás("XI/6", "Gyülekezeti újság"));
+            XII.Add(new PénzMozgás("XI/7", "Sajtó misszió"));
+            XII.Add(new PénzMozgás("XI/8", ""));
+            XII.Add(new PénzMozgás("XI/9", ""));
 
             return XII;
         }
@@ -199,21 +199,21 @@ namespace Konyvelo
         private List<PénzMozgás> XIIILista()
         {
             XIII.Clear();
-            XIII.Add(new PénzMozgás("XIII", "1", "Irodaszerek"));
-            XIII.Add(new PénzMozgás("XIII", "2", "Posta- és telefonköltség"));
-            XIII.Add(new PénzMozgás("XIII", "3", "Banki költségek"));
-            XIII.Add(new PénzMozgás("XIII", "4", "Egyházi hivatal(ok) fűtése, világítása"));
-            XIII.Add(new PénzMozgás("XIII", "5", "Egyházközségi hivatal(ok) takarítása"));
-            XIII.Add(new PénzMozgás("XIII", "6", "Hivatali berendezések és eszközök karbantartása"));
-            XIII.Add(new PénzMozgás("XIII", "7", "Kiküldetési és közlekedési költségek"));
-            XIII.Add(new PénzMozgás("XIII", "8", "Gépkocsi fenntartás költségei"));
-            XIII.Add(new PénzMozgás("XIII", "9", "Egyházlátogatások költségei"));
-            XIII.Add(new PénzMozgás("XIII", "10", "Újságok előfizetése"));
-            XIII.Add(new PénzMozgás("XIII", "11", "Egyházközségi könyvtár gyarapítása"));
-            XIII.Add(new PénzMozgás("XIII", "12", ""));
-            XIII.Add(new PénzMozgás("XIII", "13", ""));
-            XIII.Add(new PénzMozgás("XIII", "14", ""));
-            XIII.Add(new PénzMozgás("XIII", "15", ""));
+            XIII.Add(new PénzMozgás("XIII/1", "Irodaszerek"));
+            XIII.Add(new PénzMozgás("XIII/2", "Posta- és telefonköltség"));
+            XIII.Add(new PénzMozgás("XIII/3", "Banki költségek"));
+            XIII.Add(new PénzMozgás("XIII/4", "Egyházi hivatal(ok) fűtése, világítása"));
+            XIII.Add(new PénzMozgás("XIII/5", "Egyházközségi hivatal(ok) takarítása"));
+            XIII.Add(new PénzMozgás("XIII/6", "Hivatali berendezések és eszközök karbantartása"));
+            XIII.Add(new PénzMozgás("XIII/7", "Kiküldetési és közlekedési költségek"));
+            XIII.Add(new PénzMozgás("XIII/8", "Gépkocsi fenntartás költségei"));
+            XIII.Add(new PénzMozgás("XIII/9", "Egyházlátogatások költségei"));
+            XIII.Add(new PénzMozgás("XIII/10", "Újságok előfizetése"));
+            XIII.Add(new PénzMozgás("XIII/11", "Egyházközségi könyvtár gyarapítása"));
+            XIII.Add(new PénzMozgás("XIII/12", ""));
+            XIII.Add(new PénzMozgás("XIII/13", ""));
+            XIII.Add(new PénzMozgás("XIII/14", ""));
+            XIII.Add(new PénzMozgás("XIII/15", ""));
             
             return XIII;
         }
@@ -222,20 +222,20 @@ namespace Konyvelo
         private List<PénzMozgás> XIVLista()
         {
             XIV.Clear();
-            XIV.Add(new PénzMozgás("XIV", "1", "Templom karbantartási és fenntartási költségei"));
-            XIV.Add(new PénzMozgás("XIV", "2", "Templom közüzemi költségei"));
-            XIV.Add(new PénzMozgás("XIV", "3", "Parókia karbantartási és fenntartási költségei"));
-            XIV.Add(new PénzMozgás("XIV", "4", "Parókia közüzemi költségei"));
-            XIV.Add(new PénzMozgás("XIV", "5", "Gyülekezeti ház karbantartási és fenntartási költségei"));
-            XIV.Add(new PénzMozgás("XIV", "6", "Gyülekezeti ház közüzemi költségei"));
-            XIV.Add(new PénzMozgás("XIV", "7", "Egyéb épület karbantartási és fenntartási költségei"));
-            XIV.Add(new PénzMozgás("XIV", "8", "Egyéb épület közüzemi költségei"));
-            XIV.Add(new PénzMozgás("XIV", "9", "Egyéb épület felújitási költségei"));
-            XIV.Add(new PénzMozgás("XIV", "10", "Egyházi ingatlanok biztosítási díjai"));
-            XIV.Add(new PénzMozgás("XIV", "11", "Lakbérek"));
-            XIV.Add(new PénzMozgás("XIV", "12", ""));
-            XIV.Add(new PénzMozgás("XIV", "13", ""));
-            XIV.Add(new PénzMozgás("XIV", "14", ""));
+            XIV.Add(new PénzMozgás("XIV/1", "Templom karbantartási és fenntartási költségei"));
+            XIV.Add(new PénzMozgás("XIV/2", "Templom közüzemi költségei"));
+            XIV.Add(new PénzMozgás("XIV/3", "Parókia karbantartási és fenntartási költségei"));
+            XIV.Add(new PénzMozgás("XIV/4", "Parókia közüzemi költségei"));
+            XIV.Add(new PénzMozgás("XIV/5", "Gyülekezeti ház karbantartási és fenntartási költségei"));
+            XIV.Add(new PénzMozgás("XIV/6", "Gyülekezeti ház közüzemi költségei"));
+            XIV.Add(new PénzMozgás("XIV/7", "Egyéb épület karbantartási és fenntartási költségei"));
+            XIV.Add(new PénzMozgás("XIV/8", "Egyéb épület közüzemi költségei"));
+            XIV.Add(new PénzMozgás("XIV/9", "Egyéb épület felújitási költségei"));
+            XIV.Add(new PénzMozgás("XIV/10", "Egyházi ingatlanok biztosítási díjai"));
+            XIV.Add(new PénzMozgás("XIV/11", "Lakbérek"));
+            XIV.Add(new PénzMozgás("XIV/12", ""));
+            XIV.Add(new PénzMozgás("XIV/13", ""));
+            XIV.Add(new PénzMozgás("XIV/14", ""));
 
             return XIV;
         }
@@ -244,13 +244,13 @@ namespace Konyvelo
         private List<PénzMozgás> XVLista()
         {
             XV.Clear();
-            XV.Add(new PénzMozgás("XV", "1", "Templom felújítási költségei"));
-            XV.Add(new PénzMozgás("XV", "2", "Parókia felújítási költségei"));
-            XV.Add(new PénzMozgás("XV", "3", "Gyülekezeti ház felújítási költségei"));
-            XV.Add(new PénzMozgás("XV", "4", "Egyéb épület felújítási költségei"));
-            XV.Add(new PénzMozgás("XV", "5", ""));
-            XV.Add(new PénzMozgás("XV", "6", ""));
-            XV.Add(new PénzMozgás("XV", "7", ""));
+            XV.Add(new PénzMozgás("XV/1", "Templom felújítási költségei"));
+            XV.Add(new PénzMozgás("XV/2", "Parókia felújítási költségei"));
+            XV.Add(new PénzMozgás("XV/3", "Gyülekezeti ház felújítási költségei"));
+            XV.Add(new PénzMozgás("XV/4", "Egyéb épület felújítási költségei"));
+            XV.Add(new PénzMozgás("XV/5", ""));
+            XV.Add(new PénzMozgás("XV/6", ""));
+            XV.Add(new PénzMozgás("XV/7", ""));
 
             return XV;
         }
@@ -268,14 +268,14 @@ namespace Konyvelo
         private List<PénzMozgás> XVIILista()
         {
             XVII.Clear();
-            XVII.Add(new PénzMozgás("XVII", "1", "Adományok és segélyek"));
-            XVII.Add(new PénzMozgás("XVII", "1", "a", "Egyházmegyei diakónia"));
-            XVII.Add(new PénzMozgás("XVII", "1", "b", "Lekötött perselypénzek elküldése"));
-            XVII.Add(new PénzMozgás("XVII", "2", "Kölcsönök törlesztése"));
-            XVII.Add(new PénzMozgás("XVII", "3", "Gyülekezeten kívűli adományok és segélyek"));
-            XVII.Add(new PénzMozgás("XVII", "4", "Átmenő tétel"));
-            XVII.Add(new PénzMozgás("XVII", "5", "Pénzforgalom"));
-            XVII.Add(new PénzMozgás("XVII", "6", "Vegyes és előre nem látható kiadások"));
+            XVII.Add(new PénzMozgás("XVII/1", "Adományok és segélyek"));
+            XVII.Add(new PénzMozgás("XVII/1/a", "Egyházmegyei diakónia"));
+            XVII.Add(new PénzMozgás("XVII/1/b", "Lekötött perselypénzek elküldése"));
+            XVII.Add(new PénzMozgás("XVII/2", "Kölcsönök törlesztése"));
+            XVII.Add(new PénzMozgás("XVII/3", "Gyülekezeten kívűli adományok és segélyek"));
+            XVII.Add(new PénzMozgás("XVII/4", "Átmenő tétel"));
+            XVII.Add(new PénzMozgás("XVII/5", "Pénzforgalom"));
+            XVII.Add(new PénzMozgás("XVII/6", "Vegyes és előre nem látható kiadások"));
 
             return XVII;
         }
@@ -284,12 +284,12 @@ namespace Konyvelo
         private List<PénzMozgás> XVIIILista()
         {
             XVIII.Clear();
-            XVIII.Add(new PénzMozgás("XVIII", "1", "Állami normatíva"));
-            XVIII.Add(new PénzMozgás("XVIII", "2", "Kiegészítő állami támogatás"));
-            XVIII.Add(new PénzMozgás("XVIII", "3", "Pályázati céltámogatások átadása"));
-            XVIII.Add(new PénzMozgás("XVIII", "4", ""));
-            XVIII.Add(new PénzMozgás("XVIII", "5", ""));
-            XVIII.Add(new PénzMozgás("XVIII", "6", ""));
+            XVIII.Add(new PénzMozgás("XVIII/1", "Állami normatíva"));
+            XVIII.Add(new PénzMozgás("XVIII/2", "Kiegészítő állami támogatás"));
+            XVIII.Add(new PénzMozgás("XVIII/3", "Pályázati céltámogatások átadása"));
+            XVIII.Add(new PénzMozgás("XVIII/4", ""));
+            XVIII.Add(new PénzMozgás("XVIII/5", ""));
+            XVIII.Add(new PénzMozgás("XVIII/6", ""));
 
             return XVIII;
         }

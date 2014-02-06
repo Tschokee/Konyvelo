@@ -4,6 +4,9 @@
         Title="MainWindow" Height="500" Width="904" ResizeMode="NoResize">
     <!-- MaxHeight="350" MaxWidth="884" MinHeight="350" MinWidth="884" -->
     <Grid Margin="10,24,2,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Menu>
+            <MenuItem Header="_File" />
+        </Menu>
         <DataGrid Name="MyDataGrid" VerticalAlignment="Top" RenderTransformOrigin="1.167,-9.538" Height="410" Margin="10,20,0,0" Grid.RowSpan="3"
                   CanUserReorderColumns="True" CanUserResizeColumns="True" CanUserResizeRows="False" CanUserSortColumns="True" CanUserAddRows="False" CanUserDeleteRows="False"/>
         <Button x:Name="ujsorBurron" Content="Új sor" HorizontalAlignment="Left" Margin="10,-18,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
