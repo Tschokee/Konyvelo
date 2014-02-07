@@ -29,7 +29,7 @@ namespace Konyvelo
             this.sorSzám = 0;
             this.fizetésIdeje = "ma";
             this.megjegyzés = "note";
-            this.főkönyv = "TEMP";
+            this.főkönyv = "I";
             this.bankiBevétel = 300;
             this.bankiKiadás = 300;
             this.pénztáriBevétel = 300;

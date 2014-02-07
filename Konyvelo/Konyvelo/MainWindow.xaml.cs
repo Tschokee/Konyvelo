@@ -368,7 +368,7 @@ namespace Konyvelo
             MyDataGrid.Columns.Add(col9);
             DataGridTextColumn col10 = new DataGridTextColumn();
             col10.Binding = new Binding("pénztáriEgyenleg");
-            col10.Header = "pénztári egyenleg";
+            col10.Header = "Pénztári egyenleg";
             col10.Width = 87;
             MyDataGrid.Columns.Add(col10);
             
@@ -416,7 +416,7 @@ namespace Konyvelo
 
         private void fokonyvButton_Click(object sender, RoutedEventArgs e)
         {
-            Window FW = new FokonyvWindow(bejegyzések);
+            Window FW = new FokonyvWindow(bejegyzések, I, II, III, IV, V, XIAa, XIAb, XIBa, XIBb, XII, XIII, XIV, XV, XVI, XVII, XVIII);
             FW.Show();
         }
 
