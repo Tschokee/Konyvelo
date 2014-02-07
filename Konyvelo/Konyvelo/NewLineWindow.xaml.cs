@@ -105,7 +105,7 @@ namespace Konyvelo
             }
             catch (FormatException fe)
             {
-                MessageBox.Show("Az éréték mezőbe számot kell megadni!", "Hiba");
+                MessageBox.Show("Az érték mezőbe számot kell megadni!", "Hiba");
             }             
         }
 
