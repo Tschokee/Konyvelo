@@ -1,10 +1,10 @@
 ﻿<Window x:Class="Konyvelo.NewLineWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Új sor" Height="446" Width="331">
+        Title="Új sor" Height="521.994" Width="331">
     <Grid Margin="0,0,0,5">
-        <Button Content="Ok" HorizontalAlignment="Left" Margin="55,352,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
-        <Button Content="Mégse" HorizontalAlignment="Left" Margin="197,352,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
+        <Button Content="Ok" HorizontalAlignment="Left" Margin="61,411,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Button Content="Mégse" HorizontalAlignment="Left" Margin="196,411,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
         <Label Content="Fizetés ideje" HorizontalAlignment="Left" Margin="12,47,0,0" VerticalAlignment="Top"/>
         <Label Content="Megjegyzés" HorizontalAlignment="Left" Margin="12,135,0,0" VerticalAlignment="Top"/>
         <Label Content="Főkönyv" HorizontalAlignment="Left" Margin="12,211,0,0" VerticalAlignment="Top"/>
@@ -13,6 +13,8 @@
         <TextBox x:Name="megjegyzesBox" HorizontalAlignment="Left" Height="51" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Margin="116,124,0,0"/>
         <TextBox x:Name="changeBox" HorizontalAlignment="Left" Height="25" Margin="116,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114"/>
         <ComboBox x:Name="fokonyvComboBox" HorizontalAlignment="Left" SelectedIndex="0" Margin="116,209,0,0" VerticalAlignment="Top" Width="114" Height="25" MaxDropDownHeight="100"/>
+        <Label Content="Bizonylatszám" HorizontalAlignment="Left" Height="25" Margin="12,325,0,0" VerticalAlignment="Top" Width="97"/>
+        <TextBox x:Name="bizonylatBox" HorizontalAlignment="Left" Height="25" Margin="116,325,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114"/>
 
     </Grid>
 </Window>

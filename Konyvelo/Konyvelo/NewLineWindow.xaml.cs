@@ -81,9 +81,20 @@ namespace Konyvelo
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             int ssz = 0;
+            string bsz;
             if (list.Count != 0)
                 ssz = list.Last().sorSzám;
-
+            if (bizonylatBox.Text == "")
+            {
+                switch (s)
+                {
+                    case 1: bsz = "BeB/" + System.DateTime.Now.Year; break;
+                    case 2: bsz = "KiB/" + System.DateTime.Now.Year; break;
+                    case 3: bsz = "BeP/" + System.DateTime.Now.Year; break;
+                    case 4: bsz = "KiP/" + System.DateTime.Now.Year; break;
+                }
+            }
+            else bsz = bizonylatBox.Text;
             int k = 0;
             try
             {
