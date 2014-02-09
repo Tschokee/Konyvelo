@@ -27,13 +27,19 @@ namespace Konyvelo
         //ez a metódus tölti be a bejegyzések táblából az adatokat a listába
         private List<Bejegyzés> LoadCollectionData()
         {
-            bejegyzések.Add(new Bejegyzés(1, "tegnap", "asdfashdl", "I", 1000, 300, 500, 600));
-            bejegyzések.Add(new Bejegyzés(2, "tegnap", "asdfashdl", "II/2", 1000, 300, 500, 600));
-            bejegyzések.Add(new Bejegyzés(3, "tegnap", "asdfashdl", "I", 200, 600, 1200, 100));
+            bejegyzések.Add(new Bejegyzés(1, "2014. jan. 1.", " Maradvány 2008-ról (házipénztár)", "IV/10", 4093002, 0, 0, 0, "BeP/2014"));
+            bejegyzések.Add(new Bejegyzés(2, "2014. jan. 1", "Maradvány 2008-ról (bankszámla)", "IV/10", 0, 0, 110000, 0, "664-0184"));
+          /*  bejegyzések.Add(new Bejegyzés(3, "tegnap", "asdfashdl", "I", 200, 600, 1200, 100));
+
+            1.#2009. jan. 1.#BeP-1/2009. Maradvány 2008-ról (házipénztár)#IV/10#4093002#0#0#0
+2.#2009. jan. 1.#664-0184 Maradvány 2008-ról (bankszámla)#IV/10#0#0#110000#0
+3.#2009. jan. 1.#1/2009 Maradvány 2008-ról (másodbankszámla)#IV/10#0#440#0#0
+4.#2009. jan. 7.#KiP-1/2009. Postaköltség#XIII/2#0#0#0#5000
+5.#2009. jan. 8.#KiP-1/2009. Óévi perselyadomány#XVII/1/b#12000#0#0#0*/
 
             for (int i = 0; i < 50; i++)
             {
-                bejegyzések.Add(new Bejegyzés());
+               // bejegyzések.Add(new Bejegyzés());
             }
 
             return bejegyzések;
