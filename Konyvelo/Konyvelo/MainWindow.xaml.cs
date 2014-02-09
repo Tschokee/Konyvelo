@@ -27,7 +27,7 @@ namespace Konyvelo
         //ez a metódus tölti be a bejegyzések táblából az adatokat a listába
         private List<Bejegyzés> LoadCollectionData()
         {
-            bejegyzések.Add(new Bejegyzés(1, "2014. jan. 1.", "Maradvány 2008-ról (házipénztár)", "IV/10", 4093002, 0, 0, 0, "BeP/2014"));
+            bejegyzések.Add(new Bejegyzés(1000, "2014. jan. 1.", "Maradvány 2008-ról (házipénztár)", "IV/10", 4093002, 0, 0, 0, "BeP/2014"));
             bejegyzések.Add(new Bejegyzés(2, "2014. jan. 1", "Maradvány 2008-ról (bankszámla)", "IV/10", 0, 0, 110000, 0, "664-0184"));
           /*  bejegyzések.Add(new Bejegyzés(3, "tegnap", "asdfashdl", "I", 200, 600, 1200, 100));
 
@@ -330,7 +330,7 @@ namespace Konyvelo
             DataGridTextColumn col1 = new DataGridTextColumn();
             col1.Binding = new Binding("sorSzám");
             col1.Header = "Sorszám";
-            col1.Width = 65;
+            col1.Width = 55;
             MyDataGrid.Columns.Add(col1);
             DataGridTextColumn col2 = new DataGridTextColumn();
             col2.Binding = new Binding("fizetésIdeje");
@@ -360,12 +360,12 @@ namespace Konyvelo
             DataGridTextColumn col7 = new DataGridTextColumn();
             col7.Binding = new Binding("bankiEgyenleg");
             col7.Header = "Banki egyenleg";
-            col7.Width = 87;
+            col7.Width = 95;
             MyDataGrid.Columns.Add(col7);
             DataGridTextColumn col8 = new DataGridTextColumn();
             col8.Binding = new Binding("pénztáriBevétel");
             col8.Header = "Pénztári bevétel";
-            col8.Width = 87;
+            col8.Width = 95;
             MyDataGrid.Columns.Add(col8);
             DataGridTextColumn col9 = new DataGridTextColumn();
             col9.Binding = new Binding("pénztáriKiadás");
@@ -375,7 +375,7 @@ namespace Konyvelo
             DataGridTextColumn col10 = new DataGridTextColumn();
             col10.Binding = new Binding("pénztáriEgyenleg");
             col10.Header = "Pénztári egyenleg";
-            col10.Width = 87;
+            col10.Width = 105;
             MyDataGrid.Columns.Add(col10);
             
             this.Left = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right - (System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Right / 2) - (this.Width / 2);
