@@ -66,7 +66,7 @@ namespace Konyvelo
             lab.Content = i;
         }
 
-        //a gridek forráslitáit felveszika memóriában lévő listák, itt lehet menteni adatbázisba is ezeket a listákat(azt nem tudjuk h melyik elem módosult, az egészet menteni kell, de ez nem sok)
+        //a gridek forráslitáit felveszik a memóriában lévő listák, itt lehet menteni adatbázisba is ezeket a listákat(azt nem tudjuk h melyik elem módosult, az egészet menteni kell, de ez nem sok)
         public void listakMentese()
         {
             this.ILista = (List<PénzMozgás>)IDataGrid.ItemsSource;
