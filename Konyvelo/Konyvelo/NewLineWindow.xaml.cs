@@ -81,7 +81,7 @@ namespace Konyvelo
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             int ssz = 0;
-            string bsz;
+            string bsz = "";
             if (list.Count != 0)
                 ssz = list.Last().sorSzám;
             if (bizonylatBox.Text == "")
@@ -103,10 +103,10 @@ namespace Konyvelo
                 //listához itt adunk metódussal
                 switch (s)
                 {
-                    case 1: listaAdd(new Bejegyzés(ssz + 1, fizetesBox.Text, megjegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), k, 0, 0, 0)); break;
-                    case 2: listaAdd(new Bejegyzés(ssz + 1, fizetesBox.Text, megjegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), 0, k, 0, 0)); break;
-                    case 3: listaAdd(new Bejegyzés(ssz + 1, fizetesBox.Text, megjegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), 0, 0, k, 0)); break;
-                    case 4: listaAdd(new Bejegyzés(ssz + 1, fizetesBox.Text, megjegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), 0, 0, 0, k)); break;
+                    case 1: listaAdd(new Bejegyzés(ssz + 1, fizetesBox.Text, megjegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), k, 0, 0, 0, bsz)); break;
+                    case 2: listaAdd(new Bejegyzés(ssz + 1, fizetesBox.Text, megjegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), 0, k, 0, 0, bsz)); break;
+                    case 3: listaAdd(new Bejegyzés(ssz + 1, fizetesBox.Text, megjegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), 0, 0, k, 0, bsz)); break;
+                    case 4: listaAdd(new Bejegyzés(ssz + 1, fizetesBox.Text, megjegyzesBox.Text, fokonyvComboBox.SelectedItem.ToString(), 0, 0, 0, k, bsz)); break;
                     default: break;
                 }
 

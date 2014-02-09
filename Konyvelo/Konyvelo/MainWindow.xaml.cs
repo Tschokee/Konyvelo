@@ -27,7 +27,7 @@ namespace Konyvelo
         //ez a metódus tölti be a bejegyzések táblából az adatokat a listába
         private List<Bejegyzés> LoadCollectionData()
         {
-            bejegyzések.Add(new Bejegyzés(1, "2014. jan. 1.", " Maradvány 2008-ról (házipénztár)", "IV/10", 4093002, 0, 0, 0, "BeP/2014"));
+            bejegyzések.Add(new Bejegyzés(1, "2014. jan. 1.", "Maradvány 2008-ról (házipénztár)", "IV/10", 4093002, 0, 0, 0, "BeP/2014"));
             bejegyzések.Add(new Bejegyzés(2, "2014. jan. 1", "Maradvány 2008-ról (bankszámla)", "IV/10", 0, 0, 110000, 0, "664-0184"));
           /*  bejegyzések.Add(new Bejegyzés(3, "tegnap", "asdfashdl", "I", 200, 600, 1200, 100));
 
@@ -340,7 +340,7 @@ namespace Konyvelo
             DataGridTextColumn col3 = new DataGridTextColumn();
             col3.Binding = new Binding("megjegyzés");
             col3.Header = "Megjegyzés";
-            col3.Width = 87;
+            col3.Width = 221;
             MyDataGrid.Columns.Add(col3);
             DataGridTextColumn col4 = new DataGridTextColumn();
             col4.Binding = new Binding("főkönyv");
