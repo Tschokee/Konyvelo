@@ -62,6 +62,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="EvSzamWindow.xaml.cs">
+      <DependentUpon>EvSzamWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FokonyvWindow.xaml.cs">
       <DependentUpon>FokonyvWindow.xaml</DependentUpon>
     </Compile>
@@ -79,6 +82,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ComfirmDeleteWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EvSzamWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

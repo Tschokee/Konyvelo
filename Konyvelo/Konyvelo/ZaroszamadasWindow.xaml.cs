@@ -19,6 +19,7 @@ namespace Konyvelo
     /// </summary>
     public partial class ZaroszamadasWindow : Window
     {
+        private int year = PénzMozgás.évSzám;
 
         public void osszegezElo(List<PénzMozgás> Lista, Label lab)
         {
@@ -71,10 +72,10 @@ namespace Konyvelo
             osszegezElo(IILista, IIelo);
             osszegezElo(IIILista, IIIelo);
             osszegezElo(IVLista, IVelo);
-            evesSajatBevetelNev.Content = "Az egyházközség " + System.DateTime.Now.Year + ". évi saját bevételei összesen:";
+            evesSajatBevetelNev.Content = "Az egyházközség " + year + ". évi saját bevételei összesen:";
             evesSajatBevetelelo.Content = ILista[0].előirányzat + Convert.ToInt32(IIelo.Content) + Convert.ToInt32(IIIelo.Content) + Convert.ToInt32(IVelo.Content);
             osszegezElo(VLista, Velo);
-            evesBevetelNev.Content = "Az egyházközség " + System.DateTime.Now.Year + ". évi bevételei összesen:";
+            evesBevetelNev.Content = "Az egyházközség " + year + ". évi bevételei összesen:";
             EvesBevetelelo.Content = Convert.ToInt32(evesSajatBevetelelo.Content) + Convert.ToInt32(Velo.Content);
             osszegezElo(XIAaLista, XIAaelo);
             osszegezElo(XIAbLista, XIAbelo);
@@ -89,14 +90,14 @@ namespace Konyvelo
             osszegezElo(XVLista, XVelo);
             osszegezElo(XVILista, XVIelo);
             osszegezElo(XVIILista, XVIIelo);
-            evesSajatKiadasNev.Content = "Az egyházközség " + System.DateTime.Now.Year + ". évi saját kiadásai összesen:";
+            evesSajatKiadasNev.Content = "Az egyházközség " + year + ". évi saját kiadásai összesen:";
             evesSajatKiadaselo.Content = Convert.ToInt32(XIelo.Content) + Convert.ToInt32(XIIelo.Content) + Convert.ToInt32(XIIelo.Content) + Convert.ToInt32(XIVelo.Content) + Convert.ToInt32(XVelo.Content) + Convert.ToInt32(XVIelo.Content) + Convert.ToInt32(XVIelo.Content) + Convert.ToInt32(XVIIelo.Content);
-            evesKiadasNev.Content = "Az egyházközség " + System.DateTime.Now.Year + ". évi kiadásai összesen:";
+            evesKiadasNev.Content = "Az egyházközség " + year + ". évi kiadásai összesen:";
             osszegezElo(XVIIILista, XVIIIelo);
             evesKiadaselo.Content = Convert.ToInt32(evesSajatKiadaselo.Content) + Convert.ToInt32(XVIIIelo.Content);
-            osszesEloiranyzottEvesBevetelNev.Content = "Összes bevétel a " + System.DateTime.Now.Year + ". évre:";
+            osszesEloiranyzottEvesBevetelNev.Content = "Összes bevétel a " + year + ". évre:";
             osszesEloiranyzottEvesBevetelelo.Content = EvesBevetelelo.Content;
-            osszesEloiranyzottEvesKiadasNev.Content = "Összes kiadás a " + System.DateTime.Now.Year + ". évre:";
+            osszesEloiranyzottEvesKiadasNev.Content = "Összes kiadás a " + year + ". évre:";
             osszesEloiranyzottEvesKiadaselo.Content = evesKiadaselo.Content;
             kulonbozetelo.Content = Convert.ToInt32(osszesEloiranyzottEvesBevetelelo.Content) - Convert.ToInt32(osszesEloiranyzottEvesKiadaselo.Content);
 

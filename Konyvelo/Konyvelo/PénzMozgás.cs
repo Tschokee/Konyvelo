@@ -12,6 +12,7 @@ namespace Konyvelo
         public string név { get; set; }
         public int előirányzat { get; set; }
         public int teljesítés { get; set; }
+        public static int évSzám = System.DateTime.Now.Year;
 
         public PénzMozgás()
         {

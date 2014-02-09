@@ -19,6 +19,7 @@ namespace Konyvelo
     /// </summary>
     public partial class FokonyvWindow : Window
     {
+        private int year = PénzMozgás.évSzám;
         List<Bejegyzés> I = new List<Bejegyzés>(), II1 = new List<Bejegyzés>(), II2 = new List<Bejegyzés>(), II3 = new List<Bejegyzés>(), II4 = new List<Bejegyzés>(), II5 = new List<Bejegyzés>(), II6 = new List<Bejegyzés>(), III1 = new List<Bejegyzés>(), III2 = new List<Bejegyzés>(), III3 = new List<Bejegyzés>(), III4 = new List<Bejegyzés>(), III5 = new List<Bejegyzés>(), III6 = new List<Bejegyzés>(), III7 = new List<Bejegyzés>(), III8 = new List<Bejegyzés>(), III9 = new List<Bejegyzés>(), III10 = new List<Bejegyzés>(), IV1 = new List<Bejegyzés>(), IV2 = new List<Bejegyzés>(), IV3 = new List<Bejegyzés>(), IV4 = new List<Bejegyzés>(), IV5 = new List<Bejegyzés>(), IV6 = new List<Bejegyzés>(), IV7 = new List<Bejegyzés>(), IV8 = new List<Bejegyzés>(), IV9 = new List<Bejegyzés>(), IV10 = new List<Bejegyzés>(), V1 = new List<Bejegyzés>(), V2 = new List<Bejegyzés>(), V3 = new List<Bejegyzés>(), V4 = new List<Bejegyzés>(), V5 = new List<Bejegyzés>(), V6 = new List<Bejegyzés>(),
             XIAa1 = new List<Bejegyzés>(), XIAa2 = new List<Bejegyzés>(), XIAa3 = new List<Bejegyzés>(), XIAa4 = new List<Bejegyzés>(), XIAa5 = new List<Bejegyzés>(), XIAa6 = new List<Bejegyzés>(), XIAa7 = new List<Bejegyzés>(), XIAa8 = new List<Bejegyzés>(), XIAa9 = new List<Bejegyzés>(), XIAa10 = new List<Bejegyzés>(), XIAa11 = new List<Bejegyzés>(), XIAa12 = new List<Bejegyzés>(), XIAa13 = new List<Bejegyzés>(), XIAa14 = new List<Bejegyzés>(), XIAb1 = new List<Bejegyzés>(), XIAb2 = new List<Bejegyzés>(), XIAb3 = new List<Bejegyzés>(), XIBa1 = new List<Bejegyzés>(), XIBa2 = new List<Bejegyzés>(), XIBa3 = new List<Bejegyzés>(), XIBa4 = new List<Bejegyzés>(), XIBa5 = new List<Bejegyzés>(), XIBa6 = new List<Bejegyzés>(), XIBa7 = new List<Bejegyzés>(), XIBa8 = new List<Bejegyzés>(), XIBa9 = new List<Bejegyzés>(), XIBa10 = new List<Bejegyzés>(),
             XIBb1 = new List<Bejegyzés>(), XIBb2 = new List<Bejegyzés>(), XIBb3 = new List<Bejegyzés>(), XII1 = new List<Bejegyzés>(), XII2 = new List<Bejegyzés>(), XII3 = new List<Bejegyzés>(), XII4 = new List<Bejegyzés>(), XII5 = new List<Bejegyzés>(), XII6 = new List<Bejegyzés>(), XII7 = new List<Bejegyzés>(), XII8 = new List<Bejegyzés>(), XII9 = new List<Bejegyzés>(), XII10 = new List<Bejegyzés>(), XII11 = new List<Bejegyzés>(), XII12 = new List<Bejegyzés>(), XII13 = new List<Bejegyzés>(), XII14 = new List<Bejegyzés>(), XIII1 = new List<Bejegyzés>(), XIII2 = new List<Bejegyzés>(), XIII3 = new List<Bejegyzés>(), XIII4 = new List<Bejegyzés>(), XIII5 = new List<Bejegyzés>(), XIII6 = new List<Bejegyzés>(), XIII7 = new List<Bejegyzés>(), XIII8 = new List<Bejegyzés>(), XIII9 = new List<Bejegyzés>(), XIII10 = new List<Bejegyzés>(), XIII11 = new List<Bejegyzés>(), XIII12 = new List<Bejegyzés>(), XIII13 = new List<Bejegyzés>(), XIII14 = new List<Bejegyzés>(), XIII15 = new List<Bejegyzés>(),
@@ -439,7 +440,7 @@ namespace Konyvelo
             }
             //össes saját bevétel label
             Label osszSajatBevetelNevLabel = new Label();
-            osszSajatBevetelNevLabel.Content = "Az egyházközség " + System.DateTime.Now.Year + ". évi saját bevételei összesen:";
+            osszSajatBevetelNevLabel.Content = "Az egyházközség " + year + ". évi saját bevételei összesen:";
             osszSajatBevetelNevLabel.Margin = new Thickness(0, m, 0, 0);
             osszSajatBevetelNevLabel.Height = 27;
             osszSajatBevetelNevLabel.HorizontalAlignment = HorizontalAlignment.Left;
@@ -495,7 +496,7 @@ namespace Konyvelo
 
             //összes bevétel label
             Label osszBevetelNevLabel = new Label();
-            osszBevetelNevLabel.Content = "Az egyházközség " + System.DateTime.Now.Year + ". évi bevételei összesen:";
+            osszBevetelNevLabel.Content = "Az egyházközség " + year + ". évi bevételei összesen:";
             osszBevetelNevLabel.Margin = new Thickness(0, m, 0, 0);
             osszBevetelNevLabel.Height = 27;
             osszBevetelNevLabel.HorizontalAlignment = HorizontalAlignment.Left;
@@ -973,7 +974,7 @@ namespace Konyvelo
 
             //össes saját kiadás label
             Label osszSajatKiadasNevLabel = new Label();
-            osszSajatKiadasNevLabel.Content = "Az egyházközség " + System.DateTime.Now.Year + ". évi saját kiadásai összesen:";
+            osszSajatKiadasNevLabel.Content = "Az egyházközség " + year + ". évi saját kiadásai összesen:";
             osszSajatKiadasNevLabel.Margin = new Thickness(0, m, 0, 0);
             osszSajatKiadasNevLabel.Height = 27;
             osszSajatKiadasNevLabel.HorizontalAlignment = HorizontalAlignment.Left;
@@ -1028,7 +1029,7 @@ namespace Konyvelo
 
             //összes kiadás label
             Label osszKiadasNevLabel = new Label();
-            osszKiadasNevLabel.Content = "Az egyházközség " + System.DateTime.Now.Year + ". évi bevételei összesen:";
+            osszKiadasNevLabel.Content = "Az egyházközség " + year + ". évi bevételei összesen:";
             osszKiadasNevLabel.Margin = new Thickness(0, m, 0, 0);
             osszKiadasNevLabel.Height = 27;
             osszKiadasNevLabel.HorizontalAlignment = HorizontalAlignment.Left;

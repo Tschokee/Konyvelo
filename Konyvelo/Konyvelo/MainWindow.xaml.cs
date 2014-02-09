@@ -29,8 +29,8 @@ namespace Konyvelo
         {
             bejegyzések.Add(new Bejegyzés(1, "2014. jan. 1.", "Maradvány 2008-ról (házipénztár)", "IV/10", 4093002, 0, 0, 0, "BeB/2014"));
             bejegyzések.Add(new Bejegyzés(2, "2014. jan. 1.", "Maradvány 2008-ról (bankszámla)", "IV/10", 0, 0, 110000, 0, "664-0184"));
-            bejegyzések.Add(new Bejegyzés(3, "2014. jan. 7.", "Postaköltség", "XVIII", 0, 0, 0, 5000, "KiP/2014"));
-            bejegyzések.Add(new Bejegyzés(4, "2014. jan. 8.", "Óévi perselyadomány", "XVII", 12000, 0,0,0, "KiB/2014")); 
+            bejegyzések.Add(new Bejegyzés(3, "2014. jan. 7.", "Postaköltség", "XVIII/2", 0, 0, 0, 5000, "KiP/2014"));
+            bejegyzések.Add(new Bejegyzés(4, "2014. jan. 8.", "Óévi perselyadomány", "XVII/1", 12000, 0,0,0, "KiB/2014")); 
 
             for (int i = 0; i < 50; i++)
             {
@@ -425,6 +425,12 @@ namespace Konyvelo
         {
             Window SW = new SugoWindow();
             SW.Show();
+        }
+
+        private void evSzamMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Window EW = new EvSzamWindow();
+            EW.Show();
         }
 
         private void printMenuItem_Click(object sender, RoutedEventArgs e)
