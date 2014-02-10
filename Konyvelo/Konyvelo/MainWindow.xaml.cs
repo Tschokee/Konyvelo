@@ -42,14 +42,15 @@ namespace Konyvelo
         }
         private List<Bejegyzés> LoadCFromFile(string filename)
         {
-            List<Bejegyzés> bejegyzesektemp = new List<Bejegyzés>();
+            //List<Bejegyzés> bejegyzesektemp = new List<Bejegyzés>();
+            bejegyzések = new List<Bejegyzés>();
             try
             {
                 using (Stream stream = File.Open(filename+".bdb", FileMode.Open))
                 {
                     BinaryFormatter bin = new BinaryFormatter();
 
-                    bejegyzesektemp = (List<Bejegyzés>)bin.Deserialize(stream);
+                    bejegyzések = (List<Bejegyzés>)bin.Deserialize(stream);
                    
                 }
             }
@@ -58,8 +59,8 @@ namespace Konyvelo
                 MessageBox.Show(e.Message);
             }
 
-
-            return bejegyzesektemp;
+            
+            return bejegyzések;
 
         }
         List<PénzMozgás> I = new List<PénzMozgás>();
@@ -340,7 +341,8 @@ namespace Konyvelo
         public MainWindow()
         {
             InitializeComponent();
-            MyDataGrid.ItemsSource = LoadCollectionData();//LoadCFromFile(PénzMozgás.évSzám.ToString()); ;//bejegyzések listát feltöltő metódus 
+            MyDataGrid.ItemsSource = LoadCFromFile(PénzMozgás.évSzám.ToString());//LoadCollectionData();////bejegyzések listát feltöltő metódus
+            //SaveTo(PénzMozgás.évSzám.ToString());
             MyDataGrid.IsReadOnly = true;
             generateLists();//ha a pénzmozgás tábla üres akkor kell csak lefuttatni ezt a metódust és elmenteni a táblába, ha nem üres akkor a táblából kell betölteni az adatokat a listákba
             MyDataGrid.AutoGenerateColumns = false;

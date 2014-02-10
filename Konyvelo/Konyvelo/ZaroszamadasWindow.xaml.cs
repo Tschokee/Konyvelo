@@ -687,7 +687,7 @@ namespace Konyvelo
                 }
                 if (b.főkönyv.Equals(XVILista[0].azonosító))
                 {
-                    XIVLista[0].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
+                    XVILista[0].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
                 }
                 if (b.főkönyv.Equals(XVIILista[0].azonosító))
@@ -773,7 +773,7 @@ namespace Konyvelo
             XI_Atelj.Content = Convert.ToInt32(XIAatelj.Content) + Convert.ToInt32(XIAbtelj.Content);
             XI_Btelj.Content = Convert.ToInt32(XIBatelj.Content) + Convert.ToInt32(XIBbtelj.Content);
             XItelj.Content = Convert.ToInt32(XI_Atelj.Content) + Convert.ToInt32(XI_Btelj.Content);
-            evesSajatKiadastelj.Content = Convert.ToInt32(XItelj.Content) + Convert.ToInt32(XIItelj.Content) + Convert.ToInt32(XIItelj.Content) + Convert.ToInt32(XIVtelj.Content) + Convert.ToInt32(XVtelj.Content) + Convert.ToInt32(XVItelj.Content) + Convert.ToInt32(XVItelj.Content) + Convert.ToInt32(XVIItelj.Content);
+            evesSajatKiadastelj.Content = Convert.ToInt32(XItelj.Content) + Convert.ToInt32(XIItelj.Content) + Convert.ToInt32(XIIItelj.Content) + Convert.ToInt32(XIVtelj.Content) + Convert.ToInt32(XVtelj.Content) + Convert.ToInt32(XVItelj.Content) + Convert.ToInt32(XVIItelj.Content);
             evesKiadastelj.Content = Convert.ToInt32(evesSajatKiadastelj.Content) + Convert.ToInt32(XVIIItelj.Content);
             osszesEloiranyzottEvesBeveteltelj.Content = EvesBeveteltelj.Content;
             osszesEloiranyzottEvesKiadastelj.Content = evesKiadastelj.Content;
