@@ -33,10 +33,10 @@ namespace Konyvelo
             bejegyzések.Add(new Bejegyzés(3, "2014. jan. 7.", "Postaköltség", "XVIII/2", 0, 0, 0, 5000, "KiP/2014"));
             bejegyzések.Add(new Bejegyzés(4, "2014. jan. 8.", "Óévi perselyadomány", "XVII/1", 12000, 0,0,0, "KiB/2014")); 
 
-            for (int i = 0; i < 50; i++)
+            /*for (int i = 0; i < 50; i++)
             {
-               // bejegyzések.Add(new Bejegyzés());
-            }
+                bejegyzések.Add(new Bejegyzés());
+            }*/
 
             return bejegyzések;
         }
@@ -340,7 +340,7 @@ namespace Konyvelo
         public MainWindow()
         {
             InitializeComponent();
-            MyDataGrid.ItemsSource = LoadCFromFile(PénzMozgás.évSzám.ToString()); ;//bejegyzések listát feltöltő metódus 
+            MyDataGrid.ItemsSource = LoadCollectionData();//LoadCFromFile(PénzMozgás.évSzám.ToString()); ;//bejegyzések listát feltöltő metódus 
             MyDataGrid.IsReadOnly = true;
             generateLists();//ha a pénzmozgás tábla üres akkor kell csak lefuttatni ezt a metódust és elmenteni a táblába, ha nem üres akkor a táblából kell betölteni az adatokat a listákba
             MyDataGrid.AutoGenerateColumns = false;
@@ -489,9 +489,7 @@ namespace Konyvelo
             {
                 MessageBox.Show(e.Message);
             }
-            
-        
-        
+                         
         }
         public string CreatePrintPage()
         {

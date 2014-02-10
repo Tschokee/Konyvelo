@@ -46,7 +46,7 @@ namespace Konyvelo
             osszegez(XVILista, XVIossz);
             osszegez(XVIILista, XVIIossz);
             evesSajatKiadasNev.Content = "Az egyházközség " + year + ". évi saját kiadásai összesen:";
-            evesSajatKiadasErtek.Content = Convert.ToInt32(XIosszes.Content) + Convert.ToInt32(XIIossz.Content) + Convert.ToInt32(XIIossz.Content) + Convert.ToInt32(XIVossz.Content) + Convert.ToInt32(XVossz.Content) + Convert.ToInt32(XVIossz.Content) + Convert.ToInt32(XVIossz.Content) + Convert.ToInt32(XVIIossz.Content);
+            evesSajatKiadasErtek.Content = Convert.ToInt32(XIosszes.Content) + Convert.ToInt32(XIIossz.Content) + Convert.ToInt32(XIIIossz.Content) + Convert.ToInt32(XIVossz.Content) + Convert.ToInt32(XVossz.Content) + Convert.ToInt32(XVIossz.Content) + Convert.ToInt32(XVIIossz.Content);
             evesKiadasNev.Content = "Az egyházközség " + year + ". évi kiadásai összesen:";
             osszegez(XVIIILista, XVIIIossz);
             evesKiadasErtek.Content = Convert.ToInt32(evesSajatKiadasErtek.Content) + Convert.ToInt32(XVIIIossz.Content);

@@ -91,7 +91,7 @@ namespace Konyvelo
             osszegezElo(XVILista, XVIelo);
             osszegezElo(XVIILista, XVIIelo);
             evesSajatKiadasNev.Content = "Az egyházközség " + year + ". évi saját kiadásai összesen:";
-            evesSajatKiadaselo.Content = Convert.ToInt32(XIelo.Content) + Convert.ToInt32(XIIelo.Content) + Convert.ToInt32(XIIelo.Content) + Convert.ToInt32(XIVelo.Content) + Convert.ToInt32(XVelo.Content) + Convert.ToInt32(XVIelo.Content) + Convert.ToInt32(XVIelo.Content) + Convert.ToInt32(XVIIelo.Content);
+            evesSajatKiadaselo.Content = Convert.ToInt32(XIelo.Content) + Convert.ToInt32(XIIelo.Content) + Convert.ToInt32(XIIIelo.Content) + Convert.ToInt32(XIVelo.Content) + Convert.ToInt32(XVelo.Content) + Convert.ToInt32(XVIelo.Content) + Convert.ToInt32(XVIIelo.Content);
             evesKiadasNev.Content = "Az egyházközség " + year + ". évi kiadásai összesen:";
             osszegezElo(XVIIILista, XVIIIelo);
             evesKiadaselo.Content = Convert.ToInt32(evesSajatKiadaselo.Content) + Convert.ToInt32(XVIIIelo.Content);
