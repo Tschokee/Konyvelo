@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Konyvelo
 {
@@ -39,7 +40,28 @@ namespace Konyvelo
 
             return bejegyzések;
         }
+        private List<Bejegyzés> LoadCFromFile(string filename)
+        {
+            List<Bejegyzés> bejegyzesektemp = new List<Bejegyzés>();
+            try
+            {
+                using (Stream stream = File.Open(filename+".bdb", FileMode.Open))
+                {
+                    BinaryFormatter bin = new BinaryFormatter();
 
+                    bejegyzesektemp = (List<Bejegyzés>)bin.Deserialize(stream);
+                   
+                }
+            }
+            catch (IOException e)
+            {
+                MessageBox.Show(e.Message);
+            }
+
+
+            return bejegyzesektemp;
+
+        }
         List<PénzMozgás> I = new List<PénzMozgás>();
         private List<PénzMozgás> ILista()
         {
@@ -318,7 +340,7 @@ namespace Konyvelo
         public MainWindow()
         {
             InitializeComponent();
-            MyDataGrid.ItemsSource = LoadCollectionData();//bejegyzések listát feltöltő metódus 
+            MyDataGrid.ItemsSource = LoadCFromFile(PénzMozgás.évSzám.ToString()); ;//bejegyzések listát feltöltő metódus 
             MyDataGrid.IsReadOnly = true;
             generateLists();//ha a pénzmozgás tábla üres akkor kell csak lefuttatni ezt a metódust és elmenteni a táblába, ha nem üres akkor a táblából kell betölteni az adatokat a listákba
             MyDataGrid.AutoGenerateColumns = false;
@@ -451,6 +473,50 @@ namespace Konyvelo
             StackPanel myStackPanel = new StackPanel();
             myStackPanel.Children.Add(myImage);
             this.Content = myStackPanel;
+        }
+
+        
+        public void SaveTo(string fileName) {
+            try
+            {
+                using (Stream stream = File.Open(fileName+".bdb", FileMode.Create))
+                {
+                    BinaryFormatter bin = new BinaryFormatter();
+                    bin.Serialize(stream, bejegyzések);
+                }
+            }
+            catch (IOException e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            
+        
+        
+        }
+        public string CreatePrintPage()
+        {
+            string filename="print.html";
+            
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(filename,false,Encoding.Unicode))
+            {
+                
+                file.Write("<html><head><title>Napló</title></head><body>" );
+                file.Write("<table border=1px><tr><th rowspan=3></th><th rowspan=3>Fizetés ideje</th><th rowspan=3>Megnevezés</th><th rowspan=3>Főkönyv</th><th colspan=3>Banki forgalom</th><th colspan=3>Pénztári forgalom</th></tr>");
+                file.Write("<tr><th>Bevétel</th><th>Kiadás</th><th rowspan=2>Egyenleg</th><th>Bevétel</th><th>Kiadás</th><th rowspan=2>Egyenleg</th></tr><tr><th>Forint</th><th>Forint</th><th>Forint</th><th>Forint</th></tr>");
+                foreach (Bejegyzés bejegyzes in LoadCFromFile(PénzMozgás.évSzám.ToString()))
+                {
+                    file.Write(bejegyzes.toTableString());
+                }
+
+                file.Write("</table></body></html>");
+            }
+
+            return filename;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            CreatePrintPage();
         }
 
     }
