@@ -25,6 +25,8 @@
         <Menu Margin="-10,-28,0,-11" Height="477" VerticalAlignment="Top">
             <MenuItem Header="_Műveletek" Margin="5,5,0,0">
                 <MenuItem Header="Új sor" Click="Button_Click_1"/>
+                <MenuItem Header="Mentés" Click="mentesClick"/>
+                <MenuItem Header="Betöltés" Click="loadButton_Click"/>
                 <MenuItem Header="Módosítás" Click="modositButton_Click"/>
                 <MenuItem Header="Törlés" Click="torolButton_Click"/>
             </MenuItem>

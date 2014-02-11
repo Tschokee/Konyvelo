@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using Microsoft.Win32;
 
 namespace Konyvelo
 {
@@ -46,7 +47,7 @@ namespace Konyvelo
             bejegyzések = new List<Bejegyzés>();
             try
             {
-                using (Stream stream = File.Open(filename+".bdb", FileMode.Open))
+                using (Stream stream = File.Open(filename, FileMode.Open))
                 {
                     BinaryFormatter bin = new BinaryFormatter();
 
@@ -341,7 +342,7 @@ namespace Konyvelo
         public MainWindow()
         {
             InitializeComponent();
-            MyDataGrid.ItemsSource = LoadCFromFile(PénzMozgás.évSzám.ToString());//LoadCollectionData();////bejegyzések listát feltöltő metódus
+            //MyDataGrid.ItemsSource = LoadCollectionData(); ///LoadCFromFile(PénzMozgás.évSzám.ToString());bejegyzések listát feltöltő metódus
             //SaveTo(PénzMozgás.évSzám.ToString());
             MyDataGrid.IsReadOnly = true;
             generateLists();//ha a pénzmozgás tábla üres akkor kell csak lefuttatni ezt a metódust és elmenteni a táblába, ha nem üres akkor a táblából kell betölteni az adatokat a listákba
@@ -519,5 +520,29 @@ namespace Konyvelo
             CreatePrintPage();
         }
 
+        private void mentesClick(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog dlg = new SaveFileDialog();
+            Nullable<bool> result = dlg.ShowDialog();
+            if (result == true)
+            {
+
+                SaveTo(dlg.FileName);
+            }
+            
+        }
+
+        private void loadButton_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            Nullable<bool> result = dlg.ShowDialog();
+            if (result == true)
+            { 
+                string filename = dlg.FileName;
+                LoadCFromFile(filename);
+                MyDataGrid.ItemsSource = bejegyzések;
+                MyDataGrid.Items.Refresh();
+            }
+        }
     }
 }
