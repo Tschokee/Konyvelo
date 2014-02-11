@@ -79,7 +79,7 @@ namespace Konyvelo
         public string toTableString() 
         {
 
-            return "<tr><td>" + sorSzám + "</td><td>" + fizetésIdeje + "</td><td>" + megjegyzés + "</td><td>" + főkönyv + "</td><td>" + bankiBevétel + "</td><td>" + bankiKiadás + "</td><td>" + bankiEgyenleg + "</td><td>" + pénztáriBevétel + "</td><td>" +pénztáriKiadás + "</td><td>" +pénztáriEgyenleg + "</td></tr>";
+            return "<tr height=\"45\"><td>" + sorSzám + "</td><td>" + fizetésIdeje + "</td><td>" + megjegyzés + "</td><td>" + főkönyv + "</td><td>" + bankiBevétel + "</td><td>" + bankiKiadás + "</td><td>" + bankiEgyenleg + "</td><td>" + pénztáriBevétel + "</td><td>" + pénztáriKiadás + "</td><td>" + pénztáriEgyenleg + "</td></tr>";
         
         
         }

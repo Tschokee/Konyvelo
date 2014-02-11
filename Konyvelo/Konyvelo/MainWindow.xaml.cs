@@ -586,26 +586,64 @@ namespace Konyvelo
             }
         }
 
-        public string CreatePrintPage()
+       public string CreatePrintPage()
         {
-            string filename="print.html";
-            
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(filename,false,Encoding.Unicode))
+            string filename = "print.html";
+          
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(filename, false, Encoding.Unicode))
             {
-                
-                file.Write("<html><head><title>Napló</title></head><body>" );
-                file.Write("<table border=1px><tr><th rowspan=3></th><th rowspan=3>Fizetés ideje</th><th rowspan=3>Megnevezés</th><th rowspan=3>Főkönyv</th><th colspan=3>Banki forgalom</th><th colspan=3>Pénztári forgalom</th></tr>");
+
+                file.Write("<html><head><title>Napló</title></head><body>");
+                file.Write("<table border=1px height=\"950\"><tr><th rowspan=3></th><th rowspan=3>Fizetés ideje</th><th rowspan=3 width=\"250\">Megnevezés</th><th rowspan=3>Főkönyv</th><th colspan=3>Banki forgalom</th><th colspan=3>Pénztári forgalom</th></tr>");
                 file.Write("<tr><th>Bevétel</th><th>Kiadás</th><th rowspan=2>Egyenleg</th><th>Bevétel</th><th>Kiadás</th><th rowspan=2>Egyenleg</th></tr><tr><th>Forint</th><th>Forint</th><th>Forint</th><th>Forint</th></tr>");
+                int i = 0;
+                 Bejegyzés szamlalo = new Bejegyzés();
+                 szamlalo.bankiBevétel = 0;
+                 szamlalo.bankiEgyenleg = 0;
+                 szamlalo.bankiKiadás = 0;
+                szamlalo.pénztáriBevétel=0;
+                szamlalo.pénztáriEgyenleg = 0;
+                szamlalo.pénztáriKiadás = 0;
+                int limit = 19;
                 foreach (Bejegyzés bejegyzes in LoadCFromFile(PénzMozgás.évSzám.ToString()))
                 {
-                    file.Write(bejegyzes.toTableString());
+                    
+                    i++;
+                    if (i<limit)
+                    {
+                        file.Write(bejegyzes.toTableString());
+                        
+                    }
+                    else
+                    {
+                        file.Write("<tr><td colspan=4 align=\"right\">Átvitel:</td><td>" + szamlalo.bankiBevétel + "</td><td>" + szamlalo.bankiKiadás + "</td><td>" + szamlalo.bankiEgyenleg + "</td><td>" + szamlalo.pénztáriBevétel + "</td><td>" + szamlalo.pénztáriKiadás + "</td><td>" + szamlalo.pénztáriEgyenleg + "</td></tr></table><br/>");
+                        file.Write("<table border=1px height=\"950\"><tr><th rowspan=3></th><th rowspan=3>Fizetés ideje</th><th rowspan=3 width=\"250\">Megnevezés</th><th rowspan=3>Főkönyv</th><th colspan=3>Banki forgalom</th><th colspan=3>Pénztári forgalom</th></tr>");
+                        file.Write("<tr><th>Bevétel</th><th>Kiadás</th><th rowspan=2>Egyenleg</th><th>Bevétel</th><th>Kiadás</th><th rowspan=2>Egyenleg</th></tr><tr><th>Forint</th><th>Forint</th><th>Forint</th><th>Forint</th></tr>");
+                        file.Write("<tr><td colspan=4 align=\"right\">Áthozat:</td><td>" + szamlalo.bankiBevétel + "</td><td>" + szamlalo.bankiKiadás + "</td><td>" + szamlalo.bankiEgyenleg + "</td><td>" + szamlalo.pénztáriBevétel + "</td><td>" + szamlalo.pénztáriKiadás + "</td><td>" + szamlalo.pénztáriEgyenleg + "</td></tr>");
+                        if (limit==19)
+                        {
+                            limit = 17;
+                        }
+                        file.Write(bejegyzes.toTableString());
+                        i = 0;
+                    }
+                    szamlalo.bankiBevétel += bejegyzes.bankiBevétel;
+                    szamlalo.bankiKiadás += bejegyzes.bankiKiadás;
+                    szamlalo.bankiEgyenleg += bejegyzes.bankiEgyenleg;
+                    szamlalo.pénztáriBevétel += bejegyzes.pénztáriBevétel;
+                    szamlalo.pénztáriEgyenleg += bejegyzes.pénztáriEgyenleg;
+                    szamlalo.pénztáriKiadás += bejegyzes.pénztáriKiadás;
+                    
                 }
-
-                file.Write("</table></body></html>");
+                if (i != 0) { 
+                file.Write("<tr><td colspan=4 align=\"right\">Átvitel:</td><td>" + szamlalo.bankiBevétel + "</td><td>" + szamlalo.bankiKiadás + "</td><td>" + szamlalo.bankiEgyenleg + "</td><td>" + szamlalo.pénztáriBevétel + "</td><td>" + szamlalo.pénztáriKiadás + "</td><td>" + szamlalo.pénztáriEgyenleg + "</td></tr></table>");
+            }
+                file.Write("</body></html>");
             }
 
             return filename;
         }
+        
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
