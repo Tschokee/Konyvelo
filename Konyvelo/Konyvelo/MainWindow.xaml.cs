@@ -605,7 +605,7 @@ namespace Konyvelo
                 szamlalo.pénztáriEgyenleg = 0;
                 szamlalo.pénztáriKiadás = 0;
                 int limit = 19;
-                foreach (Bejegyzés bejegyzes in LoadCFromFile(PénzMozgás.évSzám.ToString()))
+                foreach (Bejegyzés bejegyzes in bejegyzések)
                 {
                     
                     i++;
