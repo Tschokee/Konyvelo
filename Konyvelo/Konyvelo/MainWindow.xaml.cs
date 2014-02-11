@@ -26,7 +26,6 @@ namespace Konyvelo
     {
         List<Bejegyzés> bejegyzések = new List<Bejegyzés>();
 
-        //ez a metódus tölti be a bejegyzések táblából az adatokat a listába
         private List<Bejegyzés> LoadCollectionData()
         {
             bejegyzések.Add(new Bejegyzés(1, "2014. jan. 1.", "Maradvány 2008-ról (házipénztár)", "IV/10", 4093002, 0, 0, 0, "BeB/2014"));
@@ -34,36 +33,9 @@ namespace Konyvelo
             bejegyzések.Add(new Bejegyzés(3, "2014. jan. 7.", "Postaköltség", "XVIII/2", 0, 0, 0, 5000, "KiP/2014"));
             bejegyzések.Add(new Bejegyzés(4, "2014. jan. 8.", "Óévi perselyadomány", "XVII/1", 12000, 0,0,0, "KiB/2014")); 
 
-            /*for (int i = 0; i < 50; i++)
-            {
-                bejegyzések.Add(new Bejegyzés());
-            }*/
-
             return bejegyzések;
         }
-        private List<Bejegyzés> LoadCFromFile(string filename)
-        {
-            //List<Bejegyzés> bejegyzesektemp = new List<Bejegyzés>();
-            bejegyzések = new List<Bejegyzés>();
-            try
-            {
-                using (Stream stream = File.Open(filename, FileMode.Open))
-                {
-                    BinaryFormatter bin = new BinaryFormatter();
 
-                    bejegyzések = (List<Bejegyzés>)bin.Deserialize(stream);
-                   
-                }
-            }
-            catch (IOException e)
-            {
-                MessageBox.Show(e.Message);
-            }
-
-            
-            return bejegyzések;
-
-        }
         List<PénzMozgás> I = new List<PénzMozgás>();
         private List<PénzMozgás> ILista()
         {
@@ -345,7 +317,7 @@ namespace Konyvelo
             //MyDataGrid.ItemsSource = LoadCollectionData(); ///LoadCFromFile(PénzMozgás.évSzám.ToString());bejegyzések listát feltöltő metódus
             //SaveTo(PénzMozgás.évSzám.ToString());
             MyDataGrid.IsReadOnly = true;
-            generateLists();//ha a pénzmozgás tábla üres akkor kell csak lefuttatni ezt a metódust és elmenteni a táblába, ha nem üres akkor a táblából kell betölteni az adatokat a listákba
+            //generateLists();//ha a pénzmozgás tábla üres akkor kell csak lefuttatni ezt a metódust és elmenteni a táblába, ha nem üres akkor a táblából kell betölteni az adatokat a listákba
             MyDataGrid.AutoGenerateColumns = false;
             DataGridTextColumn col1 = new DataGridTextColumn();
             col1.Binding = new Binding("sorSzám");
@@ -478,6 +450,55 @@ namespace Konyvelo
             this.Content = myStackPanel;
         }
 
+        public void SaveFokonyv()
+        {
+            try
+            {
+                using (Stream stream = File.Open("fokonyv.bdb", FileMode.Create))
+                {
+                    List<PénzMozgás> lp = new List<PénzMozgás>();
+                    BinaryFormatter bin = new BinaryFormatter();
+                    foreach (PénzMozgás p in I)
+                        lp.Add(p);
+                    foreach (PénzMozgás p in II)
+                        lp.Add(p);
+                    foreach (PénzMozgás p in III)
+                        lp.Add(p);
+                    foreach (PénzMozgás p in IV)
+                        lp.Add(p);
+                    foreach (PénzMozgás p in V)
+                        lp.Add(p);
+                    foreach (PénzMozgás p in XIAa)
+                        lp.Add(p);
+                    foreach (PénzMozgás p in XIAb)
+                        lp.Add(p);
+                    foreach (PénzMozgás p in XIBa)
+                        lp.Add(p);
+                    foreach (PénzMozgás p in XIBb)
+                        lp.Add(p);
+                    foreach (PénzMozgás p in XII)
+                        lp.Add(p);
+                    foreach (PénzMozgás p in XIII)
+                        lp.Add(p);
+                    foreach (PénzMozgás p in XIV)
+                        lp.Add(p);
+                    foreach (PénzMozgás p in XV)
+                        lp.Add(p);
+                    foreach (PénzMozgás p in XVI)
+                        lp.Add(p);
+                    foreach (PénzMozgás p in XVII)
+                        lp.Add(p);
+                    foreach (PénzMozgás p in XVIII)
+                        lp.Add(p);
+                    bin.Serialize(stream, lp);
+                }
+            }
+            catch (IOException e)
+            {
+                MessageBox.Show(e.Message);
+            }
+
+        }
         
         public void SaveTo(string fileName) {
             try
@@ -494,6 +515,77 @@ namespace Konyvelo
             }
                          
         }
+
+        private List<Bejegyzés> LoadCFromFile(string filename)
+        {
+            bejegyzések = new List<Bejegyzés>();
+            try
+            {
+                using (Stream stream = File.Open(filename, FileMode.Open))
+                {
+                    BinaryFormatter bin = new BinaryFormatter();
+
+                    bejegyzések = (List<Bejegyzés>)bin.Deserialize(stream);
+                }
+            }
+            catch (IOException e)
+            {
+                MessageBox.Show(e.Message);
+            }
+
+            return bejegyzések;
+        }
+
+        private void loadFokonyv()
+        {
+            List<PénzMozgás> lp = new List<PénzMozgás>();
+            int i = 0;
+            try
+            {
+                using (Stream stream = File.Open("fokonyv.bdb", FileMode.Open))
+                {
+                    BinaryFormatter bin = new BinaryFormatter();
+
+                    lp = (List<PénzMozgás>)bin.Deserialize(stream);
+                    I.Add(lp[0]);
+                    for (i = 1; i < 7; i++)
+                        II.Add(lp[i]);
+                    for (; i < 17; i++)
+                        III.Add(lp[i]);
+                    for (; i < 27; i++)
+                        IV.Add(lp[i]);
+                    for (; i < 33; i++)
+                        V.Add(lp[i]);
+                    for (; i < 47; i++)
+                        XIAa.Add(lp[i]);
+                    for (; i < 50; i++)
+                        XIAb.Add(lp[i]);
+                    for (; i < 60; i++)
+                        XIBa.Add(lp[i]);
+                    for (; i < 63; i++)
+                        XIBb.Add(lp[i]);
+                    for (; i < 77; i++)
+                        XII.Add(lp[i]);
+                    for (; i < 92; i++)
+                        XIII.Add(lp[i]);
+                    for (; i < 106; i++)
+                        XIV.Add(lp[i]);
+                    for (; i < 113; i++)
+                        XV.Add(lp[i]);
+                    for (; i < 114; i++)
+                        XVI.Add(lp[i]);
+                    for (; i < 122; i++)
+                        XVII.Add(lp[i]);
+                    for (; i < 128; i++)
+                        XVIII.Add(lp[i]);
+                }
+            }
+            catch (IOException e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
         public string CreatePrintPage()
         {
             string filename="print.html";
@@ -526,8 +618,13 @@ namespace Konyvelo
             Nullable<bool> result = dlg.ShowDialog();
             if (result == true)
             {
-
-                SaveTo(dlg.FileName);
+                string filename = dlg.FileName;
+                if (filename.EndsWith(".bdb"))
+                {
+                    filename = filename.Remove(filename.Length - 4, 4);
+                }
+                SaveTo(filename);
+                SaveFokonyv();
             }
             
         }
@@ -540,6 +637,7 @@ namespace Konyvelo
             { 
                 string filename = dlg.FileName;
                 LoadCFromFile(filename);
+                loadFokonyv();
                 MyDataGrid.ItemsSource = bejegyzések;
                 MyDataGrid.Items.Refresh();
             }

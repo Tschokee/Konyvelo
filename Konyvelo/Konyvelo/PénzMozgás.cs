@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Konyvelo
 {
+    [Serializable()]
     public class PénzMozgás
     {
         public string azonosító { get; set; }
