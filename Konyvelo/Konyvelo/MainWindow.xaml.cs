@@ -16,6 +16,8 @@ using System.Windows.Shapes;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using Microsoft.Win32;
+using System.Linq.Expressions;
+using System.Reflection;
 
 namespace Konyvelo
 {
@@ -25,7 +27,7 @@ namespace Konyvelo
     public partial class MainWindow : Window
     {
         List<Bejegyzés> bejegyzések = new List<Bejegyzés>();
-
+        List<List<PénzMozgás>> listaz= new List<List<PénzMozgás>>();
         private List<Bejegyzés> LoadCollectionData()
         {
             bejegyzések.Add(new Bejegyzés(1, "2014. jan. 1.", "Maradvány 2008-ról (házipénztár)", "IV/10", 4093002, 0, 0, 0, "BeB/2014"));
@@ -309,6 +311,24 @@ namespace Konyvelo
             XVILista();
             XVIILista();
             XVIIILista();
+
+            listaz.Add(I);
+            listaz.Add(II);
+            listaz.Add(III);
+            listaz.Add(IV);
+            listaz.Add(V);
+            listaz.Add(XIAa);
+            listaz.Add(XIAb);
+            listaz.Add(XIBa);
+            listaz.Add(XIBb);
+            listaz.Add(XII);
+            listaz.Add(XIII);
+            listaz.Add(XIV);
+            listaz.Add(XIV);
+            listaz.Add(XV);
+            listaz.Add(XVI);
+            listaz.Add(XVII);
+            listaz.Add(XVIII);
         }
 
         public MainWindow()
@@ -667,8 +687,51 @@ namespace Konyvelo
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            CreatePrintPage();
+            generateLists();
+            CreatePrintPageZaro();
         }
+
+        public string CreatePrintPageZaro() {
+
+             string filename = "printz.html";
+          
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(filename, false, Encoding.Unicode))
+            {
+
+                file.Write("<html><head><title>Zárszámadás</title></head><body><table border=\"1\" style =\"border-collapse:collapse;\">");
+               foreach (List<PénzMozgás> listn in listaz)
+	{
+                   
+		  file.Write("<tr><th>"+ listn[0].azonosító +"</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th></tr>");
+                foreach (PénzMozgás penz in listn)
+	{
+		 file.Write(penz.ToPString());
+
+
+	}
+file.Write("<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>");
+	}
+                   
+
+                   
+              
+                
+                file.Write("</body></html>");
+            }
+
+            return filename;
+        }
+
+        static string Check<T>(Expression<Func<T>> expr)
+        {
+            var body = ((MemberExpression)expr.Body);
+
+            return body.Member.Name;
+        }
+        
+        
+        
+        
 
         private void mentesClick(object sender, RoutedEventArgs e)
         {

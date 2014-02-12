@@ -30,5 +30,13 @@ namespace Konyvelo
             this.előirányzat = 0;
             this.teljesítés = 0;
         }
+        public string ToPString() {
+
+
+
+            return "<tr height=\"45\"><td>" + azonosító + "</td><td>" + név + "</td><td>&nbsp;&nbsp;&nbsp;   " + előirányzat + "  &nbsp;&nbsp;&nbsp; </td><td> &nbsp;&nbsp;&nbsp;  " + teljesítés + "  &nbsp;&nbsp;&nbsp; </td></tr>";
+        
+        
+        }
     }
 }
