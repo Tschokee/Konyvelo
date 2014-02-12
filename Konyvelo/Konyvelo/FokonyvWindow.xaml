@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Főkönyv" Height="425" Width="600" >
     <ScrollViewer x:Name="scrlViewer">
-        <Grid x:Name="myGrid" Width="595">
+        <Grid x:Name="myGrid" Width="571">
             
         </Grid>
     </ScrollViewer>

@@ -334,11 +334,13 @@ namespace Konyvelo
         public MainWindow()
         {
             InitializeComponent();
+            loadFokonyv();
             //MyDataGrid.ItemsSource = LoadCollectionData(); ///LoadCFromFile(PénzMozgás.évSzám.ToString());bejegyzések listát feltöltő metódus
             //SaveTo(PénzMozgás.évSzám.ToString());
             MyDataGrid.IsReadOnly = true;
             //generateLists();//ha a pénzmozgás tábla üres akkor kell csak lefuttatni ezt a metódust és elmenteni a táblába, ha nem üres akkor a táblából kell betölteni az adatokat a listákba
             MyDataGrid.AutoGenerateColumns = false;
+            MyDataGrid.CanUserSortColumns = false;
             DataGridTextColumn col1 = new DataGridTextColumn();
             col1.Binding = new Binding("sorSzám");
             col1.Header = "Sorszám";
@@ -758,7 +760,7 @@ file.Write("<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr
             { 
                 string filename = dlg.FileName;
                 LoadCFromFile(filename);
-                loadFokonyv();
+                //loadFokonyv();
                 MyDataGrid.ItemsSource = bejegyzések;
                 MyDataGrid.Items.Refresh();
             }

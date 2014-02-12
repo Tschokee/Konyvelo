@@ -1029,7 +1029,7 @@ namespace Konyvelo
 
             //összes kiadás label
             Label osszKiadasNevLabel = new Label();
-            osszKiadasNevLabel.Content = "Az egyházközség " + year + ". évi bevételei összesen:";
+            osszKiadasNevLabel.Content = "Az egyházközség " + year + ". évi kiadásai összesen:";
             osszKiadasNevLabel.Margin = new Thickness(0, m, 0, 0);
             osszKiadasNevLabel.Height = 27;
             osszKiadasNevLabel.HorizontalAlignment = HorizontalAlignment.Left;

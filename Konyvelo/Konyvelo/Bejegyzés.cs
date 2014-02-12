@@ -67,6 +67,9 @@ namespace Konyvelo
 
         public void modositGlobalEgyenleg()
         {
+
+           this.osszBevetel = bankiBevétel + pénztáriBevétel;
+           this.osszKiadas = bankiKiadás + pénztáriKiadás;
            
            Bejegyzés.globalBankiEgyenleg += (bankiBevétel - bankiKiadás);
            Bejegyzés.globalPenztariEgyenleg += (pénztáriBevétel - pénztáriKiadás);
