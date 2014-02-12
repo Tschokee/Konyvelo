@@ -19,8 +19,8 @@ namespace Konyvelo
         {
             azonosító = "Temp";
             név = "TMP";
-            előirányzat = 1000;
-            teljesítés = 2000;
+            előirányzat = 0;
+            teljesítés = 0;
         }
 
         public PénzMozgás(string azonosító, string név)
@@ -34,9 +34,18 @@ namespace Konyvelo
 
 
 
-            return "<tr height=\"45\"><td>" + azonosító + "</td><td>" + név + "</td><td>&nbsp;&nbsp;&nbsp;   " + előirányzat + "  &nbsp;&nbsp;&nbsp; </td><td> &nbsp;&nbsp;&nbsp;  " + teljesítés + "  &nbsp;&nbsp;&nbsp; </td></tr>";
+            return "<tr height=\"45\"><td>" + azonosító + "</td><td>" + név + "</td><td>   " + előirányzat + "  &nbsp;&nbsp;&nbsp; </td><td>   " + teljesítés + "  </td></tr>";
         
         
+        }
+        public string ToP2String()
+        {
+
+
+
+            return "<tr height=\"45\"><td>" + azonosító + "</td><td>" + név + "</td><td>   " + előirányzat + " </td></tr>";
+
+
         }
     }
 }

@@ -136,6 +136,7 @@ namespace Konyvelo
             listakMentese();//listák elmentése
             frissit();
         }
+        
 
         private void megseButton_Click(object sender, RoutedEventArgs e)
         {
