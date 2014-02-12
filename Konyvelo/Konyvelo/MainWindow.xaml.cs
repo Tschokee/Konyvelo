@@ -311,7 +311,10 @@ namespace Konyvelo
             XVILista();
             XVIILista();
             XVIIILista();
+        }
 
+        private void listazo()
+        {
             listaz.Add(I);
             listaz.Add(II);
             listaz.Add(III);
@@ -335,6 +338,7 @@ namespace Konyvelo
         {
             InitializeComponent();
             loadFokonyv();
+            
             //MyDataGrid.ItemsSource = LoadCollectionData(); ///LoadCFromFile(PénzMozgás.évSzám.ToString());bejegyzések listát feltöltő metódus
             //SaveTo(PénzMozgás.évSzám.ToString());
             MyDataGrid.IsReadOnly = true;
@@ -878,6 +882,7 @@ namespace Konyvelo
                 string filename = dlg.FileName;
                 LoadCFromFile(filename);
                 //loadFokonyv();
+                listazo();
                 MyDataGrid.ItemsSource = bejegyzések;
                 MyDataGrid.Items.Refresh();
             }
