@@ -86,6 +86,7 @@ namespace Konyvelo
             this.XVILista = (List<PénzMozgás>)XVIDataGrid.ItemsSource;
             this.XVIILista = (List<PénzMozgás>)XVIIDataGrid.ItemsSource;
             this.XVIIILista = (List<PénzMozgás>)XVIIIDataGrid.ItemsSource;
+
         }
 
         List<PénzMozgás> ILista, IILista, IIILista, IVLista, VLista, XIAaLista, XIAbLista, XIBaLista, XIBbLista, XIILista, XIIILista, XIVLista, XVLista, XVILista, XVIILista, XVIIILista;
