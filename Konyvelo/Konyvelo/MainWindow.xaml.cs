@@ -902,12 +902,14 @@ namespace Konyvelo
                     if (fokonyv.TryGetValue(romaiszamk[j], out temp22)) { 
                     foreach (Bejegyzés b2 in temp22)
                     {
+                        
+                        
                         file.Write(b2.toTable2String()); x--;
                         if (x < 30)
                         {
                             h = "0";
                         }
-                        temp.előirányzat += b2.osszBevetel + b2.osszKiadas;
+                        temp.előirányzat += b2.pénztáriBevétel+b2.pénztáriKiadás + b2.bankiKiadás+b2.bankiBevétel;
                         if (testcp(c++, p1, file, pn, h))
                         {
                             c = 0; p1++;

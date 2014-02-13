@@ -749,7 +749,17 @@ namespace Konyvelo
                 {
                     XVIIILista[5].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                     continue;
-                }              
+                }
+                if (b.főkönyv.Equals(XVIILista[6].azonosító))
+                {
+                    XVIILista[6].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
+                    continue;
+                }
+                if (b.főkönyv.Equals(XVIILista[7].azonosító))
+                {
+                    XVIILista[7].teljesítés += b.bankiKiadás + b.pénztáriKiadás;
+                    continue;
+                }
             }
 
             osszegezTelj(IILista, IItelj);
