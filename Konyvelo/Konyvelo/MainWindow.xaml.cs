@@ -365,7 +365,6 @@ namespace Konyvelo
             listaz.Add(XII);
             listaz.Add(XIII);
             listaz.Add(XIV);
-            listaz.Add(XIV);
             listaz.Add(XV);
             listaz.Add(XVI);
             listaz.Add(XVII);
