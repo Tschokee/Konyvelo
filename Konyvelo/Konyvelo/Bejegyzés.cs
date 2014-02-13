@@ -86,5 +86,12 @@ namespace Konyvelo
         
         
         }
+        public string toTable2String()
+        {
+
+            return "<tr height=\"50\"><td>" + sorSzám + "</td><td>" + fizetésIdeje + "</td><td>" + megjegyzés + "</td><td>" +( bankiEgyenleg  +pénztáriEgyenleg )+ "</td></tr>";
+
+
+        }
     }
 }

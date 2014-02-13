@@ -715,14 +715,16 @@ namespace Konyvelo
             CreatePrintPageZaro("2014");
             CreatePrintPage();
             CreatePrintPagekolt("2014");
+            createOrganizedFokonyvfromBejegyzesek();
+            CreatePrintPageFokonyv("2014");
         }
-        public bool testcp(int c, int p1, System.IO.StreamWriter file)
+        public bool testcp(int c, int p1, System.IO.StreamWriter file,int sor,string h)
         {
-            if (c > 28)
+            if (c > sor)
             {
                 //c = 0; p1++;
                 if (p1 < 5)
-                    file.Write("</table><br/><table height=\"1300\" border=\"1\"  width=\"900\" style =\"border-collapse:collapse;\">");
+                    file.Write("</table><br/><table height=\""+h+"\" border=\"1\"  width=\"900\" style =\"border-collapse:collapse;\">");
                 else
                     file.Write("</table><br/><table border=\"1\"  width=\"900\" style =\"border-collapse:collapse;\">");
                 return true;
@@ -787,13 +789,13 @@ namespace Konyvelo
                     PénzMozgás temp = new PénzMozgás();
 
                     file.Write("<tr height=\"45\"><th>" + listn[0].azonosító + "</th><th>Költségvetési Cím</th><th>Előirányzat</th><th>Teljesítés</th></tr>");
-                    if (testcp(c++, p1, file))
+                    if (testcp(c++, p1, file,28,"1300"))
                     {
                         c=0;p1++;
                     } 
                     foreach (PénzMozgás penz in listn)
                     {
-                         if (testcp(c++, p1, file))
+                        if (testcp(c++, p1, file, 28, "1300"))
                     {
                         c=0;p1++;
                     } 
@@ -804,12 +806,12 @@ namespace Konyvelo
                     }
 
                     file.Write("<tr ><td>&nbsp;</td><td>Összesen:</td><td>" + temp.előirányzat + "</td><td>" + temp.teljesítés + "</td></tr>");
-                    if (testcp(c++, p1, file))
+                    if (testcp(c++, p1, file, 28, "1300"))
                     {
                         c=0;p1++;
                     } 
                     file.Write("<tr ><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>");
-                     if (testcp(c++, p1, file))
+                    if (testcp(c++, p1, file, 28, "1300"))
                     {
                         c=0;p1++;
                     } 
@@ -819,7 +821,7 @@ namespace Konyvelo
                     {
                         egyhazsajatbe += temp.teljesítés;//direkt van így
                     }
-                    if (i >5&&i<16 )
+                    if (i >5&&i<17 )
                     {
                         egyhazsajatki += temp.teljesítés;//direkt van így
                     }
@@ -846,10 +848,24 @@ namespace Konyvelo
         public string CreatePrintPageFokonyv(string year)
         {
             List<string> romaiszamk = new List<string>();
-            foreach (string s in fokonyv.Keys)
-            {
-                romaiszamk.Add(s);// sorba rendezés hiányzik
-            }
+            
+                romaiszamk.Add("I");//hápf
+
+                romaiszamk.Add("II");//hápf
+                romaiszamk.Add("III");//hápf
+                romaiszamk.Add("IV");//hápf
+                romaiszamk.Add("V");//hápf
+                romaiszamk.Add("V");//hápf
+                romaiszamk.Add("X");//hápf
+                romaiszamk.Add("XI");//hápf
+                romaiszamk.Add("XII");//hápf
+                romaiszamk.Add("XIII");//hápf
+                romaiszamk.Add("XIV");//hápf
+                romaiszamk.Add("XV");//hápf
+                romaiszamk.Add("XVI");//hápf
+                romaiszamk.Add("XVII");//hápf
+       
+              
 
 
             string filename = "printf.html";
@@ -857,50 +873,106 @@ namespace Konyvelo
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(filename, false, Encoding.Unicode))
             {
                 PénzMozgás ossz = new PénzMozgás();
-                file.Write("<html><head><title>Főkönyv</title></head><body><table border=\"1\"  width=\"900\" style =\"border-collapse:collapse;\">");
-                int i = 0;
+                string h = "1250";
+                string h2 = "50";
+                int pn = 24;
+                int x = bejegyzések.Count;
+                x += romaiszamk.Count;
+                int y = x % pn;
+
+                file.Write("<html><head><title>Főkönyv</title></head><body><table height=\""+h+"\" border=\"1\"  width=\"900\" style =\"border-collapse:collapse;\">");
+                int i = 0, c = 0, p1 = 0;
+                int  egyhazsajatbe = 0, egyhazsajatki = 0;
+               
                 for (int j = 0; j < romaiszamk.Count; j++)
                 {
-                    //file.Write("<tr><th>" + listn[0].azonosító + "</th><th>Költségvetési Cím</th><th>Előirányzat</th><th>Teljesítés</th></tr>");
-                    
-                }
-                
-                foreach (List<PénzMozgás> listn in listaz)
-                {
+                    file.Write("<tr height=\""+h2+"\"><th>" + romaiszamk[j] + "</th><th></th><th></th><th></th></tr>");
+                    x--;
                     PénzMozgás temp = new PénzMozgás();
 
-                    file.Write("<tr><th>" + listn[0].azonosító + "</th><th>Költségvetési Cím</th><th>Előirányzat</th><th>Teljesítés</th></tr>");
-                    foreach (PénzMozgás penz in listn)
+                    if (x<30)
+	{
+		 h="0";
+	}
+                    if (testcp(c++, p1, file, pn, h))
                     {
-                        // file.Write(penz.ToPString());
-                        temp.előirányzat += penz.előirányzat;
-                        temp.teljesítés += penz.teljesítés;
+                        c = 0; p1++;
+                    }
+                    List<Bejegyzés> temp22 = new List<Bejegyzés>();
+                    if (fokonyv.TryGetValue(romaiszamk[j], out temp22)) { 
+                    foreach (Bejegyzés b2 in temp22)
+                    {
+                        file.Write(b2.toTable2String()); x--;
+                        if (x < 30)
+                        {
+                            h = "0";
+                        }
+                        temp.előirányzat += b2.osszBevetel + b2.osszKiadas;
+                        if (testcp(c++, p1, file, pn, h))
+                        {
+                            c = 0; p1++;
+                        }
+
 
                     }
-
-                    file.Write("<tr><td>&nbsp;</td><td>Összesen:</td><td>" + temp.előirányzat + "</td><td>" + temp.teljesítés + "</td></tr>");
-                    file.Write("<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>");
+                }
+                    file.Write("<tr height=\"" + h2 + "\" ><td>&nbsp;</td><td>&nbsp;</td><td>Összesen:</td><td>" + temp.előirányzat + "</td></tr>");x--;
+                    if (testcp(c++, p1, file, pn,h))
+                    {
+                        c = 0; p1++;
+                    }
+                    if (x < 30)
+                    {
+                        h = "0";
+                    }
+                    file.Write("<tr height=\"" + h2 + "\" ><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>");x--;
+                    if (testcp(c++, p1, file, pn, h))
+                    {
+                        c = 0; p1++;
+                    }
                     i++;
+
+                    if (i < 5)
+                    {
+                        egyhazsajatbe += temp.előirányzat;//direkt van így
+                    }
+                    if (i > 5 && i < 17)
+                    {
+                        egyhazsajatki += temp.előirányzat;//direkt van így
+                    }
                     if (i < 6)
                     {
-                        ossz.előirányzat += temp.teljesítés;
+                        ossz.előirányzat += temp.előirányzat;//direkt van így
                     }
                     else
                     {
-                        ossz.teljesítés += temp.teljesítés;
+                        ossz.teljesítés += temp.előirányzat;//direkt van így
                     }
-
                 }
-
-                file.Write("<tr><td>&nbsp;</td><td>Összes bevétel a " + year + ".évre</td><td>" + ossz.előirányzat + "</td></tr>");
-                file.Write("<tr><td>&nbsp;</td><td>Összes kiadás a " + year + ".évre</td><td>" + ossz.teljesítés + "</td></tr>");
-                file.Write("<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>");
-
-
-
+                
+                file.Write("</table><br/>");
+                if (y<5)
+                {
+                    for (int q = 0; q < y; q++)
+                    {
+                        file.Write("<br/> &nbsp;");
+                        file.Write("<br/> &nbsp;");
+                        file.Write("<br/> &nbsp;");
+                        file.Write("<br/> &nbsp;");
+                        file.Write("<br/> &nbsp;");
+                        file.Write("<br/> &nbsp;");
+                    } 
+                 
+                }
+                file.Write("<table border=\"1\"  width=\"900\" style =\"border-collapse:collapse;\">");
+                file.Write("<tr height=\"" + h2 + "\"><td>&nbsp;</td><td>Az egyházközség " + year + ". évi saját bevételei összesen</td><td>" + egyhazsajatbe + "</td></tr>");
+                file.Write("<tr height=\"" + h2 + "\"><td>&nbsp;</td><td>Az egyházközség " + year + ". évi saját kiadásai összesen</td><td>" + egyhazsajatki + "</td></tr>");
+                file.Write("<tr height=\"" + h2 + "\"><td>&nbsp;</td><td>Összes előirányzott bevétel a " + year + ".évre</td><td>" + ossz.előirányzat + "</td></tr>");
+                file.Write("<tr height=\"" + h2 + "\"><td>&nbsp;</td><td>Összes előirányzott kiadás a " + year + ".évre</td><td>" + ossz.teljesítés + "</td></tr>");
+                file.Write("<tr height=\"" + h2 + "\"><td>&nbsp;</td><td>Különbözet</td><td>" + (ossz.előirányzat - ossz.teljesítés) + "</td></tr>");
                 file.Write("</table></body></html>");
-            }
-
+            } 
+            
             return filename;
         }
         public string CreatePrintPagekolt(string year)
@@ -918,13 +990,13 @@ namespace Konyvelo
                     PénzMozgás temp = new PénzMozgás();
 
                     file.Write("<tr height=\"45\"><th>" + listn[0].azonosító + "</th><th>Költségvetési Cím</th><th>Összesen</th></tr>");
-                    if (testcp(c++, p1, file))
+                    if (testcp(c++, p1, file, 28, "1300"))
                     {
                         c = 0; p1++;
                     }
                     foreach (PénzMozgás penz in listn)
                     {
-                        if (testcp(c++, p1, file))
+                        if (testcp(c++, p1, file, 28, "1300"))
                         {
                             c = 0; p1++;
                         }
@@ -935,12 +1007,12 @@ namespace Konyvelo
                     }
 
                     file.Write("<tr ><td>&nbsp;</td><td>Összesen:</td><td>" + temp.előirányzat + "</td></tr>");
-                    if (testcp(c++, p1, file))
+                    if (testcp(c++, p1, file, 28, "1300"))
                     {
                         c = 0; p1++;
                     }
                     file.Write("<tr ><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>");
-                    if (testcp(c++, p1, file))
+                    if (testcp(c++, p1, file, 28, "1300"))
                     {
                         c = 0; p1++;
                     }
@@ -950,11 +1022,11 @@ namespace Konyvelo
                     {
                         egyhazsajatbe += temp.előirányzat;//direkt van így
                     }
-                    if (i > 5 && i < 9)
+                    if (i > 5 && i < 17)
                     {
                         egyhazsajatki += temp.előirányzat;//direkt van így
                     }
-                    if (i < 5)
+                    if (i < 6)
                     {
                         ossz.előirányzat += temp.előirányzat;//direkt van így
                     }
