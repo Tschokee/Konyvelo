@@ -821,7 +821,7 @@ namespace Konyvelo
                     {
                         egyhazsajatbe += temp.teljesítés;//direkt van így
                     }
-                    if (i >5&&i<17 )
+                    if (i >5&&i<19 )
                     {
                         egyhazsajatki += temp.teljesítés;//direkt van így
                     }
@@ -938,7 +938,7 @@ namespace Konyvelo
                     {
                         egyhazsajatbe += temp.előirányzat;//direkt van így
                     }
-                    if (i > 5 && i < 17)
+                    if (i > 5 && i <19)
                     {
                         egyhazsajatki += temp.előirányzat;//direkt van így
                     }
