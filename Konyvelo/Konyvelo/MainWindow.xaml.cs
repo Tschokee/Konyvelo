@@ -31,6 +31,7 @@ namespace Konyvelo
         Dictionary<string, List<Bejegyzés>> fokonyv = new Dictionary<string, List<Bejegyzés>>(); 
         
         public static string ReturnFokonyvRomaiSzam(Bejegyzés bejegyzes) {
+            //hiányzik az XI/A   XI/B szétbontása      (ಠ_ಠ) <--,o,  placs
             return bejegyzes.főkönyv.Split('/')[0]+megnevezesfromromai(bejegyzes.főkönyv.Split('/')[0]);
         }
 
@@ -713,7 +714,7 @@ namespace Konyvelo
             //generateLists();
             CreatePrintPageZaro("2014");
             CreatePrintPage();
-            CreatePrintPagekolt("2014");
+         //   CreatePrintPagekolt("2014");
         }
         public bool testcp(int c, int p1, System.IO.StreamWriter file)
         {
@@ -734,8 +735,7 @@ namespace Konyvelo
         public string CreatePrintPageZaro(string year)
         {
             int i;
-            foreach (Bejegyzés b in bejegyzések)
-            {
+            
                 i = 0;
                 foreach (List<PénzMozgás> l in listaz)
                 {
@@ -743,6 +743,10 @@ namespace Konyvelo
 
                     foreach (PénzMozgás p in l)
                     {
+                        //p.teljesítés = 0;
+                        
+                        foreach (Bejegyzés b in bejegyzések)
+                        {
                         if (i < 5)
                         {
 
@@ -750,7 +754,7 @@ namespace Konyvelo
                             if (b.főkönyv == p.azonosító)
                             {
 
-                                p.teljesítés += b.bankiBevétel + b.pénztáriBevétel;
+                             //   p.teljesítés += b.bankiBevétel + b.pénztáriBevétel;
                                 break;
                             }
                         }
@@ -759,15 +763,15 @@ namespace Konyvelo
                             if (b.főkönyv == p.azonosító)
                             {
 
-                                p.teljesítés += b.bankiKiadás + b.pénztáriKiadás;
+                            //    p.teljesítés += b.bankiKiadás + b.pénztáriKiadás;
                                 break;
                             }
 
 
                         }
                     }
-                    i++;
-                }
+
+                    } i++;
             }
 
 
@@ -841,6 +845,12 @@ namespace Konyvelo
         }
         public string CreatePrintPageFokonyv(string year)
         {
+            List<string> romaiszamk = new List<string>();
+            foreach (string s in fokonyv.Keys)
+            {
+                romaiszamk.Add(s);// sorba rendezés hiányzik
+            }
+
 
             string filename = "printf.html";
 
