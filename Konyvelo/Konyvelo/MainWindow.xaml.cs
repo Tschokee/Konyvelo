@@ -819,7 +819,7 @@ namespace Konyvelo
                     {
                         egyhazsajatbe += temp.teljesítés;//direkt van így
                     }
-                    if (i >5&&i<9 )
+                    if (i >5&&i<16 )
                     {
                         egyhazsajatki += temp.teljesítés;//direkt van így
                     }
@@ -857,10 +857,11 @@ namespace Konyvelo
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(filename, false, Encoding.Unicode))
             {
                 PénzMozgás ossz = new PénzMozgás();
-                file.Write("<html><head><title>Zárszámadás</title></head><body><table border=\"1\"  width=\"900\" style =\"border-collapse:collapse;\">");
+                file.Write("<html><head><title>Főkönyv</title></head><body><table border=\"1\"  width=\"900\" style =\"border-collapse:collapse;\">");
                 int i = 0;
                 for (int j = 0; j < romaiszamk.Count; j++)
                 {
+                    //file.Write("<tr><th>" + listn[0].azonosító + "</th><th>Költségvetési Cím</th><th>Előirányzat</th><th>Teljesítés</th></tr>");
                     
                 }
                 
