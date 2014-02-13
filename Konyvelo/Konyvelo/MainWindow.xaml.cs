@@ -714,7 +714,7 @@ namespace Konyvelo
             //generateLists();
             CreatePrintPageZaro("2014");
             CreatePrintPage();
-         //   CreatePrintPagekolt("2014");
+            CreatePrintPagekolt("2014");
         }
         public bool testcp(int c, int p1, System.IO.StreamWriter file)
         {
@@ -735,7 +735,7 @@ namespace Konyvelo
         public string CreatePrintPageZaro(string year)
         {
             int i;
-            
+            /*
                 i = 0;
                 foreach (List<PénzMozgás> l in listaz)
                 {
@@ -774,7 +774,7 @@ namespace Konyvelo
                     } i++;
             }
 
-
+            */
             string filename = "printz.html";
             i = 0;
             int c = 0, p1 = 0, egyhazsajatki = 0, egyhazsajatbe = 0;
@@ -823,7 +823,7 @@ namespace Konyvelo
                     {
                         egyhazsajatki += temp.teljesítés;//direkt van így
                     }
-                    if (i < 5)
+                    if (i < 6)
                     {
                         ossz.előirányzat += temp.teljesítés;//direkt van így
                     }
@@ -859,6 +859,11 @@ namespace Konyvelo
                 PénzMozgás ossz = new PénzMozgás();
                 file.Write("<html><head><title>Zárszámadás</title></head><body><table border=\"1\"  width=\"900\" style =\"border-collapse:collapse;\">");
                 int i = 0;
+                for (int j = 0; j < romaiszamk.Count; j++)
+                {
+                    
+                }
+                
                 foreach (List<PénzMozgás> listn in listaz)
                 {
                     PénzMozgás temp = new PénzMozgás();
@@ -875,7 +880,7 @@ namespace Konyvelo
                     file.Write("<tr><td>&nbsp;</td><td>Összesen:</td><td>" + temp.előirányzat + "</td><td>" + temp.teljesítés + "</td></tr>");
                     file.Write("<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>");
                     i++;
-                    if (i < 5)
+                    if (i < 6)
                     {
                         ossz.előirányzat += temp.teljesítés;
                     }
