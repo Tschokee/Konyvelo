@@ -1022,7 +1022,7 @@ namespace Konyvelo
                         file.Write("<br/> &nbsp;");
                     } 
                  
-                }
+                }// ezt a részt nincs időm befejezni
                 file.Write("<table border=\"1\"  width=\"900\" style =\"border-collapse:collapse;\">");
                 file.Write("<tr height=\"" + h2 + "\"><td>&nbsp;</td><td>Az egyházközség " + year + ". évi saját bevételei összesen</td><td>" + egyhazsajatbe + "</td></tr>");
                 file.Write("<tr height=\"" + h2 + "\"><td>&nbsp;</td><td>Az egyházközség " + year + ". évi saját kiadásai összesen</td><td>" + egyhazsajatki + "</td></tr>");
