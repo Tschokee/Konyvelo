@@ -1165,6 +1165,8 @@ namespace Konyvelo
         private void loadButton_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
+            dlg.DefaultExt = ".bdb";
+            dlg.Filter = "Könyvelési adatbázis (.bdb)|*.bdb";
             Nullable<bool> result = dlg.ShowDialog();
             if (result == true)
             {
