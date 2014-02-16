@@ -26,6 +26,7 @@ namespace Konyvelo
         public int osszKiadas { get; set; }
         public string bizonylatSzám { get; set; }
 
+
         public Bejegyzés()
         {
             this.sorSzám = 0;
