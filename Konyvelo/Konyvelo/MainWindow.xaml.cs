@@ -381,7 +381,7 @@ namespace Konyvelo
             generateLists();//ha a pénzmozgás tábla üres akkor kell csak lefuttatni ezt a metódust és elmenteni a táblába, ha nem üres akkor a táblából kell betölteni az adatokat a listákba
             MyDataGrid.ItemsSource = bejegyzések;
             MyDataGrid.AutoGenerateColumns = false;
-            MyDataGrid.CanUserSortColumns = true;
+            MyDataGrid.CanUserSortColumns = false;
             DataGridTextColumn col1 = new DataGridTextColumn();
             col1.Binding = new Binding("sorSzám");
             col1.Header = "Sorszám";
