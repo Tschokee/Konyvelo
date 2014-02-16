@@ -374,12 +374,12 @@ namespace Konyvelo
         public MainWindow()
         {
             InitializeComponent();
-            loadFokonyv();
             listazo();
             //MyDataGrid.ItemsSource = LoadCollectionData(); ///LoadCFromFile(PénzMozgás.évSzám.ToString());bejegyzések listát feltöltő metódus
             //SaveTo(PénzMozgás.évSzám.ToString());
             MyDataGrid.IsReadOnly = true;
-            //generateLists();//ha a pénzmozgás tábla üres akkor kell csak lefuttatni ezt a metódust és elmenteni a táblába, ha nem üres akkor a táblából kell betölteni az adatokat a listákba
+            generateLists();//ha a pénzmozgás tábla üres akkor kell csak lefuttatni ezt a metódust és elmenteni a táblába, ha nem üres akkor a táblából kell betölteni az adatokat a listákba
+            MyDataGrid.ItemsSource = bejegyzések;
             MyDataGrid.AutoGenerateColumns = false;
             MyDataGrid.CanUserSortColumns = true;
             DataGridTextColumn col1 = new DataGridTextColumn();
@@ -519,11 +519,11 @@ namespace Konyvelo
             this.Content = myStackPanel;*/
         }
 
-        public void SaveFokonyv()
+        public void SaveFokonyv(string s)
         {
             try
             {
-                using (Stream stream = File.Open("fokonyv.ddb", FileMode.Create))
+                using (Stream stream = File.Open(s + ".ddb", FileMode.Create))
                 {
                     List<PénzMozgás> lp = new List<PénzMozgás>();
                     BinaryFormatter bin = new BinaryFormatter();
@@ -588,7 +588,7 @@ namespace Konyvelo
 
         private List<Bejegyzés> LoadCFromFile(string filename)
         {
-            bejegyzések = new List<Bejegyzés>();
+            bejegyzések.Clear();
             try
             {
                 using (Stream stream = File.Open(filename, FileMode.Open))
@@ -606,13 +606,29 @@ namespace Konyvelo
             return bejegyzések;
         }
 
-        private void loadFokonyv()
+        private void loadFokonyv(string s)
         {
             List<PénzMozgás> lp = new List<PénzMozgás>();
             int i = 0;
+            I.Clear();
+            II.Clear();
+            III.Clear();
+            IV.Clear();
+            V.Clear();
+            XIAa.Clear();
+            XIAb.Clear();
+            XIBa.Clear();
+            XIBb.Clear();
+            XII.Clear();
+            XIII.Clear();
+            XIV.Clear();
+            XV.Clear();
+            XVI.Clear();
+            XVII.Clear();
+            XVIII.Clear();
             try
             {
-                using (Stream stream = File.Open("fokonyv.ddb", FileMode.Open))
+                using (Stream stream = File.Open(s, FileMode.Open))
                 {
                     BinaryFormatter bin = new BinaryFormatter();
 
@@ -1142,7 +1158,40 @@ namespace Konyvelo
         
         }
 
+        private void newKonyv(object sender, RoutedEventArgs e)
+        {
+            bejegyzések.Clear();
+            generateLists();
+            MyDataGrid.Items.Refresh();
+        }
 
+        private void mentesKoltClick(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog dlg = new SaveFileDialog();
+            Nullable<bool> result = dlg.ShowDialog();
+            if (result == true)
+            {
+                string filename = dlg.FileName;
+                if (filename.EndsWith(".ddb"))
+                {
+                    filename = filename.Remove(filename.Length - 4, 4);
+                }
+                SaveFokonyv(filename);
+            }
+        }
+
+        private void loadKoltButton_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.DefaultExt = ".ddb";
+            dlg.Filter = "Költségvetési adatbázis (.ddb)|*.ddb";
+            Nullable<bool> result = dlg.ShowDialog();
+            if (result == true)
+            {
+                string filename = dlg.FileName;
+                loadFokonyv(filename);
+            }
+        }
 
 
         private void mentesClick(object sender, RoutedEventArgs e)
@@ -1157,7 +1206,7 @@ namespace Konyvelo
                     filename = filename.Remove(filename.Length - 4, 4);
                 }
                 SaveTo(filename);
-                SaveFokonyv();
+                
             }
 
         }
