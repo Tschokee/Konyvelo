@@ -10,114 +10,114 @@
     </Window.InputBindings>
     <ScrollViewer Margin="0,0,0,4">
     <Grid Height="3960" Width="600">
-        <DataGrid x:Name="IDataGrid" HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" CanUserReorderColumns="False">
+        <DataGrid x:Name="IDataGrid" HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" CanUserReorderColumns="False" CanUserSortColumns="False">
             <DataGrid.Columns>
-                    <DataGridTextColumn Header="I. Egyházfenntartói járulékok" Binding="{Binding azonosító}" Width="180" />
+                    <DataGridTextColumn Header="I. Egyházfenntartói járulékok" Binding="{Binding azonosító}" Width="180" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Költségvetési cím" Binding="{Binding név}" Width="*"/>
                     <DataGridTextColumn Header="Összesen" Binding="{Binding előirányzat}" Width="120"/>
             </DataGrid.Columns>
         </DataGrid>
-        <DataGrid x:Name="IIDataGrid" HorizontalAlignment="Left" Height="140" Margin="0,105,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" RenderTransformOrigin="0.5,0.5" CanUserReorderColumns="False">
+        <DataGrid CanUserSortColumns="False" x:Name="IIDataGrid" HorizontalAlignment="Left" Height="140" Margin="0,105,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" RenderTransformOrigin="0.5,0.5" CanUserReorderColumns="False">
                 <DataGrid.Columns>
-                <DataGridTextColumn Header="II. Perselypénzek" Binding="{Binding azonosító}" Width="180" />
+                <DataGridTextColumn Header="II. Perselypénzek" Binding="{Binding azonosító}" Width="180" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Költségvetési cím" Binding="{Binding név}" Width="*" />
                 <DataGridTextColumn Header="Összesen" Binding="{Binding előirányzat}" Width="120"/>
             </DataGrid.Columns>
         </DataGrid>
-        <DataGrid x:Name="IIIDataGrid" HorizontalAlignment="Left" Height="216" Margin="0,305,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
+        <DataGrid CanUserSortColumns="False" x:Name="IIIDataGrid" HorizontalAlignment="Left" Height="216" Margin="0,305,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="III. Adományok" Binding="{Binding azonosító}" Width="180" />
+                <DataGridTextColumn Header="III. Adományok" Binding="{Binding azonosító}" Width="180" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Költségvetési cím" Binding="{Binding név}" Width="*" />
                 <DataGridTextColumn Header="Összesen" Binding="{Binding előirányzat}" Width="120"/>
             </DataGrid.Columns>
         </DataGrid>
-        <DataGrid x:Name="IVDataGrid" HorizontalAlignment="Left" Height="216" Margin="0,582,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
+        <DataGrid CanUserSortColumns="False" x:Name="IVDataGrid" HorizontalAlignment="Left" Height="216" Margin="0,582,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="IV. Egyéb bevételek" Binding="{Binding azonosító}" Width="180" />
+                <DataGridTextColumn Header="IV. Egyéb bevételek" Binding="{Binding azonosító}" Width="180" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Költségvetési cím" Binding="{Binding név}" Width="*" />
                     <DataGridTextColumn Header="Összesen" Binding="{Binding előirányzat}" Width="120"/>
             </DataGrid.Columns>
         </DataGrid>
-            <DataGrid x:Name="VDataGrid" HorizontalAlignment="Left" Height="140" Margin="0,858,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
+            <DataGrid CanUserSortColumns="False" x:Name="VDataGrid" HorizontalAlignment="Left" Height="140" Margin="0,858,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="V. Átvett pénzeszközök" Binding="{Binding azonosító}" Width="180" />
+                    <DataGridTextColumn Header="V. Átvett pénzeszközök" Binding="{Binding azonosító}" Width="180" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Költségvetési cím" Binding="{Binding név}" Width="*" />
                     <DataGridTextColumn Header="Összesen" Binding="{Binding előirányzat}" Width="120"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <DataGrid x:Name="XIAaDataGrid" HorizontalAlignment="Left" Height="292" Margin="0,1058,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
+            <DataGrid CanUserSortColumns="False" x:Name="XIAaDataGrid" HorizontalAlignment="Left" Height="292" Margin="0,1058,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="XI/A/a. Javadalmak" Binding="{Binding azonosító}" Width="180" />
+                    <DataGridTextColumn Header="XI/A/a. Javadalmak" Binding="{Binding azonosító}" Width="180" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Költségvetési cím" Binding="{Binding név}" Width="*" />
                     <DataGridTextColumn Header="Összesen" Binding="{Binding előirányzat}" Width="120"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <DataGrid x:Name="XIAbDataGrid" HorizontalAlignment="Left" Height="83" Margin="0,1410,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
+            <DataGrid CanUserSortColumns="False" x:Name="XIAbDataGrid" HorizontalAlignment="Left" Height="83" Margin="0,1410,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="XI/A/b. Közterhek" Binding="{Binding azonosító}" Width="180" />
+                    <DataGridTextColumn Header="XI/A/b. Közterhek" Binding="{Binding azonosító}" Width="180" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Költségvetési cím" Binding="{Binding név}" Width="*" />
                     <DataGridTextColumn Header="Összesen" Binding="{Binding előirányzat}" Width="120"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <DataGrid x:Name="XIBaDataGrid" HorizontalAlignment="Left" Height="216" Margin="0,1553,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
+            <DataGrid CanUserSortColumns="False" x:Name="XIBaDataGrid" HorizontalAlignment="Left" Height="216" Margin="0,1553,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="XI/B/a. Javadalmak " Binding="{Binding azonosító}" Width="180" />
+                    <DataGridTextColumn Header="XI/B/a. Javadalmak " Binding="{Binding azonosító}" Width="180" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Költségvetési cím" Binding="{Binding név}" Width="*" />
                     <DataGridTextColumn Header="Összesen" Binding="{Binding előirányzat}" Width="120"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <DataGrid x:Name="XIBbDataGrid" HorizontalAlignment="Left" Height="83" Margin="0,1829,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
+            <DataGrid CanUserSortColumns="False" x:Name="XIBbDataGrid" HorizontalAlignment="Left" Height="83" Margin="0,1829,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="XI/B/b. Közterhek" Binding="{Binding azonosító}" Width="180" />
+                    <DataGridTextColumn Header="XI/B/b. Közterhek" Binding="{Binding azonosító}" Width="180" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Költségvetési cím" Binding="{Binding név}" Width="*" />
                     <DataGridTextColumn Header="Összesen" Binding="{Binding előirányzat}" Width="120"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <DataGrid x:Name="XIIDataGrid" HorizontalAlignment="Left" Height="292" Margin="0,2002,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
+            <DataGrid CanUserSortColumns="False" x:Name="XIIDataGrid" HorizontalAlignment="Left" Height="292" Margin="0,2002,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="XII. Gyülekezeti élet kiadásai" Binding="{Binding azonosító}" Width="180" />
+                    <DataGridTextColumn Header="XII. Gyülekezeti élet kiadásai" Binding="{Binding azonosító}" Width="180" IsReadOnly="True" />
                     <DataGridTextColumn Header="Költségvetési cím" Binding="{Binding név}" Width="*" />
                     <DataGridTextColumn Header="Összesen" Binding="{Binding előirányzat}" Width="120"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <DataGrid x:Name="XIIIDataGrid" HorizontalAlignment="Left" Height="311" Margin="0,2324,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
+            <DataGrid CanUserSortColumns="False" x:Name="XIIIDataGrid" HorizontalAlignment="Left" Height="311" Margin="0,2324,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="XIII. Igazgatási kiadások" Binding="{Binding azonosító}" Width="180" />
+                    <DataGridTextColumn Header="XIII. Igazgatási kiadások" Binding="{Binding azonosító}" Width="180" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Költségvetési cím" Binding="{Binding név}" Width="*" />
                     <DataGridTextColumn Header="Összesen" Binding="{Binding előirányzat}" Width="120"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <DataGrid x:Name="XIVDataGrid" HorizontalAlignment="Left" Height="292" Margin="0,2695,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
+            <DataGrid CanUserSortColumns="False" x:Name="XIVDataGrid" HorizontalAlignment="Left" Height="292" Margin="0,2695,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="XIV. Egyházi ingatlanok és bérlemények fenntartása" Binding="{Binding azonosító}" Width="180" />
+                    <DataGridTextColumn Header="XIV. Egyházi ingatlanok és bérlemények fenntartása" Binding="{Binding azonosító}" Width="180" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Költségvetési cím" Binding="{Binding név}" Width="*" />
                     <DataGridTextColumn Header="Összesen" Binding="{Binding előirányzat}" Width="120"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <DataGrid x:Name="XVDataGrid" HorizontalAlignment="Left" Height="159" Margin="0,3047,0,0" VerticalAlignment="Top" Width="600"  AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" CanUserReorderColumns="False">
+            <DataGrid CanUserSortColumns="False" x:Name="XVDataGrid" HorizontalAlignment="Left" Height="159" Margin="0,3047,0,0" VerticalAlignment="Top" Width="600"  AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" CanUserReorderColumns="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="XV. Egyházi ingatlanok és bérlemények felújítási és beruházási költségei" Binding="{Binding azonosító}" Width="350" />
+                    <DataGridTextColumn Header="XV. Egyházi ingatlanok és bérlemények felújítási és beruházási költségei" Binding="{Binding azonosító}" Width="350" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Költségvetési cím" Binding="{Binding név}" Width="*" />
                     <DataGridTextColumn Header="Összesen" Binding="{Binding előirányzat}" Width="120"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <DataGrid x:Name="XVIDataGrid" HorizontalAlignment="Left" Height="45" Margin="0,3266,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
+            <DataGrid CanUserSortColumns="False" x:Name="XVIDataGrid" HorizontalAlignment="Left" Height="45" Margin="0,3266,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="XVI. Közalapi hozzájárulás" Binding="{Binding azonosító}" Width="180" />
+                    <DataGridTextColumn Header="XVI. Közalapi hozzájárulás" Binding="{Binding azonosító}" Width="180" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Költségvetési cím" Binding="{Binding név}" Width="*" />
                     <DataGridTextColumn Header="Összesen" Binding="{Binding előirányzat}" Width="120"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <DataGrid x:Name="XVIIDataGrid" HorizontalAlignment="Left" Height="178" Margin="0,3371,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
+            <DataGrid CanUserSortColumns="False" x:Name="XVIIDataGrid" HorizontalAlignment="Left" Height="178" Margin="0,3371,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="XVII. Egyéb kiadások" Binding="{Binding azonosító}" Width="180" />
+                    <DataGridTextColumn Header="XVII. Egyéb kiadások" Binding="{Binding azonosító}" Width="180" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Költségvetési cím" Binding="{Binding név}" Width="*" />
                     <DataGridTextColumn Header="Összesen" Binding="{Binding előirányzat}" Width="120"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <DataGrid x:Name="XVIIIDataGrid" HorizontalAlignment="Left" Height="140" Margin="0,3609,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
+            <DataGrid CanUserSortColumns="False" x:Name="XVIIIDataGrid" HorizontalAlignment="Left" Height="140" Margin="0,3609,0,0" VerticalAlignment="Top" Width="600" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="XVIII. Átadott pénzeszközök" Binding="{Binding azonosító}" Width="180" />
+                    <DataGridTextColumn Header="XVIII. Átadott pénzeszközök" Binding="{Binding azonosító}" Width="180" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Költségvetési cím" Binding="{Binding név}" Width="*" />
                     <DataGridTextColumn Header="Összesen" Binding="{Binding előirányzat}" Width="120"/>
                 </DataGrid.Columns>

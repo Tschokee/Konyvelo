@@ -369,7 +369,7 @@ namespace Konyvelo
 
             generateAll(III1, IIILista, 0, 3);
             generateAll(III2, IIILista, 1, 3);
-            generateAll(III3, IIILista, 3, 3);
+            generateAll(III3, IIILista, 2, 3);
             generateAll(III4, IIILista, 3, 3);
             generateAll(III5, IIILista, 4, 3);
             generateAll(III6, IIILista, 5, 3);
@@ -410,7 +410,7 @@ namespace Konyvelo
 
             generateAll(IV1, IVLista, 0, 4);
             generateAll(IV2, IVLista, 1, 4);
-            generateAll(IV3, IVLista, 3, 4);
+            generateAll(IV3, IVLista, 2, 4);
             generateAll(IV4, IVLista, 3, 4);
             generateAll(IV5, IVLista, 4, 4);
             generateAll(IV6, IVLista, 5, 4);
@@ -524,7 +524,7 @@ namespace Konyvelo
 
             generateAll(XIAa1, XIAaLista, 0, 6);
             generateAll(XIAa2, XIAaLista, 1, 6);
-            generateAll(XIAa3, XIAaLista, 3, 6);
+            generateAll(XIAa3, XIAaLista, 2, 6);
             generateAll(XIAa4, XIAaLista, 3, 6);
             generateAll(XIAa5, XIAaLista, 4, 6);
             generateAll(XIAa6, XIAaLista, 5, 6);
@@ -623,7 +623,7 @@ namespace Konyvelo
 
             generateAll(XIBa1, XIBaLista, 0, 8);
             generateAll(XIBa2, XIBaLista, 1, 8);
-            generateAll(XIBa3, XIBaLista, 3, 8);
+            generateAll(XIBa3, XIBaLista, 2, 8);
             generateAll(XIBa4, XIBaLista, 3, 8);
             generateAll(XIBa5, XIBaLista, 4, 8);
             generateAll(XIBa6, XIBaLista, 5, 8);
@@ -738,7 +738,7 @@ namespace Konyvelo
 
             generateAll(XII1, XIILista, 0, 10);
             generateAll(XII2, XIILista, 1, 10);
-            generateAll(XII3, XIILista, 3, 10);
+            generateAll(XII3, XIILista, 2, 10);
             generateAll(XII4, XIILista, 3, 10);
             generateAll(XII5, XIILista, 4, 10);
             generateAll(XII6, XIILista, 5, 10);
@@ -783,7 +783,7 @@ namespace Konyvelo
 
             generateAll(XIII1, XIIILista, 0, 11);
             generateAll(XIII2, XIIILista, 1, 11);
-            generateAll(XIII3, XIIILista, 3, 11);
+            generateAll(XIII3, XIIILista, 2, 11);
             generateAll(XIII4, XIIILista, 3, 11);
             generateAll(XIII5, XIIILista, 4, 11);
             generateAll(XIII6, XIIILista, 5, 11);
@@ -829,7 +829,7 @@ namespace Konyvelo
 
             generateAll(XIV1, XIVLista, 0, 12);
             generateAll(XIV2, XIVLista, 1, 12);
-            generateAll(XIV3, XIVLista, 3, 12);
+            generateAll(XIV3, XIVLista, 2, 12);
             generateAll(XIV4, XIVLista, 3, 12);
             generateAll(XIV5, XIVLista, 4, 12);
             generateAll(XIV6, XIVLista, 5, 12);
@@ -875,7 +875,7 @@ namespace Konyvelo
 
             generateAll(XV1, XVLista, 0, 13);
             generateAll(XV2, XVLista, 1, 13);
-            generateAll(XV3, XVLista, 3, 13);
+            generateAll(XV3, XVLista, 2, 13);
             generateAll(XV4, XVLista, 3, 13);
             generateAll(XV5, XVLista, 4, 13);
             generateAll(XV6, XVLista, 5, 13);

@@ -381,7 +381,7 @@ namespace Konyvelo
             MyDataGrid.IsReadOnly = true;
             //generateLists();//ha a pénzmozgás tábla üres akkor kell csak lefuttatni ezt a metódust és elmenteni a táblába, ha nem üres akkor a táblából kell betölteni az adatokat a listákba
             MyDataGrid.AutoGenerateColumns = false;
-            MyDataGrid.CanUserSortColumns = false;
+            MyDataGrid.CanUserSortColumns = true;
             DataGridTextColumn col1 = new DataGridTextColumn();
             col1.Binding = new Binding("sorSzám");
             col1.Header = "Sorszám";
@@ -523,7 +523,7 @@ namespace Konyvelo
         {
             try
             {
-                using (Stream stream = File.Open("fokonyv.bdb", FileMode.Create))
+                using (Stream stream = File.Open("fokonyv.ddb", FileMode.Create))
                 {
                     List<PénzMozgás> lp = new List<PénzMozgás>();
                     BinaryFormatter bin = new BinaryFormatter();
@@ -612,7 +612,7 @@ namespace Konyvelo
             int i = 0;
             try
             {
-                using (Stream stream = File.Open("fokonyv.bdb", FileMode.Open))
+                using (Stream stream = File.Open("fokonyv.ddb", FileMode.Open))
                 {
                     BinaryFormatter bin = new BinaryFormatter();
 
