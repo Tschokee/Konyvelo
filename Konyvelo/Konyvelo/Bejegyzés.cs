@@ -83,14 +83,14 @@ namespace Konyvelo
         public string toTableString() 
         {
 
-            return "<tr height=\"45\"><td>" + sorSzám + "</td><td>" + fizetésIdeje + "</td><td>" + megjegyzés + "</td><td>" + főkönyv + "</td><td>" + bankiBevétel + "</td><td>" + bankiKiadás + "</td><td>" + bankiEgyenleg + "</td><td>" + pénztáriBevétel + "</td><td>" + pénztáriKiadás + "</td><td>" + pénztáriEgyenleg + "</td></tr>";
+            return "<tr height=\"45\"><td>" + sorSzám + "</td><td>" + fizetésIdeje + "</td><td>" + megjegyzés + "</td><td>" + főkönyv + "</td><td>" + PénzMozgás.Tagol(bankiBevétel) + "</td><td>" + PénzMozgás.Tagol(bankiKiadás) + "</td><td>" + PénzMozgás.Tagol(bankiEgyenleg) + "</td><td>" + PénzMozgás.Tagol(pénztáriBevétel) + "</td><td>" + PénzMozgás.Tagol(pénztáriKiadás) + "</td><td>" + PénzMozgás.Tagol(pénztáriEgyenleg) + "</td></tr>";
         
         
         }
         public string toTable2String()
         {
 
-            return "<tr height=\"50\"><td>" + sorSzám + "</td><td>" + fizetésIdeje + "</td><td>" + megjegyzés + "</td><td>" +( bankiBevétel  +bankiKiadás+pénztáriKiadás+pénztáriBevétel )+ "</td></tr>";
+            return "<tr height=\"50\"><td>" + sorSzám + "</td><td>" + fizetésIdeje + "</td><td>" + megjegyzés + "</td><td>" +PénzMozgás.Tagol(( bankiBevétel  +bankiKiadás+pénztáriKiadás+pénztáriBevétel ))+ "</td></tr>";
 
 
         }

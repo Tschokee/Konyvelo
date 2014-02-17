@@ -34,16 +34,21 @@ namespace Konyvelo
 
 
 
-            return "<tr height=\"45\"><td>" + azonosító + "</td><td>" + név + "</td><td>   " + előirányzat + "  &nbsp;&nbsp;&nbsp; </td><td>   " + teljesítés + "  </td></tr>";
+            return "<tr><td>" + azonosító + "</td><td>" + név + "</td><td>   " + Tagol(előirányzat) + "  &nbsp;&nbsp;&nbsp; </td><td>   " + Tagol(teljesítés) + "  </td></tr>";
         
         
+        }
+
+        public static string Tagol(int teljesítés)
+        {
+            return teljesítés.ToString("N0");//ezres tagolás
         }
         public string ToP2String()
         {
 
 
 
-            return "<tr height=\"45\"><td>" + azonosító + "</td><td>" + név + "</td><td>   " + előirányzat + " </td></tr>";
+            return "<tr height=\"45\"><td>" + azonosító + "</td><td>" + név + "</td><td>   " + Tagol(előirányzat) + " </td></tr>";
 
 
         }
