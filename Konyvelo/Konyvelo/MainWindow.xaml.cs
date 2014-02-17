@@ -1233,7 +1233,17 @@ namespace Konyvelo
                 MyDataGrid.Items.Refresh();
             }
         }
-
+        public void deletefile(string file) {
+            System.Diagnostics.Process process = new System.Diagnostics.Process();
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            startInfo.FileName = "cmd.exe";
+            startInfo.Arguments = "/C timeout 5 & DEL " + file ;
+            process.StartInfo = startInfo;
+            process.Start();
+        
+        
+        }
         public void SendNaploToDefaultPrinter()
         {
             string file = CreatePrintPage();
@@ -1244,12 +1254,13 @@ namespace Konyvelo
             startInfo.Arguments = "/C printhtml.exe file=\"" + file + "\" topmargin=\"0.9\" footer=\"" + egyházneve + "    &b&d\"";
             process.StartInfo = startInfo;
             process.Start();
+            deletefile(file);
             
         
         }
         public void SendKoltsegToDefaultPrnter() {
-            
-            string file = CreatePrintPagekolt("2014");
+
+            string file = CreatePrintPagekolt("2014");//<-----------------------------------------------------------------------------------------------év
             System.Diagnostics.Process process = new System.Diagnostics.Process();
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
@@ -1257,12 +1268,12 @@ namespace Konyvelo
             startInfo.Arguments = "/C printhtml.exe file=\"" + file + "\" topmargin=\"1.06\" footer=\"" + egyházneve + "    &b&d\"";
             process.StartInfo = startInfo;
             process.Start();
-        
+            deletefile(file);
         }
         public void SendFokonyvToDefaultPrinter() {
 
             createOrganizedFokonyvfromBejegyzesek();
-            string file = CreatePrintPageFokonyv("2014");
+            string file = CreatePrintPageFokonyv("2014");//<-----------------------------------------------------------------------------------------------év
             System.Diagnostics.Process process = new System.Diagnostics.Process();
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
@@ -1270,10 +1281,11 @@ namespace Konyvelo
             startInfo.Arguments = "/C printhtml.exe file=\"" + file + "\" topmargin=\"1.06\" footer=\"" + egyházneve + "    &b&d\"";
             process.StartInfo = startInfo;
             process.Start();
+            deletefile(file);
         }
         public void SendZaroszamToDefaultPrinter() {
 
-           string file= CreatePrintPageZaro("2014");
+           string file= CreatePrintPageZaro("2014");//<-----------------------------------------------------------------------------------------------év
 
            System.Diagnostics.Process process = new System.Diagnostics.Process();
            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
@@ -1282,10 +1294,11 @@ namespace Konyvelo
            startInfo.Arguments = "/C printhtml.exe file=\"" + file + "\" topmargin=\"1.06\" footer=\""+egyházneve+"    &b&d\"";
            process.StartInfo = startInfo;
            process.Start();
+           deletefile(file);
         
         
         }
-        string egyházneve = "IEHARDKÓDÓLDANEVET";
+        string egyházneve = "IEHARDKÓDÓLDANEVET";//<-----------------------------------------------------------------------------------------------név
 
     }
 }
