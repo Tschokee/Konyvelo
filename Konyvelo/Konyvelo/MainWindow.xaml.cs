@@ -1260,7 +1260,7 @@ namespace Konyvelo
         }
         public void SendKoltsegToDefaultPrnter() {
 
-            string file = CreatePrintPagekolt("2014");//<-----------------------------------------------------------------------------------------------év
+            string file = CreatePrintPagekolt(PénzMozgás.évSzám.ToString());//<-----------------------------------------------------------------------------------------------év
             System.Diagnostics.Process process = new System.Diagnostics.Process();
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
@@ -1273,7 +1273,7 @@ namespace Konyvelo
         public void SendFokonyvToDefaultPrinter() {
 
             createOrganizedFokonyvfromBejegyzesek();
-            string file = CreatePrintPageFokonyv("2014");//<-----------------------------------------------------------------------------------------------év
+            string file = CreatePrintPageFokonyv(PénzMozgás.évSzám.ToString());//<-----------------------------------------------------------------------------------------------év
             System.Diagnostics.Process process = new System.Diagnostics.Process();
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
@@ -1285,7 +1285,7 @@ namespace Konyvelo
         }
         public void SendZaroszamToDefaultPrinter() {
 
-           string file= CreatePrintPageZaro("2014");//<-----------------------------------------------------------------------------------------------év
+           string file= CreatePrintPageZaro(PénzMozgás.évSzám.ToString());//<-----------------------------------------------------------------------------------------------év
 
            System.Diagnostics.Process process = new System.Diagnostics.Process();
            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
