@@ -38,7 +38,12 @@
                 <MenuItem Header="Költségvetés" Click="koltsegvetesButton_Click"/>
                 <MenuItem Header="Főkönyv" Click="fokonyvButton_Click"/>
             </MenuItem>
-            <MenuItem Header="Nyomtatás" Margin="5,5,0,0" Click="printMenuItem_Click"/>
+            <MenuItem Header="Nyomtatás" Margin="5,5,0,0">
+                <MenuItem Header="Napló" Click="naploPrintClick"/>
+                <MenuItem Header="Főkönyv" Click="fokonyvPrintClick"/>
+                <MenuItem Header="Költségvetés" Click="koltPrintClick"/>
+                <MenuItem Header="Zárószámadás" Click="zaroPrintClick"/>
+            </MenuItem>
             <MenuItem Header="Évszám" Margin="5,5,0,0" Click="evSzamMenuItem_Click"/>
             <MenuItem Header="Súgó" Margin="5,5,0,0" Click="sugoMenuItem_Click"/>
         </Menu>

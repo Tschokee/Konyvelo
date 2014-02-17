@@ -1300,5 +1300,25 @@ namespace Konyvelo
         }
         string egyházneve = "IEHARDKÓDÓLDANEVET";//<-----------------------------------------------------------------------------------------------név
 
+
+        private void naploPrintClick(object sender, RoutedEventArgs e)
+        {
+            SendNaploToDefaultPrinter();
+        }
+
+        private void fokonyvPrintClick(object sender, RoutedEventArgs e)
+        {
+            SendFokonyvToDefaultPrinter();
+        }
+
+        private void koltPrintClick(object sender, RoutedEventArgs e)
+        {
+            SendKoltsegToDefaultPrnter();
+        }
+
+        private void zaroPrintClick(object sender, RoutedEventArgs e)
+        {
+            SendZaroszamToDefaultPrinter();
+        }
     }
 }
