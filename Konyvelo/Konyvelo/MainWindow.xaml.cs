@@ -1251,7 +1251,7 @@ namespace Konyvelo
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
             startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = "/C printhtml.exe file=\"" + file + "\" topmargin=\"0.9\" footer=\"" + egyházneve + "    &b&d\"";
+            startInfo.Arguments = "/C printhtml.exe file=\"" + file + "\" topmargin=\"0.9\" header=\"" + egyházneve + " Napló    &b&d\" footer=\"&b&p\\&P\"";
             process.StartInfo = startInfo;
             process.Start();
             deletefile(file);
@@ -1260,12 +1260,12 @@ namespace Konyvelo
         }
         public void SendKoltsegToDefaultPrnter() {
 
-            string file = CreatePrintPagekolt(PénzMozgás.évSzám.ToString());//<-----------------------------------------------------------------------------------------------év
+            string file = CreatePrintPagekolt(PénzMozgás.évSzám.ToString());
             System.Diagnostics.Process process = new System.Diagnostics.Process();
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
             startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = "/C printhtml.exe file=\"" + file + "\" topmargin=\"1.06\" footer=\"" + egyházneve + "    &b&d\"";
+            startInfo.Arguments = "/C printhtml.exe file=\"" + file + "\" topmargin=\"1.06\" header=\"" + egyházneve + " Költségvetés   &b&d\" footer=\"&b&p\\&P\"";  //<----- lehet header footert  állítrni
             process.StartInfo = startInfo;
             process.Start();
             deletefile(file);
@@ -1273,25 +1273,25 @@ namespace Konyvelo
         public void SendFokonyvToDefaultPrinter() {
 
             createOrganizedFokonyvfromBejegyzesek();
-            string file = CreatePrintPageFokonyv(PénzMozgás.évSzám.ToString());//<-----------------------------------------------------------------------------------------------év
+            string file = CreatePrintPageFokonyv(PénzMozgás.évSzám.ToString());
             System.Diagnostics.Process process = new System.Diagnostics.Process();
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
             startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = "/C printhtml.exe file=\"" + file + "\" topmargin=\"1.06\" footer=\"" + egyházneve + "    &b&d\"";
+            startInfo.Arguments = "/C printhtml.exe file=\"" + file + "\" topmargin=\"1.06\" header=\"" + egyházneve + " Főkönyv  &b&d\" footer=\"&b&p\\&P\"";
             process.StartInfo = startInfo;
             process.Start();
             deletefile(file);
         }
         public void SendZaroszamToDefaultPrinter() {
 
-           string file= CreatePrintPageZaro(PénzMozgás.évSzám.ToString());//<-----------------------------------------------------------------------------------------------év
+           string file= CreatePrintPageZaro(PénzMozgás.évSzám.ToString());
 
            System.Diagnostics.Process process = new System.Diagnostics.Process();
            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
            startInfo.FileName = "cmd.exe";
-           startInfo.Arguments = "/C printhtml.exe file=\"" + file + "\" topmargin=\"1.06\" footer=\""+egyházneve+"    &b&d\"";
+           startInfo.Arguments = "/C printhtml.exe file=\"" + file + "\" topmargin=\"1.06\" header=\""+egyházneve+" Zárszám    &b&d\" footer=\"&b&p\\&P\"";
            process.StartInfo = startInfo;
            process.Start();
            deletefile(file);
