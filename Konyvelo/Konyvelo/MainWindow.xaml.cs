@@ -767,8 +767,12 @@ namespace Konyvelo
                 //c = 0; p1++;
                 if (p1 < 5)
                 {
-                  
-                    file.Write("</table><br/>");
+
+                    file.Write("</table>");
+                    if (p1!=-5)
+                    {
+                        file.Write("<br/>");
+                    } 
                    
                     file.Write("<table height=\"" + h + "\" border=\"1\"  width=\"900\" style =\"border-collapse:collapse;\">");
                 }
@@ -829,6 +833,7 @@ namespace Konyvelo
             i = 0;
             int c = 0, p1 = -7, egyhazsajatki = 0, egyhazsajatbe = 0, limit=28;
             string h = "1300";
+
             string ht = "45";
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(filename, false, Encoding.Unicode))
             {
@@ -838,34 +843,34 @@ namespace Konyvelo
                 {
                     PénzMozgás temp = new PénzMozgás();
 
-                    file.Write("<tr height=\""+ht+"\"><th>" + Givemeaprostring(listn[0]) + "</th><th>Költségvetési Cím</th><th>Előirányzat</th><th>Teljesítés</th></tr>");
-                    if (testcp(c++, 0, file, limit, h))
+                    file.Write("<tr ><th>" + Givemeaprostring(listn[0]) + "</th><th>Költségvetési Cím</th><th>Előirányzat</th><th>Teljesítés</th></tr>");
+                    if (testcp(c++, -5, file, limit, h))
                     {
-                        c = 0; limit = 29; h = "1300"; p1++;
+                        c = 0; limit = 29; p1++;// h = "1300";
                         if (p1 > -4) { h = "1000"; }
                     } 
                     foreach (PénzMozgás penz in listn)
                     {
                         file.Write(penz.ToPString());
-                        if (testcp(c++, 0, file, limit, h))
+                        if (testcp(c++, -5, file, limit, h))
                     {
-                        c = 0; limit = 29; h = "1300"; p1++; 
-                          if (p1 > -4){ h = "1000"; }
+                        c = 0; limit = 29; p1++;// h = "1300";
+                        if (p1 > -4) { h = "1000"; }
                     } 
 
                         temp.előirányzat += penz.előirányzat;
                         temp.teljesítés += penz.teljesítés;
 
                     }
-                    if (testcp(c++, 0, file, limit, h))
+                    if (testcp(c++, -5, file, limit, h))
                     {
-                        c = 0; limit = 29; h = "1300"; p1++; 
+                        c = 0; limit = 29; p1++; //h = "1300";  
                         if (p1 > -4) { h = "1000"; }
                     }
-                    file.Write("<tr height=\"" + ht + "\" ><td>&nbsp;</td><td>Összesen:</td><td>" + PénzMozgás.Tagol(temp.előirányzat) + "</td><td>" + PénzMozgás.Tagol(temp.teljesítés) + "</td></tr>");
-                    if (testcp(c++, 0, file, limit, h))
+                    file.Write("<tr ><td>&nbsp;</td><td>Összesen:</td><td>" + PénzMozgás.Tagol(temp.előirányzat) + "</td><td>" + PénzMozgás.Tagol(temp.teljesítés) + "</td></tr>");
+                    if (testcp(c++, -5, file, limit, h))
                     {
-                        c = 0; limit = 29; h = "1300"; p1++; 
+                        c = 0; limit = 29; p1++;// h = "1300"; 
                         if (p1 > -4) { h = "1000"; }
                     }
                     //file.Write("<tr height=\"" + ht + "\" ><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>");
@@ -1251,7 +1256,7 @@ namespace Konyvelo
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
             startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = "/C printhtml.exe file=\"" + file + "\" topmargin=\"0.9\" header=\"" + egyházneve + " Napló    &b&d\" footer=\"&b&p\\&P\"";
+            startInfo.Arguments = "/C printhtml.exe file=\"" + file + "\" topmargin=\"0.9\" bottommargin=\"0.75\" leftmargin=\"1\" rightmargin=\"1\" header=\"" + egyházneve + " Napló    &b&d\" footer=\"&b&p\\&P\"";
             process.StartInfo = startInfo;
             process.Start();
             deletefile(file);
@@ -1265,7 +1270,7 @@ namespace Konyvelo
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
             startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = "/C printhtml.exe file=\"" + file + "\" topmargin=\"1.06\" header=\"" + egyházneve + " Költségvetés   &b&d\" footer=\"&b&p\\&P\"";  //<----- lehet header footert  állítrni
+            startInfo.Arguments = "/C printhtml.exe file=\"" + file + "\" topmargin=\"1.06\"  bottommargin=\"1.6\" leftmargin=\"1\" rightmargin=\"1\"  header=\"" + egyházneve + " Költségvetés   &b&d\" footer=\"&b&p\\&P\"";  //<----- lehet header footert  állítrni
             process.StartInfo = startInfo;
             process.Start();
             deletefile(file);
@@ -1278,7 +1283,7 @@ namespace Konyvelo
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
             startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = "/C printhtml.exe file=\"" + file + "\" topmargin=\"1.06\" header=\"" + egyházneve + " Főkönyv  &b&d\" footer=\"&b&p\\&P\"";
+            startInfo.Arguments = "/C printhtml.exe file=\"" + file + "\" topmargin=\"1.06\"  bottommargin=\"1.6\" leftmargin=\"1\" rightmargin=\"1\"  header=\"" + egyházneve + " Főkönyv  &b&d\" footer=\"&b&p\\&P\"";
             process.StartInfo = startInfo;
             process.Start();
             deletefile(file);
@@ -1291,7 +1296,7 @@ namespace Konyvelo
            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
            startInfo.FileName = "cmd.exe";
-           startInfo.Arguments = "/C printhtml.exe file=\"" + file + "\" topmargin=\"1.06\" header=\""+egyházneve+" Zárszám    &b&d\" footer=\"&b&p\\&P\"";
+           startInfo.Arguments = "/C printhtml.exe file=\"" + file + "\" topmargin=\"1.06\"  bottommargin=\"1.7\" leftmargin=\"1\" rightmargin=\"1\"  header=\"" + egyházneve + " Zárszám    &b&d\" footer=\"&b&p\\&P\"";
            process.StartInfo = startInfo;
            process.Start();
            deletefile(file);
