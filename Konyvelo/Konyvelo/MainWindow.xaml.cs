@@ -736,9 +736,9 @@ namespace Konyvelo
                     }
                     szamlalo.bankiBevétel += bejegyzes.bankiBevétel;
                     szamlalo.bankiKiadás += bejegyzes.bankiKiadás;
-                    szamlalo.bankiEgyenleg += bejegyzes.bankiEgyenleg;
+                    szamlalo.bankiEgyenleg = bejegyzes.bankiEgyenleg;
                     szamlalo.pénztáriBevétel += bejegyzes.pénztáriBevétel;
-                    szamlalo.pénztáriEgyenleg += bejegyzes.pénztáriEgyenleg;
+                    szamlalo.pénztáriEgyenleg = bejegyzes.pénztáriEgyenleg;
                     szamlalo.pénztáriKiadás += bejegyzes.pénztáriKiadás;
 
                 }
