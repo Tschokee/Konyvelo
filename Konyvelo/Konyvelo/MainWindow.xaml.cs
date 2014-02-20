@@ -380,7 +380,7 @@ namespace Konyvelo
             listazo();
             //MyDataGrid.ItemsSource = LoadCollectionData(); ///LoadCFromFile(PénzMozgás.évSzám.ToString());bejegyzések listát feltöltő metódus
             //SaveTo(PénzMozgás.évSzám.ToString());
-            LoadCollectionData();
+            //LoadCollectionData();
             MyDataGrid.IsReadOnly = true;
             generateLists();//ha a pénzmozgás tábla üres akkor kell csak lefuttatni ezt a metódust és elmenteni a táblába, ha nem üres akkor a táblából kell betölteni az adatokat a listákba
             MyDataGrid.ItemsSource = bejegyzések;
@@ -1178,6 +1178,8 @@ namespace Konyvelo
         {
             bejegyzések.Clear();
             generateLists();
+            Bejegyzés.globalBankiEgyenleg = 0;
+            Bejegyzés.globalPenztariEgyenleg = 0;
             MyDataGrid.Items.Refresh();
         }
 
@@ -1241,6 +1243,8 @@ namespace Konyvelo
                 MyDataGrid.ItemsSource = bejegyzések;
                 MyDataGrid.Items.Refresh();
             }
+            Bejegyzés.globalBankiEgyenleg = bejegyzések[bejegyzések.Count - 1].bankiEgyenleg;
+            Bejegyzés.globalPenztariEgyenleg = bejegyzések[bejegyzések.Count - 1].pénztáriEgyenleg;
         }
         public void deletefile(string file) {
             System.Diagnostics.Process process = new System.Diagnostics.Process();
