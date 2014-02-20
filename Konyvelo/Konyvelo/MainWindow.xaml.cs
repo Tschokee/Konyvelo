@@ -1313,16 +1313,26 @@ namespace Konyvelo
 
         private void fokonyvPrintClick(object sender, RoutedEventArgs e)
         {
+            Window FW = new FokonyvWindow(bejegyzések, I, II, III, IV, V, XIAa, XIAb, XIBa, XIBb, XII, XIII, XIV, XV, XVI, XVII, XVIII);
+            FW.Close();
+    
             SendFokonyvToDefaultPrinter();
         }
 
         private void koltPrintClick(object sender, RoutedEventArgs e)
         {
+       
+            Window KW = new KoltsegvetesWindow(I, II, III, IV, V, XIAa, XIAb, XIBa, XIBb, XII, XIII, XIV, XV, XVI, XVII, XVIII);
+            KW.Close();
+     
+
             SendKoltsegToDefaultPrnter();
         }
 
         private void zaroPrintClick(object sender, RoutedEventArgs e)
         {
+            Window ZSZW = new ZaroszamadasWindow(bejegyzések, I, II, III, IV, V, XIAa, XIAb, XIBa, XIBb, XII, XIII, XIV, XV, XVI, XVII, XVIII);
+            ZSZW.Close();
             SendZaroszamToDefaultPrinter();
         }
     }
