@@ -27,7 +27,7 @@
                 <MenuItem Header="Új Könyvelés" Click="newKonyv"/>
                 <MenuItem Header="Új Sor" Click="Button_Click_1"/>
                 <MenuItem Header="Kijelölt Sor Módosítása" Click="modositButton_Click"/>
-                <MenuItem Header="Kijelölt Sor Törlés" Click="torolButton_Click"/>
+                <MenuItem Header="Kijelölt Sor Törlése" Click="torolButton_Click"/>
                 <MenuItem Header="Napló Mentése" Click="mentesClick"/>
                 <MenuItem Header="Napló Betöltése" Click="loadButton_Click"/>
                 <MenuItem Header="Költségvetés Mentése" Click="mentesKoltClick"/>

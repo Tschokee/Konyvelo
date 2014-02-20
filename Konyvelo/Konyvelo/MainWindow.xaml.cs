@@ -1303,7 +1303,7 @@ namespace Konyvelo
         
         
         }
-        string egyházneve = "IEHARDKÓDÓLDANEVET";//<-----------------------------------------------------------------------------------------------név
+        string egyházneve = "Példa Egyház";//<-----------------------------------------------------------------------------------------------név
 
 
         private void naploPrintClick(object sender, RoutedEventArgs e)

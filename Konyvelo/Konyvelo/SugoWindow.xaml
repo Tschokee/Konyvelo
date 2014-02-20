@@ -1,6 +1,6 @@
 ﻿<Window x:Class="Konyvelo.SugoWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Súgó" Height="205.97" Width="320.896">
+        Title="Súgó" Height="205.97" Width="320.896" ResizeMode="NoResize">
     <Label HorizontalAlignment="Left" Height="176" VerticalAlignment="Top" Width="311" Content="Akció &#x9;&#x9;&#x9;&#x9;Gyorsbillentyű&#xA;&#xA;Új sor beszúrása&#x9;&#x9;&#x9;N&#xA;Kijelölt sor módosítása&#x9;&#x9;M, Duplakattintás&#xA;Kijelölt sor törlése &#x9;&#x9;D&#xA;Főkönyv ablak megnyitása&#x9;&#x9;F&#x9;&#xA;Zárószámadás ablak megnyitása&#x9;Z&#xA;Költségvetés ablak megnyitása &#x9;K&#xD;&#xA;Mentés &#x9;&#x9;&#x9;&#x9;CTRL+S&#xA;&#xA;"/>
 </Window>
