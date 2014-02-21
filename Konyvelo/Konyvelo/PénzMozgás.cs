@@ -30,11 +30,11 @@ namespace Konyvelo
             this.előirányzat = 0;
             this.teljesítés = 0;
         }
-        public string ToPString() {
+        public string ToPString(string sormagasság) {
 
 
 
-            return "<tr><td>" + azonosító + "</td><td>" + név + "</td><td>   " + Tagol(előirányzat) + "  &nbsp;&nbsp;&nbsp; </td><td>   " + Tagol(teljesítés) + "  </td></tr>";
+            return "<tr height=\"" + sormagasság + "\"><td>" + azonosító + "</td><td>" + név + "</td><td>   " + Tagol(előirányzat) + "  &nbsp;&nbsp;&nbsp; </td><td>   " + Tagol(teljesítés) + "  </td></tr>";
         
         
         }
@@ -43,12 +43,12 @@ namespace Konyvelo
         {
             return teljesítés.ToString("N0");//ezres tagolás
         }
-        public string ToP2String()
+        public string ToP2String(string sormagasság)
         {
 
 
 
-            return "<tr height=\"45\"><td>" + azonosító + "</td><td>" + név + "</td><td>   " + Tagol(előirányzat) + " </td></tr>";
+            return "<tr height=\""+sormagasság+"\"><td>" + azonosító + "</td><td>" + név + "</td><td>   " + Tagol(előirányzat) + " </td></tr>";
 
 
         }
