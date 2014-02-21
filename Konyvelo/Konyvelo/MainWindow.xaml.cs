@@ -30,6 +30,45 @@ namespace Konyvelo
         List<List<PénzMozgás>> listaz = new List<List<PénzMozgás>>();
         Dictionary<string, List<Bejegyzés>> fokonyv = new Dictionary<string, List<Bejegyzés>>(); 
         
+        public List<string> költségvetésiCím= new List<string>();
+        public List<string> költségvetésiCímFeltölt() //még nincs meghívva sehol
+        {
+            költségvetésiCím.Clear();
+
+            //1. oldal
+            költségvetésiCím.Add("I. Egyházfenntartói járulékok");
+            költségvetésiCím.Add("II. Perselypénzek");
+            költségvetésiCím.Add("III. Adományok");
+            költségvetésiCím.Add("IV. Egyéb bevételek");
+            költségvetésiCím.Add("V. Átvett pénzeszközök");
+
+            //2. oldal
+            //Egymás alá közvetlenül
+            költségvetésiCím.Add("XI. Személyi kiadások");
+            költségvetésiCím.Add("XI/A. Lelkészek javadalma és közterhei");
+            költségvetésiCím.Add("XI/A/a. Javadalmak");
+            //
+            költségvetésiCím.Add("XI/A/b. Közterhek");
+            //Egymás alá közvetlenül
+            költségvetésiCím.Add("XI/B. Alkalmazottak javadalmai és közterhei");
+            költségvetésiCím.Add("XI/B/a. Javadalmak");
+            //
+            költségvetésiCím.Add("XI/B/b. Közterhek");
+
+            //3. oldal
+            költségvetésiCím.Add("XII. Gyülekezeti élet kiadásai");
+            költségvetésiCím.Add("XIII. Igazgatási kiadások");
+            költségvetésiCím.Add("XIV. Egyházi ingatlanok és bérlemények fenntartása");
+
+            //4. oldal
+            költségvetésiCím.Add("XV. Egyházi ingatlanok és bérlemények felújitási és beruházási költségei");
+            költségvetésiCím.Add("XVI. Közalapi hozzájárulás");
+            költségvetésiCím.Add("XVII. Egyéb kiadások");
+            költségvetésiCím.Add("XVIII. Átadott pénzeszközök");
+
+            return költségvetésiCím;
+        }
+
         public string ReturnFokonyvRomaiSzam(Bejegyzés bejegyzes) {
             //na ez ittlehet  hülyeség de benne hagyom mert még lehet jó
             foreach (List<PénzMozgás> lista in listaz)
