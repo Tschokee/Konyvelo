@@ -1151,7 +1151,9 @@ namespace Konyvelo
             int sorszám = sorlimit;
 
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(filename, false, Encoding.Unicode))
-            {
+            {   PénzMozgás XIIA= new PénzMozgás();
+                PénzMozgás XIIB= new PénzMozgás();
+
                 int osszkiegmentes = 0;
                 PénzMozgás személyi = new PénzMozgás();
                 PénzMozgás egyhazsajat = new PénzMozgás();
@@ -1193,6 +1195,16 @@ namespace Konyvelo
                         személyi.előirányzat += temp.előirányzat;
                         személyi.teljesítés += temp.teljesítés;
                     }
+                    if (i < 8 && i > 5)
+                    {
+                        XIIA.előirányzat += temp.előirányzat;
+                        XIIA.teljesítés += temp.teljesítés;
+                    }
+                    if (i < 10 && i > 7)
+                    {
+                        XIIB.előirányzat += temp.előirányzat;
+                        XIIB.teljesítés += temp.teljesítés;
+                    }
                     if (i < 5)
                     {
                         egyhazsajatbe += temp.teljesítés;//direkt van így
@@ -1217,6 +1229,16 @@ namespace Konyvelo
                     if (testcp(c++, p1, file, sorszám, h))
                     {
                         c = 0; p1++;
+                    } 
+                    if (fokonyvszam == 9)
+                    {
+                        file.Write("<tr height=\"" + sh + "\"><td></td><td><b>XIIA. Személyi kiadások összesen</b></td><td>" + PénzMozgás.Tagol(XIIA.előirányzat) + "</td></tr>");
+
+                    } 
+                    if (fokonyvszam == 12)
+                    {
+                        file.Write("<tr height=\"" + sh + "\"><td></td><td><b>XIIB. Személyi kiadások összesen</b></td><td>" + PénzMozgás.Tagol(XIIB.előirányzat) + "</td></tr>");
+
                     }
                     if (fokonyvszam == 12)
                     {
@@ -1289,6 +1311,9 @@ namespace Konyvelo
 
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(filename, false, Encoding.Unicode))
             {
+                PénzMozgás XIIA = new PénzMozgás();
+                PénzMozgás XIIB = new PénzMozgás();
+
                 int osszkiegmentes1 = 0; int osszkiegmentes2 = 0;
                 PénzMozgás személyi = new PénzMozgás();
                 PénzMozgás egyhazsajat = new PénzMozgás();
@@ -1330,6 +1355,16 @@ namespace Konyvelo
                         személyi.előirányzat += temp.előirányzat;
                         személyi.teljesítés += temp.teljesítés;
                     }
+                    if (i < 8 && i > 5)
+                    {
+                        XIIA.előirányzat += temp.előirányzat;
+                        XIIA.teljesítés += temp.teljesítés;
+                    }
+                    if (i < 10 && i > 7)
+                    {
+                        XIIB.előirányzat += temp.előirányzat;
+                        XIIB.teljesítés += temp.teljesítés;
+                    }
                     if (i < 5)
                     {
                         egyhazsajatbetelj += temp.teljesítés;//direkt van így
@@ -1354,6 +1389,16 @@ namespace Konyvelo
                     if (testcp(c++, p1, file, sorszám, h))
                     {
                         c = 0; p1++;
+                    }
+                    if (fokonyvszam == 9)
+                    {
+                        file.Write("<tr height=\"" + sh + "\"><td></td><td><b>XIIA. Személyi kiadások összesen</b></td><td>" + PénzMozgás.Tagol(XIIA.előirányzat) + "</td><td>" + PénzMozgás.Tagol(XIIA.teljesítés) + "</td></tr>");
+
+                    }
+                    if (fokonyvszam == 12)
+                    {
+                        file.Write("<tr height=\"" + sh + "\"><td></td><td><b>XIIB. Személyi kiadások összesen</b></td><td>" + PénzMozgás.Tagol(XIIB.előirányzat) + "</td><td>" + PénzMozgás.Tagol(XIIB.teljesítés) + "</td></tr>");
+
                     }
                     if (fokonyvszam == 12)
                     {
