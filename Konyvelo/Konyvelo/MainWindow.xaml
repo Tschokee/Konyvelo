@@ -24,8 +24,8 @@
     <Grid Margin="10,24,2,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Menu Margin="-10,-28,0,-11" Height="477" VerticalAlignment="Top">
             <MenuItem Header="_Műveletek" Margin="5,5,0,0">
-                <MenuItem Header="Új Könyvelés" Click="newKonyv"/>
-                <MenuItem Header="Új Sor" Click="Button_Click_1"/>
+                <MenuItem Header="Új Könyvelés Létrehozása" Click="newKonyv"/>
+                <MenuItem Header="Új Sor Hozzáadása" Click="Button_Click_1"/>
                 <MenuItem Header="Kijelölt Sor Módosítása" Click="modositButton_Click"/>
                 <MenuItem Header="Kijelölt Sor Törlése" Click="torolButton_Click"/>
                 <MenuItem Header="Napló Mentése" Click="mentesClick"/>
