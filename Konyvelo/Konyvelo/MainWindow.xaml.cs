@@ -736,13 +736,13 @@ namespace Konyvelo
         public string CreatePrintPage()
         {
             string filename = "print.html";
-            string sormagasság = naplosormagasság;
+            string sormagasság = "45";
             string th = "1530";
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(filename, false, Encoding.Unicode))
             {
 
                 file.Write("<html><head><title>Napló</title></head><body>");
-                if (bejegyzések.Count > 50)
+                if (bejegyzések.Count > 30)
                 {
                     file.Write("<table style =\"border-collapse:collapse;\" border=1px height=\"" + "1550" + "\" width=\"900\"><tr height=\"25\"><th rowspan=3></th><th rowspan=3>Fizetés ideje</th><th rowspan=3 width=\"250\">Megnevezés</th><th rowspan=3>Főkönyv</th><th colspan=3>Banki forgalom</th><th colspan=3>Pénztári forgalom</th></tr>");//<<<---- itt a hiba
 
@@ -762,7 +762,7 @@ namespace Konyvelo
                 szamlalo.pénztáriBevétel = 0;
                 szamlalo.pénztáriEgyenleg = 0;
                 szamlalo.pénztáriKiadás = 0;
-                int limit = 50;
+                int limit = 30;
                 int sorszamolo = 0;
                 foreach (Bejegyzés bejegyzes in bejegyzések)
                 {
@@ -779,7 +779,7 @@ namespace Konyvelo
                     {
                         if (limit == sorlimit)
                         {
-                            limit=sorlimit;
+                            limit=sorlimit-1;
                         }
                         file.Write("<tr><td colspan=4 align=\"right\">Átvitel:</td><td>" + PénzMozgás.Tagol(szamlalo.bankiBevétel) + "</td><td>" + PénzMozgás.Tagol(szamlalo.bankiKiadás) + "</td><td>" + PénzMozgás.Tagol(szamlalo.bankiEgyenleg) + "</td><td>" + PénzMozgás.Tagol(szamlalo.pénztáriBevétel) + "</td><td>" + PénzMozgás.Tagol(szamlalo.pénztáriKiadás) + "</td><td>" + PénzMozgás.Tagol(szamlalo.pénztáriEgyenleg) + "</td></tr></table><br/>");
                         if (bejegyzések.Count - sorszamolo > limit)
@@ -793,7 +793,7 @@ namespace Konyvelo
                             file.Write("<table border=1px  style =\"border-collapse:collapse;\" width=\"900\"><tr><th rowspan=3></th><th rowspan=3>Fizetés ideje</th><th rowspan=3 width=\"250\">Megnevezés</th><th rowspan=3>Főkönyv</th><th colspan=3>Banki forgalom</th><th colspan=3>Pénztári forgalom</th></tr>");
 
                         }
-                        file.Write("<tr><th>Bevétel</th><th>Kiadás</th><th rowspan=2>Egyenleg</th><th>Bevétel</th><th>Kiadás</th><th rowspan=2>Egyenleg</th></tr><tr><th>Forint</th><th>Forint</th><th>Forint</th><th>Forint</th></tr>");
+                        file.Write("<tr  height=\"25\"><th width=\"100\">Bevétel</th><th width=\"100\">Kiadás</th><th rowspan=2 width=\"100\">Egyenleg</th><th width=\"100\">Bevétel</th><th width=\"100\">Kiadás</th><th rowspan=2 width=\"100\">Egyenleg</th></tr><tr height=\"25\"><th>Forint</th><th>Forint</th><th>Forint</th><th>Forint</th></tr>");
                         file.Write("<tr><td colspan=4 align=\"right\">Áthozat:</td><td>" + PénzMozgás.Tagol(szamlalo.bankiBevétel) + "</td><td>" + PénzMozgás.Tagol(szamlalo.bankiKiadás) + "</td><td>" + PénzMozgás.Tagol(szamlalo.bankiEgyenleg) + "</td><td>" + PénzMozgás.Tagol(szamlalo.pénztáriBevétel) + "</td><td>" + PénzMozgás.Tagol(szamlalo.pénztáriKiadás) + "</td><td>" + PénzMozgás.Tagol(szamlalo.pénztáriEgyenleg) + "</td></tr>");
 
                         file.Write(bejegyzes.toTableString(sormagasság));
