@@ -109,10 +109,10 @@ namespace Konyvelo
         {
             for (int i = 0; i < 100; i++)
             {
-                bejegyzések.Add(new Bejegyzés(1, "2014. jan. 1.", "Maradvány 2008-ról (házipénztár)", "IV/10", 40, 0, 0, 0, "BeB/2014"));
-                bejegyzések.Add(new Bejegyzés(2, "2014. jan. 1.", "Maradvány 2008-ról (bankszámla)", "IV/10", 0, 0, 11, 0, "664-0184"));
-                bejegyzések.Add(new Bejegyzés(3, "2014. jan. 7.", "Postaköltség", "XVIII/2", 0, 0, 0, 50, "KiP/2014"));
-                bejegyzések.Add(new Bejegyzés(4, "2014. jan. 8.", "Óévi perselyadomány", "XVII/1", 12, 0, 0, 0, "KiB/2014"));
+                bejegyzések.Add(new Bejegyzés(i, "2014. jan. 1.", "Maradvány 2008-ról (házipénztár)", "IV/10", 40, 0, 0, 0, "BeB/2014"));
+                bejegyzések.Add(new Bejegyzés(i+1, "2014. jan. 1.", "Maradvány 2008-ról (bankszámla)", "IV/10", 0, 0, 11, 0, "664-0184"));
+                bejegyzések.Add(new Bejegyzés(i + 2, "2014. jan. 7.", "Postaköltség", "XVIII/2", 0, 0, 0, 50, "KiP/2014"));
+                bejegyzések.Add(new Bejegyzés(i + 3, "2014. jan. 8.", "Óévi perselyadomány", "XVII/1", 12, 0, 0, 0, "KiB/2014"));
             }
 
             return bejegyzések;
