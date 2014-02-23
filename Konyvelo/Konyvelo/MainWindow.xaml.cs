@@ -107,12 +107,12 @@ namespace Konyvelo
         }
         private List<Bejegyzés> LoadCollectionData()
         {
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 1200; i+=4)
             {
-                bejegyzések.Add(new Bejegyzés(i, "2014. jan. 1.", "Maradvány 2008-ról (házipénztár)", "IV/10", 40, 0, 0, 0, "BeB/2014"));
-                bejegyzések.Add(new Bejegyzés(i+1, "2014. jan. 1.", "Maradvány 2008-ról (bankszámla)", "IV/10", 0, 0, 11, 0, "664-0184"));
-                bejegyzések.Add(new Bejegyzés(i + 2, "2014. jan. 7.", "Postaköltség", "XVIII/2", 0, 0, 0, 50, "KiP/2014"));
-                bejegyzések.Add(new Bejegyzés(i + 3, "2014. jan. 8.", "Óévi perselyadomány", "XVII/1", 12, 0, 0, 0, "KiB/2014"));
+                bejegyzések.Add(new Bejegyzés(i, "2014.10.1.", "Maradvány 2008-ról (házipénztár)", "IV/10", 40, 0, 0, 0, "BeB/2014"));
+                bejegyzések.Add(new Bejegyzés(i+1, "2014.01.1.", "Maradvány 2008-ról (bankszámla)", "IV/10", 0, 0, 11, 0, "664-0184"));
+                bejegyzések.Add(new Bejegyzés(i + 2, "2014.02.7.", "Postaköltség", "XVIII/2", 0, 0, 0, 50, "KiP/2014"));
+                bejegyzések.Add(new Bejegyzés(i + 3, "2014.03.8.", "Óévi perselyadomány", "XVII/1", 0, 12, 0, 0, "KiB/2014"));
             }
 
             return bejegyzések;
@@ -423,7 +423,7 @@ namespace Konyvelo
             listazo();
             //MyDataGrid.ItemsSource = LoadCollectionData(); ///LoadCFromFile(PénzMozgás.évSzám.ToString());bejegyzések listát feltöltő metódus
             //SaveTo(PénzMozgás.évSzám.ToString());
-            //LoadCollectionData();
+            LoadCollectionData();
             MyDataGrid.IsReadOnly = true;
             generateLists();//ha a pénzmozgás tábla üres akkor kell csak lefuttatni ezt a metódust és elmenteni a táblába, ha nem üres akkor a táblából kell betölteni az adatokat a listákba
             MyDataGrid.ItemsSource = bejegyzések;
