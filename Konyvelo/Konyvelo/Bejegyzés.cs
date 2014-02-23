@@ -90,7 +90,7 @@ namespace Konyvelo
         public string toTable2String(string sormagasság)
         {
 
-            return "<tr height=\""+sormagasság+"\"><td>" + sorSzám + "</td><td>" + fizetésIdeje + "</td><td>" + megjegyzés + "</td><td>" + PénzMozgás.Tagol((bankiBevétel + bankiKiadás + pénztáriKiadás + pénztáriBevétel)) + "</td></tr>";
+            return "<tr height=\""+sormagasság+"\"><td>" + sorSzám + "</td><td>" + fizetésIdeje + "</td><td width=\"700\">" + megjegyzés + "</td><td>" + PénzMozgás.Tagol((bankiBevétel + bankiKiadás + pénztáriKiadás + pénztáriBevétel)) + "</td></tr>";
 
 
         }

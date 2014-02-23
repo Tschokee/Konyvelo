@@ -1022,15 +1022,15 @@ namespace Konyvelo
             {
                 PénzMozgás ossz = new PénzMozgás();
                 string h = tablazatmagassag;
-                string h2 = fokonyvsormagasság;
+                string h2 = "40";
                 int pn = 36;
 
                 int x = bejegyzések.Count;
-                x += romaiszamk.Count;
+                //x += romaiszamk.Count;
                 int y = x % pn;
 
                 file.Write("<html><head><title>Főkönyv</title></head><body><table height=\""+h+"\" border=\"1\"  width=\"900\" style =\"border-collapse:collapse;\">");
-                int i = 0, c = 0, p1 = 0;
+                int i = 0, c = 0;
                 int  egyhazsajatbe = 0, egyhazsajatki = 0;
                 h = "1525";
                 for (int j = 0; j < romaiszamk.Count; j++)
@@ -1043,16 +1043,16 @@ namespace Konyvelo
 
 
                             file.Write("<tr height=\"" + h2 + "\"><th></th><th></th><th width=\"700\">" + romaiszamk[j] + " " + leszk[j] + "</th><th></th></tr>");
-                            x--;
+                           
                             int temp =  0;
 
-                            if (x < 30)
+                            if (x<30)
                             {
-                                h = "0";
+                                h = "h";
                             }
-                            if (testcp(c++, p1, file, pn, h))
+                            if (testcp(c++, 1, file, pn, h))
                             {
-                                c = 0; p1++;
+                                c = 0; 
                             }
 
                             if (fokonyv.TryGetValue(romaiszamk[j], out temp22))
@@ -1062,32 +1062,34 @@ namespace Konyvelo
 
 
                                     file.Write(b2.toTable2String(h2)); x--;
-                                    if (x < 30)
-                                    {
-                                        h = "0";
-                                    }
+                                    
                                     temp += b2.pénztáriBevétel + b2.pénztáriKiadás + b2.bankiKiadás + b2.bankiBevétel;
-                                    if (testcp(c++, p1, file, pn, h))
+                                    if (x < 40)////<-----------------------ez egy tipp  x az hogy hány sor van még amit ki kell írni(bejegyzés)
                                     {
-                                        c = 0; p1++;
+                                        h = "h";
+                                    }
+                                    if (testcp(c++, 1, file, pn, h))
+                                    {
+                                        c = 0; 
                                     }
 
 
                                 }
                             }
-                            file.Write("<tr height=\"" + h2 + "\" ><td></td><td></td><td>Összesen:</td><td>" + PénzMozgás.Tagol(temp) + "</td></tr>"); x--;
-                            if (testcp(c++, p1, file, pn, h))
+                            file.Write("<tr height=\"" + h2 + "\" ><td></td><td></td><td>Összesen:</td><td>" + PénzMozgás.Tagol(temp) + "</td></tr>"); 
+                           
+                            if (testcp(c++, 1, file, pn, h))
                             {
-                                c = 0; p1++;
+                                c = 0;
                             }
                            /* if (x < 30)
                             {
                                 h = "0";
                             }*/
-                            file.Write("<tr><td></td><td></td><td></td><td></td></tr>"); x--;
-                            if (testcp(c++, p1, file, pn, h))
+                            file.Write("<tr><td></td><td></td><td></td><td></td></tr>"); 
+                            if (testcp(c++, 1, file, pn, h))
                             {
-                                c = 0; p1++;
+                                c = 0; 
                             }
 
                          
