@@ -1232,12 +1232,12 @@ namespace Konyvelo
                     } 
                     if (fokonyvszam == 9)
                     {
-                        file.Write("<tr height=\"" + sh + "\"><td></td><td><b>XIIA. Személyi kiadások összesen</b></td><td>" + PénzMozgás.Tagol(XIIA.előirányzat) + "</td></tr>");
+                        file.Write("<tr height=\"" + sh + "\"><td></td><td><b>XIA. Személyi kiadások összesen</b></td><td>" + PénzMozgás.Tagol(XIIA.előirányzat) + "</td></tr>");
 
                     } 
                     if (fokonyvszam == 12)
                     {
-                        file.Write("<tr height=\"" + sh + "\"><td></td><td><b>XIIB. Személyi kiadások összesen</b></td><td>" + PénzMozgás.Tagol(XIIB.előirányzat) + "</td></tr>");
+                        file.Write("<tr height=\"" + sh + "\"><td></td><td><b>XIB. Személyi kiadások összesen</b></td><td>" + PénzMozgás.Tagol(XIIB.előirányzat) + "</td></tr>");
 
                     }
                     if (fokonyvszam == 12)
@@ -1392,17 +1392,17 @@ namespace Konyvelo
                     }
                     if (fokonyvszam == 9)
                     {
-                        file.Write("<tr height=\"" + sh + "\"><td></td><td><b>XIIA. Személyi kiadások összesen</b></td><td>" + PénzMozgás.Tagol(XIIA.előirányzat) + "</td><td>" + PénzMozgás.Tagol(XIIA.teljesítés) + "</td></tr>");
+                        file.Write("<tr height=\"" + sh + "\"><td></td><td><b>XIA. Személyi kiadások összesen</b></td><td>" + PénzMozgás.Tagol(XIIA.előirányzat) + "</td><td>" + PénzMozgás.Tagol(XIIA.teljesítés) + "</td></tr>");
 
                     }
                     if (fokonyvszam == 12)
                     {
-                        file.Write("<tr height=\"" + sh + "\"><td></td><td><b>XIIB. Személyi kiadások összesen</b></td><td>" + PénzMozgás.Tagol(XIIB.előirányzat) + "</td><td>" + PénzMozgás.Tagol(XIIB.teljesítés) + "</td></tr>");
+                        file.Write("<tr height=\"" + sh + "\"><td></td><td><b>XIB. Személyi kiadások összesen</b></td><td>" + PénzMozgás.Tagol(XIIB.előirányzat) + "</td><td>" + PénzMozgás.Tagol(XIIB.teljesítés) + "</td></tr>");
 
                     }
                     if (fokonyvszam == 12)
                     {
-                        file.Write("<tr height=\"" + sh + "\"><td>&nbsp;</td><td><b>Személyi kiadások összesen</b></td><td>" + PénzMozgás.Tagol(személyi.előirányzat) + "</td><td>" + PénzMozgás.Tagol(személyi.teljesítés) + "</td></tr>");
+                        file.Write("<tr height=\"" + sh + "\"><td></td><td><b>Személyi kiadások összesen</b></td><td>" + PénzMozgás.Tagol(személyi.előirányzat) + "</td><td>" + PénzMozgás.Tagol(személyi.teljesítés) + "</td></tr>");
 
                     }
                     if (fokonyvszam == 4)
