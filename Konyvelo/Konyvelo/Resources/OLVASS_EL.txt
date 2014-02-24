@@ -3,7 +3,7 @@ Telepítés:
 1. DhtmlEd.exe
 2. Konyvelo.exe 
 3/a. Ha nincs .NET keretrendszer telepítve, a program felajánlja a letöltését.
-3/b. Offline telepítõ: NDP451-KB2858728-x86-x64-AllOS-ENU
+3/b. Offline telepítõ: NDP451-KB2858728-x86-x64-AllOS-ENU.exe
 
 A 3/a. megoldás javasolt.
 
@@ -15,3 +15,5 @@ A Konyvelo.exe és printhtml.exe fájlok egy közös mappában legyenek tárolva.
 A .bdb kiterjesztésû fájl a naplót tartalmazza.
 A .ddb kiterjesztésû fájl a költségvetést tartalmazza.
 Mindkét fájl tetszõleges tárolón õrizhetõ.
+Ha nem az aktuális évi könyvelést szeretnék nyomtatni vagy szerkeszteni, állítsák át az ávszámot az évszám menü alatt.
+Új költségvetés létrehozására a program indítása után a költségvetés ablakban van lehetõség. 
