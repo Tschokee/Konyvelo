@@ -1775,7 +1775,7 @@ namespace Konyvelo
 
 
         }
-        string egyházneve = "Pátrohai Református Egyház";//<-----------------------------------------------------------------------------------------------név
+        string egyházneve = "IDE KERÜL MAJD AZ EGYHÁZ NEVE";//<-----------------------------------------------------------------------------------------------név
 
 
         private void naploPrintClick(object sender, RoutedEventArgs e)
