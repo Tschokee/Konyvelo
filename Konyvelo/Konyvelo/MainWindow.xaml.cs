@@ -1553,9 +1553,10 @@ namespace Konyvelo
                 //loadFokonyv();
                 MyDataGrid.ItemsSource = bejegyzések;
                 MyDataGrid.Items.Refresh();
+
+                Bejegyzés.globalBankiEgyenleg = bejegyzések[bejegyzések.Count - 1].bankiEgyenleg;
+                Bejegyzés.globalPenztariEgyenleg = bejegyzések[bejegyzések.Count - 1].pénztáriEgyenleg;
             }
-            Bejegyzés.globalBankiEgyenleg = bejegyzések[bejegyzések.Count - 1].bankiEgyenleg;
-            Bejegyzés.globalPenztariEgyenleg = bejegyzések[bejegyzések.Count - 1].pénztáriEgyenleg;
         }
         public void deletefile(string file) {
             System.Diagnostics.Process process = new System.Diagnostics.Process();
@@ -1622,7 +1623,7 @@ namespace Konyvelo
         
         
         }
-        string egyházneve = "Példa Egyház";//<-----------------------------------------------------------------------------------------------név
+        string egyházneve = "Pátrohai Református Egyház";//<-----------------------------------------------------------------------------------------------név
 
 
         private void naploPrintClick(object sender, RoutedEventArgs e)

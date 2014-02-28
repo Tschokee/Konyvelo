@@ -15,5 +15,5 @@ A Konyvelo.exe és printhtml.exe fájlok egy közös mappában legyenek tárolva.
 A .bdb kiterjesztésû fájl a naplót tartalmazza.
 A .ddb kiterjesztésû fájl a költségvetést tartalmazza.
 Mindkét fájl tetszõleges tárolón õrizhetõ.
-Ha nem az aktuális évi könyvelést szeretnék nyomtatni vagy szerkeszteni, állítsák át az ávszámot az évszám menü alatt.
-Új költségvetés létrehozására a program indítása után a költségvetés ablakban van lehetõség. 
+Ha nem az aktuális évi könyvelést szeretnék nyomtatni vagy szerkeszteni, állítsák át az évszámot az Évszám menü alatt.
+Új költségvetés létrehozására a program indítása után a Költségvetés ablakban van lehetõség. 
