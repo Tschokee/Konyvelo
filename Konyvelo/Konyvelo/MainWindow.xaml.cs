@@ -1725,7 +1725,7 @@ namespace Konyvelo
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
             startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = "/C printhtml.exe file=\"" + file + "\" topmargin=\"0.5\" bottommargin=\"0.5\" leftmargin=\"1\" rightmargin=\"1\" header=\"" + egyházneve + " Napló    &b&d\" footer=\"&b&p\\&P\"";
+            startInfo.Arguments = "/C nyomtato.exe file=\"" + file + "\" topmargin=\"0.5\" bottommargin=\"0.5\" leftmargin=\"1\" rightmargin=\"1\" header=\"" + egyházneve + " Napló    &b&d\" footer=\"&b&p\\&P\"";
             process.StartInfo = startInfo;
             process.Start();
             deletefile(file);
@@ -1740,7 +1740,7 @@ namespace Konyvelo
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
             startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = "/C printhtml.exe file=\"" + file + "\" topmargin=\"0.5\"  bottommargin=\"0.5\" leftmargin=\"1\" rightmargin=\"1\"  header=\"" + egyházneve + " Költségvetés   &b&d\" footer=\"&b&p\\&P\"";  //<----- lehet header footert  állítrni
+            startInfo.Arguments = "/C nyomtato.exe file=\"" + file + "\" topmargin=\"0.5\"  bottommargin=\"0.5\" leftmargin=\"1\" rightmargin=\"1\"  header=\"" + egyházneve + " Költségvetés   &b&d\" footer=\"&b&p\\&P\"";  //<----- lehet header footert  állítrni
             process.StartInfo = startInfo;
             process.Start();
             deletefile(file);
@@ -1754,7 +1754,7 @@ namespace Konyvelo
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
             startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = "/C printhtml.exe file=\"" + file + "\" topmargin=\"0.5\"  bottommargin=\"0.5\" leftmargin=\"1\" rightmargin=\"1\"  header=\"" + egyházneve + " Főkönyv  &b&d\" footer=\"&b&p\\&P\"";
+            startInfo.Arguments = "/C nyomtato.exe file=\"" + file + "\" topmargin=\"0.5\"  bottommargin=\"0.5\" leftmargin=\"1\" rightmargin=\"1\"  header=\"" + egyházneve + " Főkönyv  &b&d\" footer=\"&b&p\\&P\"";
             process.StartInfo = startInfo;
             process.Start();
             deletefile(file);
@@ -1768,7 +1768,7 @@ namespace Konyvelo
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
             startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = "/C printhtml.exe file=\"" + file + "\" topmargin=\"0.5\"  bottommargin=\"0.5\" leftmargin=\"1\" rightmargin=\"1\"  header=\"" + egyházneve + " Zárószámadás    &b&d\" footer=\"&b&p\\&P\"";
+            startInfo.Arguments = "/C nyomtato.exe file=\"" + file + "\" topmargin=\"0.5\"  bottommargin=\"0.5\" leftmargin=\"1\" rightmargin=\"1\"  header=\"" + egyházneve + " Zárószámadás    &b&d\" footer=\"&b&p\\&P\"";
             process.StartInfo = startInfo;
             process.Start();
             deletefile(file);
