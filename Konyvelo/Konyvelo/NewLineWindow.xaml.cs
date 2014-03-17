@@ -37,7 +37,24 @@ namespace Konyvelo
         //a listához hozzáadó metódus
         public void listaAdd(Bejegyzés b)
         {
-            list.Add(b);
+            int t = Convert.ToInt32(d.SelectedIndex.ToString());
+            //Console.WriteLine(t);
+            if (t == -1)
+            {
+                t = 0;
+            }
+            list.Insert(Convert.ToInt32(d.SelectedIndex.ToString()) + 1, b);
+
+            //int ssz = list.ElementAt(t).sorSzám;
+            int i = 1/*, j = ssz*/;      
+            Bejegyzés.globalBankiEgyenleg = 0;
+            Bejegyzés.globalPenztariEgyenleg = 0;
+            foreach (Bejegyzés be in list)
+            {
+                be.modositGlobalEgyenleg();
+                be.sorSzám = i;
+                i++;
+            }
         }
 
         public NewLineWindow(List<Bejegyzés> l, DataGrid d, int s, List<PénzMozgás> ILista, List<PénzMozgás> IILista, List<PénzMozgás> IIILista, List<PénzMozgás> IVLista, List<PénzMozgás> VLista, List<PénzMozgás> XIAaLista, List<PénzMozgás> XIAbLista, List<PénzMozgás> XIBaLista, List<PénzMozgás> XIBbLista, List<PénzMozgás> XIILista, List<PénzMozgás> XIIILista, List<PénzMozgás> XIVLista, List<PénzMozgás> XVLista, List<PénzMozgás> XVILista, List<PénzMozgás> XVIILista, List<PénzMozgás> XVIIILista)
