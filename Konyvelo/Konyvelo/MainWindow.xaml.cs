@@ -1434,7 +1434,7 @@ namespace Konyvelo
                 }
                 file.Write("</table><br/><table border=\"1\"  width=\"900\" style =\"border-collapse:collapse;\">");
                 file.Write("<tr height=\"" + sh + "\"><td></td><td><b>" + year + ". évi saját bevétel összege</b></td><td>" + PénzMozgás.Tagol(egyhazsajat.előirányzat) + "</td></tr>");
-                file.Write("<tr height=\"" + sh + "\"><td></td><td><b>" + year + ". évi saját kiadás összege</b></td><td>" + PénzMozgás.Tagol(osszkiegmentes) + "</td></tr>");
+                file.Write("<tr height=\"" + sh + "\"><td></td><td><b>" + year + ". évi saját kiadás összege</b></td><td>" + PénzMozgás.Tagol(osszkiegmentes) + "</td></tr>"); //ennek 50-nel kevesebbnek kell lennie nálam
                 file.Write("<tr height=\"" + sh + "\"><td></td><td><b>Maradvány</b></td><td>" + PénzMozgás.Tagol((egyhazsajat.előirányzat - osszkiegmentes)) + "</td></tr>");
                 file.Write("<tr height=\"" + sh + "\"><td></td><td><b>" + year + ". évi összes bevétel összege</b></td><td>" + PénzMozgás.Tagol(egyhazsajat.előirányzat) + "</td></tr>");
                 file.Write("<tr height=\"" + sh + "\"><td></td><td><b>" + year + ". évi összes kiadás összege</b></td><td>" + PénzMozgás.Tagol(osszkieg) + "</td></tr>");
