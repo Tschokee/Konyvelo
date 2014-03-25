@@ -1519,7 +1519,7 @@ namespace Konyvelo
                         egyhazsajatbetelj += temp.teljesítés;//direkt van így
                         egyhazsajatbeel += temp.előirányzat;//direkt van így
                     }
-                    if (i > 4 && i < 17)
+                    if (i > 5 && i < 17)
                     {
                         egyhazsajatkitelj += temp.teljesítés;//direkt van így
                         egyhazsajatkiel += temp.előirányzat;
