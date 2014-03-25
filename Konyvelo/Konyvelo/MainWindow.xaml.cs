@@ -1359,7 +1359,7 @@ namespace Konyvelo
                         egyhazsajatbe += temp.teljesítés;//direkt van így
                         egyhazsajat.előirányzat += temp.előirányzat;//direkt van így
                     }
-                    if (i > 4 && i < 17)
+                    if (i > 5 && i < 17)
                     {
                         egyhazsajatki += temp.teljesítés;//direkt van így
                         egyhazsajat.teljesítés += temp.előirányzat;
